@@ -60,6 +60,9 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  button17;
 	private: System::Windows::Forms::Panel^  panel3;
 	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Panel^  panel4;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label3;
 
 	private:
 		/// <summary>
@@ -99,9 +102,13 @@ namespace Project1 {
 			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
+			this->panel4->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -133,7 +140,7 @@ namespace Project1 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(24, 108);
+			this->button4->Location = System::Drawing::Point(24, 102);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(74, 66);
 			this->button4->TabIndex = 3;
@@ -142,7 +149,7 @@ namespace Project1 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(121, 108);
+			this->button5->Location = System::Drawing::Point(121, 102);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(74, 66);
 			this->button5->TabIndex = 4;
@@ -151,7 +158,7 @@ namespace Project1 {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(219, 108);
+			this->button6->Location = System::Drawing::Point(219, 102);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(74, 66);
 			this->button6->TabIndex = 5;
@@ -160,7 +167,7 @@ namespace Project1 {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(24, 194);
+			this->button7->Location = System::Drawing::Point(24, 187);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(74, 66);
 			this->button7->TabIndex = 6;
@@ -169,7 +176,7 @@ namespace Project1 {
 			// 
 			// button8
 			// 
-			this->button8->Location = System::Drawing::Point(121, 194);
+			this->button8->Location = System::Drawing::Point(121, 187);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(74, 66);
 			this->button8->TabIndex = 7;
@@ -178,7 +185,7 @@ namespace Project1 {
 			// 
 			// button9
 			// 
-			this->button9->Location = System::Drawing::Point(219, 194);
+			this->button9->Location = System::Drawing::Point(219, 187);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(74, 66);
 			this->button9->TabIndex = 8;
@@ -190,7 +197,8 @@ namespace Project1 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(178, 19);
+			this->label1->ForeColor = System::Drawing::Color::LightCyan;
+			this->label1->Location = System::Drawing::Point(166, 20);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(176, 39);
 			this->label1->TabIndex = 9;
@@ -200,13 +208,13 @@ namespace Project1 {
 			// 
 			this->richTextBox1->Location = System::Drawing::Point(484, 71);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(147, 368);
+			this->richTextBox1->Size = System::Drawing::Size(147, 268);
 			this->richTextBox1->TabIndex = 10;
 			this->richTextBox1->Text = L"";
 			// 
 			// button10
 			// 
-			this->button10->Location = System::Drawing::Point(24, 280);
+			this->button10->Location = System::Drawing::Point(24, 274);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(74, 66);
 			this->button10->TabIndex = 11;
@@ -215,7 +223,7 @@ namespace Project1 {
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(121, 280);
+			this->button11->Location = System::Drawing::Point(121, 274);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(74, 66);
 			this->button11->TabIndex = 12;
@@ -224,7 +232,7 @@ namespace Project1 {
 			// 
 			// button12
 			// 
-			this->button12->Location = System::Drawing::Point(219, 280);
+			this->button12->Location = System::Drawing::Point(219, 274);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(74, 66);
 			this->button12->TabIndex = 13;
@@ -233,7 +241,7 @@ namespace Project1 {
 			// 
 			// button13
 			// 
-			this->button13->Location = System::Drawing::Point(314, 280);
+			this->button13->Location = System::Drawing::Point(314, 274);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(74, 66);
 			this->button13->TabIndex = 14;
@@ -242,7 +250,7 @@ namespace Project1 {
 			// 
 			// button14
 			// 
-			this->button14->Location = System::Drawing::Point(314, 194);
+			this->button14->Location = System::Drawing::Point(314, 187);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(74, 66);
 			this->button14->TabIndex = 15;
@@ -251,7 +259,7 @@ namespace Project1 {
 			// 
 			// button15
 			// 
-			this->button15->Location = System::Drawing::Point(314, 108);
+			this->button15->Location = System::Drawing::Point(314, 102);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(74, 66);
 			this->button15->TabIndex = 16;
@@ -269,7 +277,7 @@ namespace Project1 {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button16);
 			this->panel1->Controls->Add(this->button1);
@@ -288,7 +296,7 @@ namespace Project1 {
 			this->panel1->Controls->Add(this->button9);
 			this->panel1->Location = System::Drawing::Point(49, 71);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(411, 369);
+			this->panel1->Size = System::Drawing::Size(411, 360);
 			this->panel1->TabIndex = 18;
 			// 
 			// lblTimeName
@@ -297,7 +305,7 @@ namespace Project1 {
 			this->lblTimeName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->lblTimeName->ForeColor = System::Drawing::SystemColors::Control;
-			this->lblTimeName->Location = System::Drawing::Point(3, 4);
+			this->lblTimeName->Location = System::Drawing::Point(3, 13);
 			this->lblTimeName->Name = L"lblTimeName";
 			this->lblTimeName->Size = System::Drawing::Size(43, 15);
 			this->lblTimeName->TabIndex = 19;
@@ -309,9 +317,9 @@ namespace Project1 {
 			this->panel2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->panel2->Controls->Add(this->lblTime);
 			this->panel2->Controls->Add(this->lblTimeName);
-			this->panel2->Location = System::Drawing::Point(485, 445);
+			this->panel2->Location = System::Drawing::Point(484, 437);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(147, 74);
+			this->panel2->Size = System::Drawing::Size(148, 95);
 			this->panel2->TabIndex = 20;
 			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel2_Paint);
 			// 
@@ -321,15 +329,15 @@ namespace Project1 {
 			this->lblTime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lblTime->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->lblTime->Location = System::Drawing::Point(42, 30);
+			this->lblTime->Location = System::Drawing::Point(10, 39);
 			this->lblTime->Name = L"lblTime";
-			this->lblTime->Size = System::Drawing::Size(59, 31);
+			this->lblTime->Size = System::Drawing::Size(67, 31);
 			this->lblTime->TabIndex = 0;
-			this->lblTime->Text = L"test";
+			this->lblTime->Text = L"3.00";
 			// 
 			// button17
 			// 
-			this->button17->Location = System::Drawing::Point(314, 3);
+			this->button17->Location = System::Drawing::Point(314, 13);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(74, 66);
 			this->button17->TabIndex = 18;
@@ -341,9 +349,9 @@ namespace Project1 {
 			this->panel3->BackColor = System::Drawing::SystemColors::AppWorkspace;
 			this->panel3->Controls->Add(this->label2);
 			this->panel3->Controls->Add(this->button17);
-			this->panel3->Location = System::Drawing::Point(49, 446);
+			this->panel3->Location = System::Drawing::Point(49, 437);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(411, 73);
+			this->panel3->Size = System::Drawing::Size(411, 95);
 			this->panel3->TabIndex = 21;
 			// 
 			// label2
@@ -352,18 +360,53 @@ namespace Project1 {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label2->Location = System::Drawing::Point(28, 29);
+			this->label2->Location = System::Drawing::Point(27, 30);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(59, 31);
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"test";
 			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->panel4->Controls->Add(this->label4);
+			this->panel4->Controls->Add(this->label3);
+			this->panel4->Location = System::Drawing::Point(484, 345);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(147, 85);
+			this->panel4->TabIndex = 22;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label3->Location = System::Drawing::Point(10, 35);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(74, 31);
+			this->label3->TabIndex = 20;
+			this->label3->Text = L"0000";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label4->Location = System::Drawing::Point(3, 9);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(48, 15);
+			this->label4->TabIndex = 21;
+			this->label4->Text = L"Score:";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
-			this->ClientSize = System::Drawing::Size(674, 544);
+			this->BackColor = System::Drawing::Color::DarkOrange;
+			this->ClientSize = System::Drawing::Size(674, 566);
+			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -376,6 +419,8 @@ namespace Project1 {
 			this->panel2->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
+			this->panel4->ResumeLayout(false);
+			this->panel4->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
