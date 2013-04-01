@@ -1,5 +1,6 @@
 #include "MyForm.h"
-
+#include <iostream>
+using namespace std;
 using namespace Project1;
 
 [STAThreadAttribute]
