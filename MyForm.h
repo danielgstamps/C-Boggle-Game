@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Dice.h"
 namespace Project1 {
 
 	using namespace System;
@@ -34,25 +34,46 @@ namespace Project1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  die0;
+	private: System::Windows::Forms::Button^  die1;
+	private: System::Windows::Forms::Button^  die2;
+	private: System::Windows::Forms::Button^  die4;
+	private: System::Windows::Forms::Button^  die5;
+	private: System::Windows::Forms::Button^  die6;
+	private: System::Windows::Forms::Button^  die8;
+	private: System::Windows::Forms::Button^  die9;
+	private: System::Windows::Forms::Button^  die10;
 	protected: 
-	private: System::Windows::Forms::Button^  button2;
-	private: System::Windows::Forms::Button^  button3;
-	private: System::Windows::Forms::Button^  button4;
-	private: System::Windows::Forms::Button^  button5;
-	private: System::Windows::Forms::Button^  button6;
-	private: System::Windows::Forms::Button^  button7;
-	private: System::Windows::Forms::Button^  button8;
-	private: System::Windows::Forms::Button^  button9;
+
+
+
+	protected: 
+
+	protected: 
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::RichTextBox^  richTextBox1;
-	private: System::Windows::Forms::Button^  button10;
-	private: System::Windows::Forms::Button^  button11;
-	private: System::Windows::Forms::Button^  button12;
-	private: System::Windows::Forms::Button^  button13;
-	private: System::Windows::Forms::Button^  button14;
-	private: System::Windows::Forms::Button^  button15;
-	private: System::Windows::Forms::Button^  button16;
+	private: System::Windows::Forms::Button^  die12;
+	private: System::Windows::Forms::Button^  die13;
+	private: System::Windows::Forms::Button^  die14;
+	private: System::Windows::Forms::Button^  die15;
+
+
+
+
+	private: System::Windows::Forms::Button^  die11;
+
+	private: System::Windows::Forms::Button^  die7;
+
+	private: System::Windows::Forms::Button^  die3;
+
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::Label^  lblTimeName;
 	private: System::Windows::Forms::Panel^  panel2;
@@ -63,6 +84,17 @@ namespace Project1 {
 	private: System::Windows::Forms::Panel^  panel4;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label3;
+
+
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADDED BY DANIEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	private: Dice dice;
+	 // Want to create a Dice list, so that we can access them to set the text of each Die block to a random letter.
+
+
+
 
 	private:
 		/// <summary>
@@ -77,24 +109,24 @@ namespace Project1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->die0 = (gcnew System::Windows::Forms::Button());
+			this->die1 = (gcnew System::Windows::Forms::Button());
+			this->die2 = (gcnew System::Windows::Forms::Button());
+			this->die4 = (gcnew System::Windows::Forms::Button());
+			this->die5 = (gcnew System::Windows::Forms::Button());
+			this->die6 = (gcnew System::Windows::Forms::Button());
+			this->die8 = (gcnew System::Windows::Forms::Button());
+			this->die9 = (gcnew System::Windows::Forms::Button());
+			this->die10 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
-			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->button11 = (gcnew System::Windows::Forms::Button());
-			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
-			this->button15 = (gcnew System::Windows::Forms::Button());
-			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->die12 = (gcnew System::Windows::Forms::Button());
+			this->die13 = (gcnew System::Windows::Forms::Button());
+			this->die14 = (gcnew System::Windows::Forms::Button());
+			this->die15 = (gcnew System::Windows::Forms::Button());
+			this->die11 = (gcnew System::Windows::Forms::Button());
+			this->die7 = (gcnew System::Windows::Forms::Button());
+			this->die3 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->lblTimeName = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -103,94 +135,95 @@ namespace Project1 {
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// button1
+			// die0
 			// 
-			this->button1->Location = System::Drawing::Point(24, 17);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(74, 66);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
+			this->die0->Location = System::Drawing::Point(24, 17);
+			this->die0->Name = L"die0";
+			this->die0->Size = System::Drawing::Size(74, 66);
+			this->die0->TabIndex = 0;
+			//this->die0->Text = L"button1";
+			this->die0->Text = L"button1";
+			this->die0->UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// die1
 			// 
-			this->button2->Location = System::Drawing::Point(121, 17);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(74, 66);
-			this->button2->TabIndex = 1;
-			this->button2->Text = L"button2";
-			this->button2->UseVisualStyleBackColor = true;
+			this->die1->Location = System::Drawing::Point(121, 17);
+			this->die1->Name = L"die1";
+			this->die1->Size = System::Drawing::Size(74, 66);
+			this->die1->TabIndex = 1;
+			this->die1->Text = L"button2";
+			this->die1->UseVisualStyleBackColor = true;
 			// 
-			// button3
+			// die2
 			// 
-			this->button3->Location = System::Drawing::Point(219, 17);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(74, 66);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"button3";
-			this->button3->UseVisualStyleBackColor = true;
+			this->die2->Location = System::Drawing::Point(219, 17);
+			this->die2->Name = L"die2";
+			this->die2->Size = System::Drawing::Size(74, 66);
+			this->die2->TabIndex = 2;
+			this->die2->Text = L"button3";
+			this->die2->UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// die4
 			// 
-			this->button4->Location = System::Drawing::Point(24, 102);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(74, 66);
-			this->button4->TabIndex = 3;
-			this->button4->Text = L"button4";
-			this->button4->UseVisualStyleBackColor = true;
+			this->die4->Location = System::Drawing::Point(24, 102);
+			this->die4->Name = L"die4";
+			this->die4->Size = System::Drawing::Size(74, 66);
+			this->die4->TabIndex = 3;
+			this->die4->Text = L"button4";
+			this->die4->UseVisualStyleBackColor = true;
 			// 
-			// button5
+			// die5
 			// 
-			this->button5->Location = System::Drawing::Point(121, 102);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(74, 66);
-			this->button5->TabIndex = 4;
-			this->button5->Text = L"button5";
-			this->button5->UseVisualStyleBackColor = true;
+			this->die5->Location = System::Drawing::Point(121, 102);
+			this->die5->Name = L"die5";
+			this->die5->Size = System::Drawing::Size(74, 66);
+			this->die5->TabIndex = 4;
+			this->die5->Text = L"button5";
+			this->die5->UseVisualStyleBackColor = true;
 			// 
-			// button6
+			// die6
 			// 
-			this->button6->Location = System::Drawing::Point(219, 102);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(74, 66);
-			this->button6->TabIndex = 5;
-			this->button6->Text = L"button6";
-			this->button6->UseVisualStyleBackColor = true;
+			this->die6->Location = System::Drawing::Point(219, 102);
+			this->die6->Name = L"die6";
+			this->die6->Size = System::Drawing::Size(74, 66);
+			this->die6->TabIndex = 5;
+			this->die6->Text = L"button6";
+			this->die6->UseVisualStyleBackColor = true;
 			// 
-			// button7
+			// die8
 			// 
-			this->button7->Location = System::Drawing::Point(24, 187);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(74, 66);
-			this->button7->TabIndex = 6;
-			this->button7->Text = L"button7";
-			this->button7->UseVisualStyleBackColor = true;
+			this->die8->Location = System::Drawing::Point(24, 187);
+			this->die8->Name = L"die8";
+			this->die8->Size = System::Drawing::Size(74, 66);
+			this->die8->TabIndex = 6;
+			this->die8->Text = L"button7";
+			this->die8->UseVisualStyleBackColor = true;
 			// 
-			// button8
+			// die9
 			// 
-			this->button8->Location = System::Drawing::Point(121, 187);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(74, 66);
-			this->button8->TabIndex = 7;
-			this->button8->Text = L"button8";
-			this->button8->UseVisualStyleBackColor = true;
+			this->die9->Location = System::Drawing::Point(121, 187);
+			this->die9->Name = L"die9";
+			this->die9->Size = System::Drawing::Size(74, 66);
+			this->die9->TabIndex = 7;
+			this->die9->Text = L"button8";
+			this->die9->UseVisualStyleBackColor = true;
 			// 
-			// button9
+			// die10
 			// 
-			this->button9->Location = System::Drawing::Point(219, 187);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(74, 66);
-			this->button9->TabIndex = 8;
-			this->button9->Text = L"button9";
-			this->button9->UseVisualStyleBackColor = true;
+			this->die10->Location = System::Drawing::Point(219, 187);
+			this->die10->Name = L"die10";
+			this->die10->Size = System::Drawing::Size(74, 66);
+			this->die10->TabIndex = 8;
+			this->die10->Text = L"button9";
+			this->die10->UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
@@ -212,88 +245,88 @@ namespace Project1 {
 			this->richTextBox1->TabIndex = 10;
 			this->richTextBox1->Text = L"";
 			// 
-			// button10
+			// die12
 			// 
-			this->button10->Location = System::Drawing::Point(24, 274);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(74, 66);
-			this->button10->TabIndex = 11;
-			this->button10->Text = L"button10";
-			this->button10->UseVisualStyleBackColor = true;
+			this->die12->Location = System::Drawing::Point(24, 274);
+			this->die12->Name = L"die12";
+			this->die12->Size = System::Drawing::Size(74, 66);
+			this->die12->TabIndex = 11;
+			this->die12->Text = L"button10";
+			this->die12->UseVisualStyleBackColor = true;
 			// 
-			// button11
+			// die13
 			// 
-			this->button11->Location = System::Drawing::Point(121, 274);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(74, 66);
-			this->button11->TabIndex = 12;
-			this->button11->Text = L"button11";
-			this->button11->UseVisualStyleBackColor = true;
+			this->die13->Location = System::Drawing::Point(121, 274);
+			this->die13->Name = L"die13";
+			this->die13->Size = System::Drawing::Size(74, 66);
+			this->die13->TabIndex = 12;
+			this->die13->Text = L"button11";
+			this->die13->UseVisualStyleBackColor = true;
 			// 
-			// button12
+			// die14
 			// 
-			this->button12->Location = System::Drawing::Point(219, 274);
-			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(74, 66);
-			this->button12->TabIndex = 13;
-			this->button12->Text = L"button12";
-			this->button12->UseVisualStyleBackColor = true;
+			this->die14->Location = System::Drawing::Point(219, 274);
+			this->die14->Name = L"die14";
+			this->die14->Size = System::Drawing::Size(74, 66);
+			this->die14->TabIndex = 13;
+			this->die14->Text = L"button12";
+			this->die14->UseVisualStyleBackColor = true;
 			// 
-			// button13
+			// die15
 			// 
-			this->button13->Location = System::Drawing::Point(314, 274);
-			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(74, 66);
-			this->button13->TabIndex = 14;
-			this->button13->Text = L"button13";
-			this->button13->UseVisualStyleBackColor = true;
+			this->die15->Location = System::Drawing::Point(314, 274);
+			this->die15->Name = L"die15";
+			this->die15->Size = System::Drawing::Size(74, 66);
+			this->die15->TabIndex = 14;
+			this->die15->Text = L"button13";
+			this->die15->UseVisualStyleBackColor = true;
 			// 
-			// button14
+			// die11
 			// 
-			this->button14->Location = System::Drawing::Point(314, 187);
-			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(74, 66);
-			this->button14->TabIndex = 15;
-			this->button14->Text = L"button14";
-			this->button14->UseVisualStyleBackColor = true;
+			this->die11->Location = System::Drawing::Point(314, 187);
+			this->die11->Name = L"die11";
+			this->die11->Size = System::Drawing::Size(74, 66);
+			this->die11->TabIndex = 15;
+			this->die11->Text = L"button14";
+			this->die11->UseVisualStyleBackColor = true;
 			// 
-			// button15
+			// die7
 			// 
-			this->button15->Location = System::Drawing::Point(314, 102);
-			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(74, 66);
-			this->button15->TabIndex = 16;
-			this->button15->Text = L"button15";
-			this->button15->UseVisualStyleBackColor = true;
+			this->die7->Location = System::Drawing::Point(314, 102);
+			this->die7->Name = L"die7";
+			this->die7->Size = System::Drawing::Size(74, 66);
+			this->die7->TabIndex = 16;
+			this->die7->Text = L"button15";
+			this->die7->UseVisualStyleBackColor = true;
 			// 
-			// button16
+			// die3
 			// 
-			this->button16->Location = System::Drawing::Point(314, 17);
-			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(74, 66);
-			this->button16->TabIndex = 17;
-			this->button16->Text = L"button16";
-			this->button16->UseVisualStyleBackColor = true;
+			this->die3->Location = System::Drawing::Point(314, 17);
+			this->die3->Name = L"die3";
+			this->die3->Size = System::Drawing::Size(74, 66);
+			this->die3->TabIndex = 17;
+			this->die3->Text = L"button16";
+			this->die3->UseVisualStyleBackColor = true;
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->panel1->Controls->Add(this->button3);
-			this->panel1->Controls->Add(this->button16);
-			this->panel1->Controls->Add(this->button1);
-			this->panel1->Controls->Add(this->button15);
-			this->panel1->Controls->Add(this->button2);
-			this->panel1->Controls->Add(this->button14);
-			this->panel1->Controls->Add(this->button4);
-			this->panel1->Controls->Add(this->button13);
-			this->panel1->Controls->Add(this->button5);
-			this->panel1->Controls->Add(this->button12);
-			this->panel1->Controls->Add(this->button6);
-			this->panel1->Controls->Add(this->button11);
-			this->panel1->Controls->Add(this->button7);
-			this->panel1->Controls->Add(this->button10);
-			this->panel1->Controls->Add(this->button8);
-			this->panel1->Controls->Add(this->button9);
+			this->panel1->Controls->Add(this->die2);
+			this->panel1->Controls->Add(this->die3);
+			this->panel1->Controls->Add(this->die0);
+			this->panel1->Controls->Add(this->die7);
+			this->panel1->Controls->Add(this->die1);
+			this->panel1->Controls->Add(this->die11);
+			this->panel1->Controls->Add(this->die4);
+			this->panel1->Controls->Add(this->die15);
+			this->panel1->Controls->Add(this->die5);
+			this->panel1->Controls->Add(this->die14);
+			this->panel1->Controls->Add(this->die6);
+			this->panel1->Controls->Add(this->die13);
+			this->panel1->Controls->Add(this->die8);
+			this->panel1->Controls->Add(this->die12);
+			this->panel1->Controls->Add(this->die9);
+			this->panel1->Controls->Add(this->die10);
 			this->panel1->Location = System::Drawing::Point(49, 71);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(411, 360);
@@ -376,18 +409,6 @@ namespace Project1 {
 			this->panel4->Size = System::Drawing::Size(147, 85);
 			this->panel4->TabIndex = 22;
 			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label3->Location = System::Drawing::Point(10, 35);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(74, 31);
-			this->label3->TabIndex = 20;
-			this->label3->Text = L"0000";
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
@@ -400,11 +421,23 @@ namespace Project1 {
 			this->label4->TabIndex = 21;
 			this->label4->Text = L"Score:";
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label3->Location = System::Drawing::Point(10, 35);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(74, 31);
+			this->label3->TabIndex = 20;
+			this->label3->Text = L"0000";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::DarkOrange;
+			this->BackColor = System::Drawing::Color::DarkGreen;
 			this->ClientSize = System::Drawing::Size(674, 566);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel3);

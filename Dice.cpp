@@ -4,6 +4,7 @@
 Dice::Dice(void)
 {
 	this->dice = gcnew array<Die^>(16);
+	this->populateDiceList();
 }
 
 void Dice::populateDiceList(){
