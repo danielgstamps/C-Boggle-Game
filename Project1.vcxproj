@@ -73,6 +73,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Die.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="WinCLI.cpp" />
@@ -85,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dice.h" />
     <ClInclude Include="Die.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
