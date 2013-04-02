@@ -2,13 +2,13 @@
 #include "Die.h"
 #include <time.h>
 
-Die::Die(void)
+Die::Die()
 {
-	this->letters = gcnew array<String^>(6);
+	this->letters = vector<string>(6);
 }
 
-Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, String^ letter5, String^ letter6){
-	this->letters = gcnew array<String^>(6);
+Die::Die(string letter1, string letter2, string letter3, string letter4, string letter5, string letter6){
+	this->letters = vector<string>(6);
 	letters[0] = letter1;
 	letters[1] = letter2;
 	letters[2] = letter3;
@@ -17,7 +17,7 @@ Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, Str
 	letters[5] = letter6;
 }
 
-String^ Die::getRandomLetter(){
+string Die::getRandomLetter(){
 	srand((unsigned) time(NULL));
 	int randomNumber = rand() % 6;
 	return letters[randomNumber];

@@ -90,7 +90,7 @@ namespace Project1 {
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADDED BY DANIEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	private: Dice dice;
+	private: Dice dice = Dice();
 	 // Want to create a Dice list, so that we can access them to set the text of each Die block to a random letter.
 
 

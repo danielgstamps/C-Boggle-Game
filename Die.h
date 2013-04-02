@@ -4,13 +4,13 @@
 using namespace System;
 using namespace std;
 
-ref class Die
+class Die
 {
 private:
-	array<String^>^ letters;
+	vector<string> letters;
 public:
-	Die(void);
-	Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, String^ letter5, String^ letter6);
-	String^ getRandomLetter();
+	Die();
+	Die(string letter1, string letter2, string letter3, string letter4, string letter5, string letter6);
+	string getRandomLetter();
 };
 

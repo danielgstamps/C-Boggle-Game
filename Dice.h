@@ -1,12 +1,12 @@
 #pragma once
 #include "Die.h"
-ref class Dice
+
+class Dice
 {
 private:
-	array<Die^>^ dice;
+	vector<Die> dice;
 public:
 	Dice(void);
 	void populateDiceList();
-	Die^ getElementAt(int index);
+	Die getElementAt(int index);
 };
-
