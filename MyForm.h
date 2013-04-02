@@ -81,23 +81,16 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  button17;
 	private: System::Windows::Forms::Panel^  panel3;
 	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::Panel^  panel4;
-	private: System::Windows::Forms::Label^  label4;
-	private: System::Windows::Forms::Label^  label3;
 
 
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADDED BY DANIEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<<<<<<< local
-	private: Dice dice = Dice();
-	 // Want to create a Dice list, so that we can access them to set the text of each Die block to a random letter.
-=======
-	private: Dice dice;
-<<<<<<< local
-	 // Want to create a Dice list, so that we can access them to set the text of each Die block to a random letter.
-=======
+
+
+
+
+
+	
+
+
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  startToolStripMenuItem;
@@ -107,9 +100,7 @@ namespace Project1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  howToToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem1;
-			 // Want to create a Dice list, so that we can access them to set the text of each Die block to a random letter.
->>>>>>> other
->>>>>>> other
+			
 
 
 
@@ -152,13 +143,9 @@ namespace Project1 {
 			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
-			this->panel4->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// die0
@@ -167,7 +154,6 @@ namespace Project1 {
 			this->die0->Name = L"die0";
 			this->die0->Size = System::Drawing::Size(74, 66);
 			this->die0->TabIndex = 0;
-			//this->die0->Text = L"button1";
 			this->die0->Text = L"button1";
 			this->die0->UseVisualStyleBackColor = true;
 			// 
@@ -259,7 +245,7 @@ namespace Project1 {
 			// 
 			this->richTextBox1->Location = System::Drawing::Point(484, 71);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(147, 268);
+			this->richTextBox1->Size = System::Drawing::Size(147, 360);
 			this->richTextBox1->TabIndex = 10;
 			this->richTextBox1->Text = L"";
 			// 
@@ -417,47 +403,12 @@ namespace Project1 {
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"test";
 			// 
-			// panel4
-			// 
-			this->panel4->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->panel4->Controls->Add(this->label4);
-			this->panel4->Controls->Add(this->label3);
-			this->panel4->Location = System::Drawing::Point(484, 345);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(147, 85);
-			this->panel4->TabIndex = 22;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label4->Location = System::Drawing::Point(3, 9);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(48, 15);
-			this->label4->TabIndex = 21;
-			this->label4->Text = L"Score:";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label3->Location = System::Drawing::Point(10, 35);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(74, 31);
-			this->label3->TabIndex = 20;
-			this->label3->Text = L"0000";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DarkGreen;
 			this->ClientSize = System::Drawing::Size(674, 566);
-			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -470,8 +421,6 @@ namespace Project1 {
 			this->panel2->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
-			this->panel4->ResumeLayout(false);
-			this->panel4->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
