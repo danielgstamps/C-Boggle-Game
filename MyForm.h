@@ -159,7 +159,7 @@ namespace Project1 {
 			// 
 			// die1
 			// 
-			this->die1->Location = System::Drawing::Point(121, 17);
+			this->die1->Location = System::Drawing::Point(104, 17);
 			this->die1->Name = L"die1";
 			this->die1->Size = System::Drawing::Size(74, 66);
 			this->die1->TabIndex = 1;
@@ -168,7 +168,7 @@ namespace Project1 {
 			// 
 			// die2
 			// 
-			this->die2->Location = System::Drawing::Point(219, 17);
+			this->die2->Location = System::Drawing::Point(184, 17);
 			this->die2->Name = L"die2";
 			this->die2->Size = System::Drawing::Size(74, 66);
 			this->die2->TabIndex = 2;
@@ -177,7 +177,7 @@ namespace Project1 {
 			// 
 			// die4
 			// 
-			this->die4->Location = System::Drawing::Point(24, 102);
+			this->die4->Location = System::Drawing::Point(24, 89);
 			this->die4->Name = L"die4";
 			this->die4->Size = System::Drawing::Size(74, 66);
 			this->die4->TabIndex = 3;
@@ -186,7 +186,7 @@ namespace Project1 {
 			// 
 			// die5
 			// 
-			this->die5->Location = System::Drawing::Point(121, 102);
+			this->die5->Location = System::Drawing::Point(104, 89);
 			this->die5->Name = L"die5";
 			this->die5->Size = System::Drawing::Size(74, 66);
 			this->die5->TabIndex = 4;
@@ -195,7 +195,7 @@ namespace Project1 {
 			// 
 			// die6
 			// 
-			this->die6->Location = System::Drawing::Point(219, 102);
+			this->die6->Location = System::Drawing::Point(184, 89);
 			this->die6->Name = L"die6";
 			this->die6->Size = System::Drawing::Size(74, 66);
 			this->die6->TabIndex = 5;
@@ -204,7 +204,7 @@ namespace Project1 {
 			// 
 			// die8
 			// 
-			this->die8->Location = System::Drawing::Point(24, 187);
+			this->die8->Location = System::Drawing::Point(24, 161);
 			this->die8->Name = L"die8";
 			this->die8->Size = System::Drawing::Size(74, 66);
 			this->die8->TabIndex = 6;
@@ -213,7 +213,7 @@ namespace Project1 {
 			// 
 			// die9
 			// 
-			this->die9->Location = System::Drawing::Point(121, 187);
+			this->die9->Location = System::Drawing::Point(104, 161);
 			this->die9->Name = L"die9";
 			this->die9->Size = System::Drawing::Size(74, 66);
 			this->die9->TabIndex = 7;
@@ -222,7 +222,7 @@ namespace Project1 {
 			// 
 			// die10
 			// 
-			this->die10->Location = System::Drawing::Point(219, 187);
+			this->die10->Location = System::Drawing::Point(184, 161);
 			this->die10->Name = L"die10";
 			this->die10->Size = System::Drawing::Size(74, 66);
 			this->die10->TabIndex = 8;
@@ -235,7 +235,7 @@ namespace Project1 {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::LightCyan;
-			this->label1->Location = System::Drawing::Point(166, 20);
+			this->label1->Location = System::Drawing::Point(121, 11);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(176, 39);
 			this->label1->TabIndex = 9;
@@ -243,15 +243,15 @@ namespace Project1 {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Location = System::Drawing::Point(484, 71);
+			this->richTextBox1->Location = System::Drawing::Point(393, 53);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(147, 360);
+			this->richTextBox1->Size = System::Drawing::Size(147, 318);
 			this->richTextBox1->TabIndex = 10;
 			this->richTextBox1->Text = L"";
 			// 
 			// die12
 			// 
-			this->die12->Location = System::Drawing::Point(24, 274);
+			this->die12->Location = System::Drawing::Point(24, 233);
 			this->die12->Name = L"die12";
 			this->die12->Size = System::Drawing::Size(74, 66);
 			this->die12->TabIndex = 11;
@@ -260,7 +260,7 @@ namespace Project1 {
 			// 
 			// die13
 			// 
-			this->die13->Location = System::Drawing::Point(121, 274);
+			this->die13->Location = System::Drawing::Point(104, 233);
 			this->die13->Name = L"die13";
 			this->die13->Size = System::Drawing::Size(74, 66);
 			this->die13->TabIndex = 12;
@@ -269,7 +269,7 @@ namespace Project1 {
 			// 
 			// die14
 			// 
-			this->die14->Location = System::Drawing::Point(219, 274);
+			this->die14->Location = System::Drawing::Point(184, 233);
 			this->die14->Name = L"die14";
 			this->die14->Size = System::Drawing::Size(74, 66);
 			this->die14->TabIndex = 13;
@@ -278,7 +278,7 @@ namespace Project1 {
 			// 
 			// die15
 			// 
-			this->die15->Location = System::Drawing::Point(314, 274);
+			this->die15->Location = System::Drawing::Point(264, 233);
 			this->die15->Name = L"die15";
 			this->die15->Size = System::Drawing::Size(74, 66);
 			this->die15->TabIndex = 14;
@@ -287,7 +287,7 @@ namespace Project1 {
 			// 
 			// die11
 			// 
-			this->die11->Location = System::Drawing::Point(314, 187);
+			this->die11->Location = System::Drawing::Point(264, 161);
 			this->die11->Name = L"die11";
 			this->die11->Size = System::Drawing::Size(74, 66);
 			this->die11->TabIndex = 15;
@@ -296,7 +296,7 @@ namespace Project1 {
 			// 
 			// die7
 			// 
-			this->die7->Location = System::Drawing::Point(314, 102);
+			this->die7->Location = System::Drawing::Point(264, 89);
 			this->die7->Name = L"die7";
 			this->die7->Size = System::Drawing::Size(74, 66);
 			this->die7->TabIndex = 16;
@@ -305,7 +305,7 @@ namespace Project1 {
 			// 
 			// die3
 			// 
-			this->die3->Location = System::Drawing::Point(314, 17);
+			this->die3->Location = System::Drawing::Point(264, 17);
 			this->die3->Name = L"die3";
 			this->die3->Size = System::Drawing::Size(74, 66);
 			this->die3->TabIndex = 17;
@@ -331,9 +331,9 @@ namespace Project1 {
 			this->panel1->Controls->Add(this->die12);
 			this->panel1->Controls->Add(this->die9);
 			this->panel1->Controls->Add(this->die10);
-			this->panel1->Location = System::Drawing::Point(49, 71);
+			this->panel1->Location = System::Drawing::Point(24, 53);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(411, 360);
+			this->panel1->Size = System::Drawing::Size(363, 318);
 			this->panel1->TabIndex = 18;
 			// 
 			// lblTimeName
@@ -354,7 +354,7 @@ namespace Project1 {
 			this->panel2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->panel2->Controls->Add(this->lblTime);
 			this->panel2->Controls->Add(this->lblTimeName);
-			this->panel2->Location = System::Drawing::Point(484, 437);
+			this->panel2->Location = System::Drawing::Point(393, 377);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(148, 95);
 			this->panel2->TabIndex = 20;
@@ -374,7 +374,7 @@ namespace Project1 {
 			// 
 			// button17
 			// 
-			this->button17->Location = System::Drawing::Point(314, 13);
+			this->button17->Location = System::Drawing::Point(264, 13);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(74, 66);
 			this->button17->TabIndex = 18;
@@ -386,9 +386,9 @@ namespace Project1 {
 			this->panel3->BackColor = System::Drawing::SystemColors::AppWorkspace;
 			this->panel3->Controls->Add(this->label2);
 			this->panel3->Controls->Add(this->button17);
-			this->panel3->Location = System::Drawing::Point(49, 437);
+			this->panel3->Location = System::Drawing::Point(24, 377);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(411, 95);
+			this->panel3->Size = System::Drawing::Size(363, 95);
 			this->panel3->TabIndex = 21;
 			// 
 			// label2
@@ -408,7 +408,7 @@ namespace Project1 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DarkGreen;
-			this->ClientSize = System::Drawing::Size(674, 566);
+			this->ClientSize = System::Drawing::Size(573, 488);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
