@@ -5,24 +5,20 @@
 
 Die::Die()
 {
-	this->letters = cliext::vector<String^>(6);
+	this->letters = gcnew array<String^>(6);
 }
 
 Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, String^ letter5, String^ letter6){
-	this->letters = cliext::vector<String^>(6);
-	letters.push_back(letter1);
-	letters.push_back(letter2);	
-	letters.push_back(letter3);
-	letters.push_back(letter4);
-	letters.push_back(letter5);
-	letters.push_back(letter6);
+	this->letters = gcnew array<String^>(6);
+	letters[0] = letter1;
+	letters[1] = letter2;
+	letters[2] = letter3;
+	letters[3] = letter4;
+	letters[4] = letter5;
+	letters[5] = letter6;
 }
 
 String^ Die::getRandomLetter(){
 	int randomNumber = rand() % 6;
-	for(int i = 0 ; i < randomNumber ; i++){
-		this->letters.pop_back();
-	}
-	String^ randomString = this->letters.end;
-	return randomString;
+	return this->letters[randomNumber];
 }

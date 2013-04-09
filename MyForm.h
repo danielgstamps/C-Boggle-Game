@@ -98,6 +98,7 @@ namespace Project1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			Dice^ dice = gcnew Dice();
 			this->die0 = (gcnew System::Windows::Forms::Button());
 			this->die1 = (gcnew System::Windows::Forms::Button());
 			this->die2 = (gcnew System::Windows::Forms::Button());
@@ -130,91 +131,92 @@ namespace Project1 {
 			// 
 			// die0
 			// 
-			Dice^ dice = gcnew Dice();
-			Die^ die = dice->getElementAt(0);
-
-		// Problem line
-			String^ lol = die->getRandomLetter();
-
-		//	String^ letter = dice->getElementAt(0)->getRandomLetter();
-
+			String^ letter0 = dice->getElementAt(0)->getRandomLetter();
 			this->die0->Location = System::Drawing::Point(24, 17);
 			this->die0->Name = L"die0";
 			this->die0->Size = System::Drawing::Size(74, 66);
 			this->die0->TabIndex = 0;
-			this->die0->Text = "letter";
+			this->die0->Text = letter0;
 			this->die0->UseVisualStyleBackColor = true;
 			// 
 			// die1
 			// 
+			String^ letter1 = dice->getElementAt(1)->getRandomLetter();
 			this->die1->Location = System::Drawing::Point(104, 17);
 			this->die1->Name = L"die1";
 			this->die1->Size = System::Drawing::Size(74, 66);
 			this->die1->TabIndex = 1;
-			this->die1->Text = L"button2";
+			this->die1->Text = letter1;
 			this->die1->UseVisualStyleBackColor = true;
 			// 
 			// die2
-			// 
+			//
+			String^ letter2 = dice->getElementAt(2)->getRandomLetter();
 			this->die2->Location = System::Drawing::Point(184, 17);
 			this->die2->Name = L"die2";
 			this->die2->Size = System::Drawing::Size(74, 66);
 			this->die2->TabIndex = 2;
-			this->die2->Text = L"button3";
+			this->die2->Text = letter2;
 			this->die2->UseVisualStyleBackColor = true;
 			// 
 			// die4
 			// 
+			String^ letter4 = dice->getElementAt(4)->getRandomLetter();
 			this->die4->Location = System::Drawing::Point(24, 89);
 			this->die4->Name = L"die4";
 			this->die4->Size = System::Drawing::Size(74, 66);
 			this->die4->TabIndex = 3;
-			this->die4->Text = L"button4";
+			this->die4->Text = letter4;
 			this->die4->UseVisualStyleBackColor = true;
 			// 
 			// die5
-			// 
+			//
+			String^ letter5 = dice->getElementAt(5)->getRandomLetter();
 			this->die5->Location = System::Drawing::Point(104, 89);
 			this->die5->Name = L"die5";
 			this->die5->Size = System::Drawing::Size(74, 66);
 			this->die5->TabIndex = 4;
-			this->die5->Text = L"button5";
+			this->die5->Text = letter5;
 			this->die5->UseVisualStyleBackColor = true;
 			// 
 			// die6
-			// 
+			//
+			String^ letter6 = dice->getElementAt(6)->getRandomLetter();
 			this->die6->Location = System::Drawing::Point(184, 89);
 			this->die6->Name = L"die6";
 			this->die6->Size = System::Drawing::Size(74, 66);
 			this->die6->TabIndex = 5;
-			this->die6->Text = L"button6";
+			this->die6->Text = letter6;
 			this->die6->UseVisualStyleBackColor = true;
 			// 
 			// die8
 			// 
+			String^ letter8 = dice->getElementAt(8)->getRandomLetter();
 			this->die8->Location = System::Drawing::Point(24, 161);
 			this->die8->Name = L"die8";
 			this->die8->Size = System::Drawing::Size(74, 66);
 			this->die8->TabIndex = 6;
-			this->die8->Text = L"button7";
+			this->die8->Text = letter8;
 			this->die8->UseVisualStyleBackColor = true;
 			// 
 			// die9
 			// 
+			String^ letter9 = dice->getElementAt(9)->getRandomLetter();
 			this->die9->Location = System::Drawing::Point(104, 161);
 			this->die9->Name = L"die9";
 			this->die9->Size = System::Drawing::Size(74, 66);
 			this->die9->TabIndex = 7;
-			this->die9->Text = L"button8";
+			this->die9->Text = letter9;
 			this->die9->UseVisualStyleBackColor = true;
 			// 
 			// die10
 			// 
+			String^ letter10 = dice->getElementAt(10)->getRandomLetter();
 			this->die10->Location = System::Drawing::Point(184, 161);
 			this->die10->Name = L"die10";
 			this->die10->Size = System::Drawing::Size(74, 66);
 			this->die10->TabIndex = 8;
-			this->die10->Text = L"button9";
+			this->die10->Text = letter10;
 			this->die10->UseVisualStyleBackColor = true;
 			// 
 			// label1
@@ -239,65 +241,72 @@ namespace Project1 {
 			// 
 			// die12
 			// 
+			String^ letter12 = dice->getElementAt(12)->getRandomLetter();
 			this->die12->Location = System::Drawing::Point(24, 233);
 			this->die12->Name = L"die12";
 			this->die12->Size = System::Drawing::Size(74, 66);
 			this->die12->TabIndex = 11;
-			this->die12->Text = L"button10";
+			this->die12->Text = letter12;
 			this->die12->UseVisualStyleBackColor = true;
 			// 
 			// die13
 			// 
+			String^ letter13 = dice->getElementAt(13)->getRandomLetter();
 			this->die13->Location = System::Drawing::Point(104, 233);
 			this->die13->Name = L"die13";
 			this->die13->Size = System::Drawing::Size(74, 66);
 			this->die13->TabIndex = 12;
-			this->die13->Text = L"button11";
+			this->die13->Text = letter13;
 			this->die13->UseVisualStyleBackColor = true;
 			// 
 			// die14
 			// 
+			String^ letter14 = dice->getElementAt(14)->getRandomLetter();
 			this->die14->Location = System::Drawing::Point(184, 233);
 			this->die14->Name = L"die14";
 			this->die14->Size = System::Drawing::Size(74, 66);
 			this->die14->TabIndex = 13;
-			this->die14->Text = L"button12";
+			this->die14->Text = letter14;
 			this->die14->UseVisualStyleBackColor = true;
 			// 
 			// die15
 			// 
+			String^ letter15 = dice->getElementAt(15)->getRandomLetter();
 			this->die15->Location = System::Drawing::Point(264, 233);
 			this->die15->Name = L"die15";
 			this->die15->Size = System::Drawing::Size(74, 66);
 			this->die15->TabIndex = 14;
-			this->die15->Text = L"button13";
+			this->die15->Text = letter15;
 			this->die15->UseVisualStyleBackColor = true;
 			// 
 			// die11
 			// 
+			String^ letter11 = dice->getElementAt(11)->getRandomLetter();
 			this->die11->Location = System::Drawing::Point(264, 161);
 			this->die11->Name = L"die11";
 			this->die11->Size = System::Drawing::Size(74, 66);
 			this->die11->TabIndex = 15;
-			this->die11->Text = L"button14";
+			this->die11->Text = letter11;
 			this->die11->UseVisualStyleBackColor = true;
 			// 
 			// die7
 			// 
+			String^ letter7 = dice->getElementAt(7)->getRandomLetter();
 			this->die7->Location = System::Drawing::Point(264, 89);
 			this->die7->Name = L"die7";
 			this->die7->Size = System::Drawing::Size(74, 66);
 			this->die7->TabIndex = 16;
-			this->die7->Text = L"button15";
+			this->die7->Text = letter7;
 			this->die7->UseVisualStyleBackColor = true;
 			// 
 			// die3
 			// 
+			String^ letter3 = dice->getElementAt(3)->getRandomLetter();
 			this->die3->Location = System::Drawing::Point(264, 17);
 			this->die3->Name = L"die3";
 			this->die3->Size = System::Drawing::Size(74, 66);
 			this->die3->TabIndex = 17;
-			this->die3->Text = L"button16";
+			this->die3->Text = letter3;
 			this->die3->UseVisualStyleBackColor = true;
 			// 
 			// panel1
