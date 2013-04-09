@@ -134,7 +134,7 @@ namespace Project1 {
 			Die^ die = dice->getElementAt(0);
 
 		// Problem line
-		//	String^ lol = die->getRandomLetter();
+			String^ lol = die->getRandomLetter();
 
 		//	String^ letter = dice->getElementAt(0)->getRandomLetter();
 

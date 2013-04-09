@@ -20,5 +20,9 @@ Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, Str
 
 String^ Die::getRandomLetter(){
 	int randomNumber = rand() % 6;
-	return letters.at(randomNumber);
+	for(int i = 0 ; i < randomNumber ; i++){
+		this->letters.pop_back();
+	}
+	String^ randomString = this->letters.end;
+	return randomString;
 }
