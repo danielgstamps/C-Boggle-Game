@@ -5,7 +5,7 @@
 ref class Dice
 {
 private:
-	cliext::vector<Die^> dice;
+	array<Die^>^ dice;
 public:
 	Dice(void);
 	void populateDiceList();
