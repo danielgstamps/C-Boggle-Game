@@ -35,9 +35,6 @@ namespace Project1 {
 			}
 		}
 
-
-	private: Dice^ dice;
-
 	private: System::Windows::Forms::Button^  die0;
 	private: System::Windows::Forms::Button^  die1;
 	private: System::Windows::Forms::Button^  die2;
@@ -133,13 +130,19 @@ namespace Project1 {
 			// 
 			// die0
 			// 
-			this->dice = gcnew Dice();
-			String^ letter = dice->getElementAt(0)->getRandomLetter();
+			Dice^ dice = gcnew Dice();
+			Die^ die = dice->getElementAt(0);
+
+		// Problem line
+		//	String^ lol = die->getRandomLetter();
+
+		//	String^ letter = dice->getElementAt(0)->getRandomLetter();
+
 			this->die0->Location = System::Drawing::Point(24, 17);
 			this->die0->Name = L"die0";
 			this->die0->Size = System::Drawing::Size(74, 66);
 			this->die0->TabIndex = 0;
-			this->die0->Text = letter;
+			this->die0->Text = "letter";
 			this->die0->UseVisualStyleBackColor = true;
 			// 
 			// die1

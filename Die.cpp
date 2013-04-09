@@ -19,7 +19,6 @@ Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, Str
 }
 
 String^ Die::getRandomLetter(){
-	srand((unsigned) time(NULL));
-	int randomNumber = rand() % 5;
+	int randomNumber = rand() % 6;
 	return letters.at(randomNumber);
 }
