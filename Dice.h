@@ -1,12 +1,13 @@
 #pragma once
+#include <cliext/vector>
 #include "Die.h"
 
-class Dice
+ref class Dice
 {
 private:
-	vector<Die> dice;
+	cliext::vector<Die^> dice;
 public:
 	Dice(void);
 	void populateDiceList();
-	Die getElementAt(int index);
+	Die^ getElementAt(int index);
 };

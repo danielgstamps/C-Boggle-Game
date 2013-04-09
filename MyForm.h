@@ -34,6 +34,10 @@ namespace Project1 {
 				delete components;
 			}
 		}
+
+
+	private: Dice^ dice;
+
 	private: System::Windows::Forms::Button^  die0;
 	private: System::Windows::Forms::Button^  die1;
 	private: System::Windows::Forms::Button^  die2;
@@ -43,19 +47,7 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  die8;
 	private: System::Windows::Forms::Button^  die9;
 	private: System::Windows::Forms::Button^  die10;
-	protected: 
-
-
-
-	protected: 
-
-	protected: 
-
-
-
-
-
-
+ 
 
 
 	private: System::Windows::Forms::Label^  label1;
@@ -85,12 +77,6 @@ namespace Project1 {
 
 
 
-
-
-
-	
-
-
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  startToolStripMenuItem;
@@ -101,9 +87,6 @@ namespace Project1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  howToToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem1;
 			
-
-
-
 
 	private:
 		/// <summary>
@@ -150,11 +133,13 @@ namespace Project1 {
 			// 
 			// die0
 			// 
+			this->dice = gcnew Dice();
+			String^ letter = dice->getElementAt(0)->getRandomLetter();
 			this->die0->Location = System::Drawing::Point(24, 17);
 			this->die0->Name = L"die0";
 			this->die0->Size = System::Drawing::Size(74, 66);
 			this->die0->TabIndex = 0;
-			this->die0->Text = L"button1";
+			this->die0->Text = letter;
 			this->die0->UseVisualStyleBackColor = true;
 			// 
 			// die1

@@ -1,24 +1,25 @@
 
 #include "Die.h"
 #include <time.h>
+#include <cliext/vector>
 
 Die::Die()
 {
-	this->letters = vector<string>(6);
+	this->letters = cliext::vector<String^>(6);
 }
 
-Die::Die(string letter1, string letter2, string letter3, string letter4, string letter5, string letter6){
-	this->letters = vector<string>(6);
-	letters[0] = letter1;
-	letters[1] = letter2;
-	letters[2] = letter3;
-	letters[3] = letter4;
-	letters[4] = letter5;
-	letters[5] = letter6;
+Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, String^ letter5, String^ letter6){
+	this->letters = cliext::vector<String^>(6);
+	letters.push_back(letter1);
+	letters.push_back(letter2);	
+	letters.push_back(letter3);
+	letters.push_back(letter4);
+	letters.push_back(letter5);
+	letters.push_back(letter6);
 }
 
-string Die::getRandomLetter(){
+String^ Die::getRandomLetter(){
 	srand((unsigned) time(NULL));
-	int randomNumber = rand() % 6;
-	return letters[randomNumber];
+	int randomNumber = rand() % 5;
+	return letters.at(randomNumber);
 }

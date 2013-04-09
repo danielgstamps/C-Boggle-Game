@@ -1,16 +1,16 @@
 #pragma once
 #pragma once
-#include <vector>
+#include <cliext/vector>
 using namespace System;
 using namespace std;
 
-class Die
+ref class Die
 {
 private:
-	vector<string> letters;
+	cliext::vector<String^> letters;
 public:
 	Die();
-	Die(string letter1, string letter2, string letter3, string letter4, string letter5, string letter6);
-	string getRandomLetter();
+	Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, String^ letter5, String^ letter6);
+	String^ getRandomLetter();
 };
 
