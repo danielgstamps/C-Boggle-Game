@@ -409,7 +409,7 @@ namespace Project1 {
 			///
 			Dictionary dictionary = Dictionary();
 			dictionary.loadDictionary();
-			bool find = dictionary.wordExist("hello");
+			bool find = dictionary.wordExist("adsfasdfffddasdfaff");
 			
 			if(find){
 				this->label2->Text = L"found";
