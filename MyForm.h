@@ -1,5 +1,6 @@
 #pragma once
 #include "Dice.h"
+#include "Dictionary.h"
 namespace Project1 {
 
 	using namespace System;
@@ -17,6 +18,8 @@ namespace Project1 {
 	public:
 		MyForm(void)
 		{
+			
+			
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -398,7 +401,22 @@ namespace Project1 {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(59, 31);
 			this->label2->TabIndex = 20;
-			this->label2->Text = L"test";
+
+			///
+			///
+			///Used this for testing
+			///
+			///
+			Dictionary dictionary = Dictionary();
+			dictionary.loadDictionary();
+			bool find = dictionary.wordExist("hello");
+			
+			if(find){
+				this->label2->Text = L"found";
+			}else{
+				this->label2->Text = L"nope";
+			}
+			
 			// 
 			// MyForm
 			// 
