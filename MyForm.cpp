@@ -43,16 +43,20 @@ namespace Project1{
 		this->SuspendLayout();
 		// 
 		// die0
-		//
+		// 
+		this->die0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die0->Location = System::Drawing::Point(24, 17);
 		this->die0->Name = L"die0";
 		this->die0->Size = System::Drawing::Size(74, 66);
 		this->die0->TabIndex = 0;
 		this->die0->UseVisualStyleBackColor = true;
 		this->die0->Click += gcnew System::EventHandler(this, &MyForm::die0_Click);
-		// 			
+		// 
 		// die1
 		// 
+		this->die1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die1->Location = System::Drawing::Point(104, 17);
 		this->die1->Name = L"die1";
 		this->die1->Size = System::Drawing::Size(74, 66);
@@ -61,115 +65,73 @@ namespace Project1{
 		// 
 		// die2
 		// 
+		this->die2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die2->Location = System::Drawing::Point(184, 17);
 		this->die2->Name = L"die2";
 		this->die2->Size = System::Drawing::Size(74, 66);
 		this->die2->TabIndex = 2;
 		this->die2->UseVisualStyleBackColor = true;
 		// 
-		// die3
-		// 
-		this->die3->Location = System::Drawing::Point(264, 17);
-		this->die3->Name = L"die3";
-		this->die3->Size = System::Drawing::Size(74, 66);
-		this->die3->TabIndex = 17;
-		this->die3->UseVisualStyleBackColor = true;
-		// 
 		// die4
 		// 
+		this->die4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die4->Location = System::Drawing::Point(24, 89);
 		this->die4->Name = L"die4";
 		this->die4->Size = System::Drawing::Size(74, 66);
-		this->die4->TabIndex = 3;
+		this->die4->TabIndex = 4;
 		this->die4->UseVisualStyleBackColor = true;
 		// 
 		// die5
 		// 
+		this->die5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die5->Location = System::Drawing::Point(104, 89);
 		this->die5->Name = L"die5";
 		this->die5->Size = System::Drawing::Size(74, 66);
-		this->die5->TabIndex = 4;
+		this->die5->TabIndex = 5;
 		this->die5->UseVisualStyleBackColor = true;
 		// 
 		// die6
 		// 
+		this->die6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die6->Location = System::Drawing::Point(184, 89);
 		this->die6->Name = L"die6";
 		this->die6->Size = System::Drawing::Size(74, 66);
-		this->die6->TabIndex = 5;
+		this->die6->TabIndex = 6;
 		this->die6->UseVisualStyleBackColor = true;
-		// 
-		// die7
-		// 
-		this->die7->Location = System::Drawing::Point(264, 89);
-		this->die7->Name = L"die7";
-		this->die7->Size = System::Drawing::Size(74, 66);
-		this->die7->TabIndex = 16;
-		this->die7->UseVisualStyleBackColor = true;
 		// 
 		// die8
 		// 
+		this->die8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die8->Location = System::Drawing::Point(24, 161);
 		this->die8->Name = L"die8";
 		this->die8->Size = System::Drawing::Size(74, 66);
-		this->die8->TabIndex = 6;
+		this->die8->TabIndex = 8;
 		this->die8->UseVisualStyleBackColor = true;
 		// 
 		// die9
 		// 
+		this->die9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die9->Location = System::Drawing::Point(104, 161);
 		this->die9->Name = L"die9";
 		this->die9->Size = System::Drawing::Size(74, 66);
-		this->die9->TabIndex = 7;
+		this->die9->TabIndex = 9;
 		this->die9->UseVisualStyleBackColor = true;
 		// 
 		// die10
 		// 
+		this->die10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->die10->Location = System::Drawing::Point(184, 161);
 		this->die10->Name = L"die10";
 		this->die10->Size = System::Drawing::Size(74, 66);
-		this->die10->TabIndex = 8;
+		this->die10->TabIndex = 10;
 		this->die10->UseVisualStyleBackColor = true;
-		// 
-		// die11
-		// 
-		this->die11->Location = System::Drawing::Point(264, 161);
-		this->die11->Name = L"die11";
-		this->die11->Size = System::Drawing::Size(74, 66);
-		this->die11->TabIndex = 15;
-		this->die11->UseVisualStyleBackColor = true;
-		// 
-		// die12
-		// 
-		this->die12->Location = System::Drawing::Point(24, 233);
-		this->die12->Name = L"die12";
-		this->die12->Size = System::Drawing::Size(74, 66);
-		this->die12->TabIndex = 11;
-		this->die12->UseVisualStyleBackColor = true;
-		// 
-		// die13
-		// 
-		this->die13->Location = System::Drawing::Point(104, 233);
-		this->die13->Name = L"die13";
-		this->die13->Size = System::Drawing::Size(74, 66);
-		this->die13->TabIndex = 12;
-		this->die13->UseVisualStyleBackColor = true;
-		// 
-		// die14
-		// 
-		this->die14->Location = System::Drawing::Point(184, 233);
-		this->die14->Name = L"die14";
-		this->die14->Size = System::Drawing::Size(74, 66);
-		this->die14->TabIndex = 13;
-		this->die14->UseVisualStyleBackColor = true;
-		// 
-		// die15
-		// 
-		this->die15->Location = System::Drawing::Point(264, 233);
-		this->die15->Name = L"die15";
-		this->die15->Size = System::Drawing::Size(74, 66);
-		this->die15->TabIndex = 14;
-		this->die15->UseVisualStyleBackColor = true;
 		// 
 		// label1
 		// 
@@ -185,15 +147,85 @@ namespace Project1{
 		// 
 		// richTextBox1
 		// 
-		this->richTextBox1->Location = System::Drawing::Point(393, 53);
+		this->richTextBox1->Location = System::Drawing::Point(393, 70);
 		this->richTextBox1->Name = L"richTextBox1";
-		this->richTextBox1->Size = System::Drawing::Size(147, 318);
+		this->richTextBox1->Size = System::Drawing::Size(147, 301);
 		this->richTextBox1->TabIndex = 10;
 		this->richTextBox1->Text = L"";
 		// 
+		// die12
+		// 
+		this->die12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die12->Location = System::Drawing::Point(24, 233);
+		this->die12->Name = L"die12";
+		this->die12->Size = System::Drawing::Size(74, 66);
+		this->die12->TabIndex = 12;
+		this->die12->UseVisualStyleBackColor = true;
+		// 
+		// die13
+		// 
+		this->die13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die13->Location = System::Drawing::Point(104, 233);
+		this->die13->Name = L"die13";
+		this->die13->Size = System::Drawing::Size(74, 66);
+		this->die13->TabIndex = 13;
+		this->die13->UseVisualStyleBackColor = true;
+		// 
+		// die14
+		// 
+		this->die14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die14->Location = System::Drawing::Point(184, 233);
+		this->die14->Name = L"die14";
+		this->die14->Size = System::Drawing::Size(74, 66);
+		this->die14->TabIndex = 14;
+		this->die14->UseVisualStyleBackColor = true;
+		// 
+		// die15
+		// 
+		this->die15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die15->Location = System::Drawing::Point(264, 233);
+		this->die15->Name = L"die15";
+		this->die15->Size = System::Drawing::Size(74, 66);
+		this->die15->TabIndex = 15;
+		this->die15->UseVisualStyleBackColor = true;
+		// 
+		// die11
+		// 
+		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die11->Location = System::Drawing::Point(264, 161);
+		this->die11->Name = L"die11";
+		this->die11->Size = System::Drawing::Size(74, 66);
+		this->die11->TabIndex = 11;
+		this->die11->UseVisualStyleBackColor = true;
+		// 
+		// die7
+		// 
+		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die7->Location = System::Drawing::Point(264, 89);
+		this->die7->Name = L"die7";
+		this->die7->Size = System::Drawing::Size(74, 66);
+		this->die7->TabIndex = 7;
+		this->die7->UseVisualStyleBackColor = true;
+		// 
+		// die3
+		// 
+		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die3->Location = System::Drawing::Point(264, 17);
+		this->die3->Name = L"die3";
+		this->die3->Size = System::Drawing::Size(74, 66);
+		this->die3->TabIndex = 3;
+		this->die3->UseVisualStyleBackColor = true;
+		// 
 		// panel1
 		// 
-		this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+		this->panel1->BackColor = System::Drawing::Color::DarkGreen;
 		this->panel1->Controls->Add(this->die2);
 		this->panel1->Controls->Add(this->die3);
 		this->panel1->Controls->Add(this->die0);
@@ -218,12 +250,12 @@ namespace Project1{
 		// lblTimeName
 		// 
 		this->lblTimeName->AutoSize = true;
-		this->lblTimeName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
+		this->lblTimeName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 		this->lblTimeName->ForeColor = System::Drawing::SystemColors::Control;
-		this->lblTimeName->Location = System::Drawing::Point(3, 13);
+		this->lblTimeName->Location = System::Drawing::Point(41, 6);
 		this->lblTimeName->Name = L"lblTimeName";
-		this->lblTimeName->Size = System::Drawing::Size(43, 15);
+		this->lblTimeName->Size = System::Drawing::Size(60, 22);
 		this->lblTimeName->TabIndex = 19;
 		this->lblTimeName->Text = L"Time:";
 		// 
@@ -240,17 +272,19 @@ namespace Project1{
 		// lblTime
 		// 
 		this->lblTime->AutoSize = true;
-		this->lblTime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->lblTime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->lblTime->ForeColor = System::Drawing::SystemColors::ButtonFace;
-		this->lblTime->Location = System::Drawing::Point(10, 39);
+		this->lblTime->Location = System::Drawing::Point(17, 30);
 		this->lblTime->Name = L"lblTime";
-		this->lblTime->Size = System::Drawing::Size(67, 31);
+		this->lblTime->Size = System::Drawing::Size(114, 54);
 		this->lblTime->TabIndex = 0;
 		this->lblTime->Text = L"3.00";
 		// 
 		// button17
 		// 
+		this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->button17->Location = System::Drawing::Point(264, 13);
 		this->button17->Name = L"button17";
 		this->button17->Size = System::Drawing::Size(74, 66);
@@ -299,6 +333,7 @@ namespace Project1{
 		this->panel3->PerformLayout();
 		this->ResumeLayout(false);
 		this->PerformLayout();
+
 	}
 
 	void MyForm::initializeDice(){
