@@ -46,101 +46,110 @@ namespace Project1{
 		// 
 		// die0
 		// 
+		this->die0->BackColor = System::Drawing::Color::DarkGray;
 		this->die0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die0->Location = System::Drawing::Point(24, 17);
 		this->die0->Name = L"die0";
 		this->die0->Size = System::Drawing::Size(74, 66);
 		this->die0->TabIndex = 0;
-		this->die0->UseVisualStyleBackColor = true;
+		this->die0->UseVisualStyleBackColor = false;
 		this->die0->Click += gcnew System::EventHandler(this, &MyForm::die0_Click);
 		// 
 		// die1
 		// 
+		this->die1->BackColor = System::Drawing::Color::DarkGray;
 		this->die1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die1->Location = System::Drawing::Point(104, 17);
 		this->die1->Name = L"die1";
 		this->die1->Size = System::Drawing::Size(74, 66);
 		this->die1->TabIndex = 1;
-		this->die1->UseVisualStyleBackColor = true;
+		this->die1->UseVisualStyleBackColor = false;
 		this->die1->Click += gcnew System::EventHandler(this, &MyForm::die1_Click);
 		// 
 		// die2
 		// 
+		this->die2->BackColor = System::Drawing::Color::DarkGray;
 		this->die2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die2->Location = System::Drawing::Point(184, 17);
 		this->die2->Name = L"die2";
 		this->die2->Size = System::Drawing::Size(74, 66);
 		this->die2->TabIndex = 2;
-		this->die2->UseVisualStyleBackColor = true;
+		this->die2->UseVisualStyleBackColor = false;
 		this->die2->Click += gcnew System::EventHandler(this, &MyForm::die2_Click);
 		// 
 		// die4
 		// 
+		this->die4->BackColor = System::Drawing::Color::DarkGray;
 		this->die4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die4->Location = System::Drawing::Point(24, 89);
 		this->die4->Name = L"die4";
 		this->die4->Size = System::Drawing::Size(74, 66);
 		this->die4->TabIndex = 4;
-		this->die4->UseVisualStyleBackColor = true;
+		this->die4->UseVisualStyleBackColor = false;
 		this->die4->Click += gcnew System::EventHandler(this, &MyForm::die4_Click);
 		// 
 		// die5
 		// 
+		this->die5->BackColor = System::Drawing::Color::DarkGray;
 		this->die5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die5->Location = System::Drawing::Point(104, 89);
 		this->die5->Name = L"die5";
 		this->die5->Size = System::Drawing::Size(74, 66);
 		this->die5->TabIndex = 5;
-		this->die5->UseVisualStyleBackColor = true;
+		this->die5->UseVisualStyleBackColor = false;
 		this->die5->Click += gcnew System::EventHandler(this, &MyForm::die5_Click);
 		// 
 		// die6
 		// 
+		this->die6->BackColor = System::Drawing::Color::DarkGray;
 		this->die6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die6->Location = System::Drawing::Point(184, 89);
 		this->die6->Name = L"die6";
 		this->die6->Size = System::Drawing::Size(74, 66);
 		this->die6->TabIndex = 6;
-		this->die6->UseVisualStyleBackColor = true;
+		this->die6->UseVisualStyleBackColor = false;
 		this->die6->Click += gcnew System::EventHandler(this, &MyForm::die6_Click);
 		// 
 		// die8
 		// 
+		this->die8->BackColor = System::Drawing::Color::DarkGray;
 		this->die8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die8->Location = System::Drawing::Point(24, 161);
 		this->die8->Name = L"die8";
 		this->die8->Size = System::Drawing::Size(74, 66);
 		this->die8->TabIndex = 8;
-		this->die8->UseVisualStyleBackColor = true;
+		this->die8->UseVisualStyleBackColor = false;
 		this->die8->Click += gcnew System::EventHandler(this, &MyForm::die8_Click);
 		// 
 		// die9
 		// 
+		this->die9->BackColor = System::Drawing::Color::DarkGray;
 		this->die9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die9->Location = System::Drawing::Point(104, 161);
 		this->die9->Name = L"die9";
 		this->die9->Size = System::Drawing::Size(74, 66);
 		this->die9->TabIndex = 9;
-		this->die9->UseVisualStyleBackColor = true;
+		this->die9->UseVisualStyleBackColor = false;
 		this->die9->Click += gcnew System::EventHandler(this, &MyForm::die9_Click);
 		// 
 		// die10
 		// 
+		this->die10->BackColor = System::Drawing::Color::DarkGray;
 		this->die10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die10->Location = System::Drawing::Point(184, 161);
 		this->die10->Name = L"die10";
 		this->die10->Size = System::Drawing::Size(74, 66);
 		this->die10->TabIndex = 10;
-		this->die10->UseVisualStyleBackColor = true;
+		this->die10->UseVisualStyleBackColor = false;
 		this->die10->Click += gcnew System::EventHandler(this, &MyForm::die10_Click);
 		// 
 		// label1
@@ -165,84 +174,91 @@ namespace Project1{
 		// 
 		// die12
 		// 
+		this->die12->BackColor = System::Drawing::Color::DarkGray;
 		this->die12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die12->Location = System::Drawing::Point(24, 233);
 		this->die12->Name = L"die12";
 		this->die12->Size = System::Drawing::Size(74, 66);
 		this->die12->TabIndex = 12;
-		this->die12->UseVisualStyleBackColor = true;
+		this->die12->UseVisualStyleBackColor = false;
 		this->die12->Click += gcnew System::EventHandler(this, &MyForm::die12_Click);
 		// 
 		// die13
 		// 
+		this->die13->BackColor = System::Drawing::Color::DarkGray;
 		this->die13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die13->Location = System::Drawing::Point(104, 233);
 		this->die13->Name = L"die13";
 		this->die13->Size = System::Drawing::Size(74, 66);
 		this->die13->TabIndex = 13;
-		this->die13->UseVisualStyleBackColor = true;
+		this->die13->UseVisualStyleBackColor = false;
 		this->die13->Click += gcnew System::EventHandler(this, &MyForm::die13_Click);
 		// 
 		// die14
 		// 
+		this->die14->BackColor = System::Drawing::Color::DarkGray;
 		this->die14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die14->Location = System::Drawing::Point(184, 233);
 		this->die14->Name = L"die14";
 		this->die14->Size = System::Drawing::Size(74, 66);
 		this->die14->TabIndex = 14;
-		this->die14->UseVisualStyleBackColor = true;
+		this->die14->UseVisualStyleBackColor = false;
 		this->die14->Click += gcnew System::EventHandler(this, &MyForm::die14_Click);
 		// 
 		// die15
 		// 
+		this->die15->BackColor = System::Drawing::Color::DarkGray;
 		this->die15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die15->Location = System::Drawing::Point(264, 233);
 		this->die15->Name = L"die15";
 		this->die15->Size = System::Drawing::Size(74, 66);
 		this->die15->TabIndex = 15;
-		this->die15->UseVisualStyleBackColor = true;
+		this->die15->UseVisualStyleBackColor = false;
 		this->die15->Click += gcnew System::EventHandler(this, &MyForm::die15_Click);
 		// 
 		// die11
 		// 
+		this->die11->BackColor = System::Drawing::Color::DarkGray;
 		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die11->Location = System::Drawing::Point(264, 161);
 		this->die11->Name = L"die11";
 		this->die11->Size = System::Drawing::Size(74, 66);
 		this->die11->TabIndex = 11;
-		this->die11->UseVisualStyleBackColor = true;
+		this->die11->UseVisualStyleBackColor = false;
 		this->die11->Click += gcnew System::EventHandler(this, &MyForm::die11_Click);
 		// 
 		// die7
 		// 
+		this->die7->BackColor = System::Drawing::Color::DarkGray;
 		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die7->Location = System::Drawing::Point(264, 89);
 		this->die7->Name = L"die7";
 		this->die7->Size = System::Drawing::Size(74, 66);
 		this->die7->TabIndex = 7;
-		this->die7->UseVisualStyleBackColor = true;
+		this->die7->UseVisualStyleBackColor = false;
 		this->die7->Click += gcnew System::EventHandler(this, &MyForm::die7_Click);
 		// 
 		// die3
 		// 
+		this->die3->BackColor = System::Drawing::Color::DarkGray;
 		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die3->Location = System::Drawing::Point(264, 17);
 		this->die3->Name = L"die3";
 		this->die3->Size = System::Drawing::Size(74, 66);
 		this->die3->TabIndex = 3;
-		this->die3->UseVisualStyleBackColor = true;
+		this->die3->UseVisualStyleBackColor = false;
 		this->die3->Click += gcnew System::EventHandler(this, &MyForm::die3_Click);
 		// 
 		// panel1
 		// 
-		this->panel1->BackColor = System::Drawing::Color::DarkGreen;
+		this->panel1->BackColor = System::Drawing::Color::SteelBlue;
 		this->panel1->Controls->Add(this->die2);
 		this->panel1->Controls->Add(this->die3);
 		this->panel1->Controls->Add(this->die0);
@@ -308,6 +324,7 @@ namespace Project1{
 		this->button17->TabIndex = 18;
 		this->button17->Text = L"Submit";
 		this->button17->UseVisualStyleBackColor = true;
+		this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
 		// 
 		// panel3
 		// 
@@ -361,7 +378,7 @@ namespace Project1{
 		// 
 		this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 		this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-		this->BackColor = System::Drawing::Color::DarkGreen;
+		this->BackColor = System::Drawing::Color::SteelBlue;
 		this->ClientSize = System::Drawing::Size(573, 488);
 		this->Controls->Add(this->panel3);
 		this->Controls->Add(this->panel2);
@@ -369,7 +386,7 @@ namespace Project1{
 		this->Controls->Add(this->richTextBox1);
 		this->Controls->Add(this->label1);
 		this->Name = L"MyForm";
-		this->Text = L"Group9 Boggle";
+		this->Text = L"Boggle by Daniel Stamps and Bryan Patterson";
 		this->panel1->ResumeLayout(false);
 		this->panel2->ResumeLayout(false);
 		this->panel2->PerformLayout();
@@ -381,6 +398,7 @@ namespace Project1{
 	} // End of initializeComponent
 
 	void MyForm::initializeDice(){
+		enableButtons();
 		this->die0->Text = this->dice->getElementAt(0)->getRandomLetter();
 		this->die1->Text = this->dice->getElementAt(1)->getRandomLetter();
 		this->die2->Text = this->dice->getElementAt(2)->getRandomLetter();
@@ -397,24 +415,75 @@ namespace Project1{
 		this->die13->Text = this->dice->getElementAt(13)->getRandomLetter();
 		this->die14->Text = this->dice->getElementAt(14)->getRandomLetter();
 		this->die15->Text = this->dice->getElementAt(15)->getRandomLetter();
+
+	}
+
+	void MyForm::enableButtons(){
+		this->die0->Enabled=true;
+		this->die1->Enabled=true;
+		this->die2->Enabled=true;
+		this->die3->Enabled=true;
+		this->die4->Enabled=true;
+		this->die5->Enabled=true;
+		this->die6->Enabled=true;
+		this->die7->Enabled=true;
+		this->die8->Enabled=true;
+		this->die9->Enabled=true;
+		this->die10->Enabled=true;
+		this->die11->Enabled=true;
+		this->die12->Enabled=true;
+		this->die13->Enabled=true;
+		this->die14->Enabled=true;
+		this->die15->Enabled=true;
+
+		this->die0->BackColor=Color::White;
+		this->die1->BackColor=Color::White;
+		this->die2->BackColor=Color::White;
+		this->die3->BackColor=Color::White;
+		this->die4->BackColor=Color::White;
+		this->die5->BackColor=Color::White;
+		this->die6->BackColor=Color::White;
+		this->die7->BackColor=Color::White;
+		this->die8->BackColor=Color::White;
+		this->die9->BackColor=Color::White;
+		this->die10->BackColor=Color::White;
+		this->die11->BackColor=Color::White;
+		this->die12->BackColor=Color::White;
+		this->die13->BackColor=Color::White;
+		this->die14->BackColor=Color::White;
+		this->die15->BackColor=Color::White;
 	}
 
 	void MyForm::cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner){
-		itSelf->Enabled = false;
+		disableAllButtons();
 		sideOne->Enabled = true;
 		sideTwo->Enabled = true;
 		corner->Enabled = true;
+
+		itSelf->BackColor = Color::DarkOrange; 
+		sideOne->BackColor = Color::White;
+		sideTwo->BackColor = Color::White;
+		corner->BackColor = Color::White;
+		
 	}
 	void MyForm::insideEdgeDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ cornerOne, Button^ cornerTwo){
-		itSelf->Enabled = false;
+		disableAllButtons();
 		sideOne->Enabled = true;
 		sideTwo->Enabled = true;
 		sideThree->Enabled = true;
 		cornerOne->Enabled = true;
 		cornerTwo->Enabled = true;
+
+		itSelf->BackColor = Color::DarkOrange; 
+		sideOne->BackColor = Color::White;
+		sideTwo->BackColor = Color::White;
+		sideThree->BackColor = Color::White;
+		cornerOne->BackColor = Color::White;
+		cornerTwo->BackColor = Color::White;
+
 	}
 	void MyForm::insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour){
-		itSelf->Enabled = false;
+		disableAllButtons();
 		sideOne->Enabled = true;
 		sideTwo->Enabled = true;
 		sideThree->Enabled = true;
@@ -423,6 +492,16 @@ namespace Project1{
 		cornerTwo->Enabled = true;
 		cornerThree->Enabled = true;
 		cornerFour->Enabled= true;
+
+		itSelf->BackColor = Color::DarkOrange; 
+		sideOne->BackColor = Color::White;
+		sideTwo->BackColor = Color::White;
+		sideThree->BackColor = Color::White;
+		sideFour->BackColor = Color::White;
+		cornerOne->BackColor = Color::White;
+		cornerTwo->BackColor = Color::White;
+		cornerThree->BackColor = Color::White;
+		cornerFour->BackColor = Color::White;
 	}
 	void MyForm::disableAllButtons(){
 		this->die0->Enabled=false;
@@ -441,6 +520,23 @@ namespace Project1{
 		this->die13->Enabled=false;
 		this->die14->Enabled=false;
 		this->die15->Enabled=false;
+
+		this->die0->BackColor=Color::DarkGray;
+		this->die1->BackColor=Color::DarkGray;
+		this->die2->BackColor=Color::DarkGray;
+		this->die3->BackColor=Color::DarkGray;
+		this->die4->BackColor=Color::DarkGray;
+		this->die5->BackColor=Color::DarkGray;
+		this->die6->BackColor=Color::DarkGray;
+		this->die7->BackColor=Color::DarkGray;
+		this->die8->BackColor=Color::DarkGray;
+		this->die9->BackColor=Color::DarkGray;
+		this->die10->BackColor=Color::DarkGray;
+		this->die11->BackColor=Color::DarkGray;
+		this->die12->BackColor=Color::DarkGray;
+		this->die13->BackColor=Color::DarkGray;
+		this->die14->BackColor=Color::DarkGray;
+		this->die15->BackColor=Color::DarkGray;
 	}
 
 	void MyForm::disableButtonsClicked(){
@@ -456,96 +552,119 @@ namespace Project1{
 	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die0->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		cornerDie(this->die0, this->die1, this->die4, this->die5);
 	}
 
 	// Die 1
 	System::Void MyForm::die1_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die1->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die1, this->die2, this->die5, this->die0, this->die6, this->die4);
 	}
 
 	// Die 2
 	System::Void MyForm::die2_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die2->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die2, this->die3, this->die6, this->die1, this->die7, this->die5);
 	}
 
 	// Die 3
 	System::Void MyForm::die3_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die3->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		cornerDie(this->die3, this->die2, this->die7, this->die6);
 	}
 
 	// Die 4
 	System::Void MyForm::die4_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die4->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die4, this->die0, this->die5, this->die8, this->die1, this->die9);
 	}
 
 	// Die 5
 	System::Void MyForm::die5_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die5->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideDie(this->die5, this->die1, this->die6, this->die9, this->die4, this->die2, this->die10, this->die8, this->die0);
 	}
 
 	// Die 6
 	System::Void MyForm::die6_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die6->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideDie(this->die6, this->die2, this->die7, this->die10, this->die5, this->die3, this->die11, this->die9, this->die1);
 	}
 
 	// Die 7
 	System::Void MyForm::die7_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die7->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die7, this->die3, this->die11, this->die6, this->die10, this->die2);
 	}
 
 	// Die 8
 	System::Void MyForm::die8_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die8->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die8, this->die4, this->die9, this->die12, this->die5, this->die13);
 	}
 
 	// Die 9
 	System::Void MyForm::die9_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die9->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideDie(this->die9, this->die5, this->die10, this->die13, this->die8, this->die6, this->die14, this->die12, this->die4);
 	}
 
 	// Die 10
 	System::Void MyForm::die10_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die10->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideDie(this->die10, this->die6, this->die11, this->die14, this->die9, this->die7, this->die15, this->die13, this->die5);
 	}
 
 	// Die 11
 	System::Void MyForm::die11_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die11->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die11, this->die7, this->die15, this->die10, this->die14, this->die6);
 	}
 
 	// Die 12
 	System::Void MyForm::die12_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die12->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		cornerDie(this->die12, this->die8, this->die13, this->die9);
 	}
 
 	// Die 13
 	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die13->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die13, this->die9, this->die14, this->die12, this->die8, this->die10);
 	}
 
 	// Die 14
 	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die14->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		insideEdgeDie(this->die14, this->die10, this->die15, this->die13, this->die9, this->die11);
 	}
 
 	// Die 15
 	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die15->Text;
 		this->userWordLabel->Text = this->userWordChoice;
+		cornerDie(this->die15, this->die11, this->die14, this->die10);
+	}
+
+	// Submit Button
+	System::Void MyForm::button17_Click(System::Object^  sender, System::EventArgs^  e) {
+		enableButtons();
+		this->userWordChoice = "";
+		this->userWordLabel->Text = "";
 	}
 
 
