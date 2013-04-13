@@ -19,6 +19,7 @@ namespace Project1 {
 	public:
 	MyForm();
 
+
 	protected:
 	~MyForm();
 
@@ -27,6 +28,10 @@ namespace Project1 {
 	Dice^ dice;
 	void InitializeComponent();
 	void initializeDice();
+	void cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner);
+	void insideEdgeDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ cornerOne, Button^ cornerTwo);
+	void insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour);
+	void disableAllButtons();
 
 	// ----- FORMS ------ //
 	System::Windows::Forms::Button^  die0;
