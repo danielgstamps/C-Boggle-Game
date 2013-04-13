@@ -25,7 +25,11 @@ namespace Project1 {
 
 	private: 
 	String^ userWordChoice;
-	Dice^ dice;
+
+	private: System::Windows::Forms::Label^  yourWordLabel;
+	private: System::Windows::Forms::Label^  userWordLabel;
+	private: System::Windows::Forms::Label^  label2;
+			 Dice^ dice;
 	//array of dice
 	void InitializeComponent();
 	void initializeDice();
@@ -60,7 +64,7 @@ namespace Project1 {
 	System::Windows::Forms::Label^  lblTime;
 	System::Windows::Forms::Button^  button17;
 	System::Windows::Forms::Panel^  panel3;
-	System::Windows::Forms::Label^  label2;
+
 	System::Windows::Forms::MenuStrip^  menuStrip1;
 	System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  startToolStripMenuItem;
@@ -69,18 +73,39 @@ namespace Project1 {
 	System::Windows::Forms::ToolStripMenuItem^  exitToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  howToToolStripMenuItem;
-	System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem1;
-			
+	System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem1;		
 	System::ComponentModel::Container ^components;
 
+	// ----- ACTION LISTENERS ------ //
+	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die1_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die2_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die3_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die4_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die5_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die6_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die7_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die8_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die9_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die10_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die11_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die12_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e);
+
+	};
+
+
+
+
+
+
+
+
+
+
+
 #pragma region Windows Form Designer generated code
-
-		 System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e) {
-			this->userWordChoice += this->die0->Text;
-		}
 #pragma endregion
-
-
-
-};
 }
