@@ -400,6 +400,11 @@ namespace Project1{
 		this->die15->Enabled=false;
 	}
 
+	void MyForm::disableButtonsClicked(){
+		///after every button is clicked it will be added to an array. 
+		///This method should disable every button in the array with a for each loop.
+	}
+
 	MyForm::~MyForm()
 	{
 		if (components)
