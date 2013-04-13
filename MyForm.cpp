@@ -9,7 +9,9 @@ namespace Project1{
 		this->InitializeComponent();
 		this->initializeDice();
 		this->selectedButtons = gcnew array<Button^>(16);
+		this->guessedWords = gcnew array<String^>(256);
 		this->buttonCounter=0;
+		this->richTextBox1->Text="MAKE A GUESS! HURRY!";
 	}
 
 	void MyForm::InitializeComponent()
@@ -548,12 +550,12 @@ namespace Project1{
 	}
 
 	void MyForm::disableButtonsClicked(){
-		if(this->buttonCounter!=0){
+		
 			for(int i = 0; i <this->buttonCounter; i++){
 				this->selectedButtons[i]->Enabled = false;
 				this->selectedButtons[i]->BackColor = Color::LightSalmon;
 			}
-		}
+		
 	}
 
 
@@ -710,17 +712,29 @@ namespace Project1{
 
 	// Submit Button
 	System::Void MyForm::button17_Click(System::Object^  sender, System::EventArgs^  e) {
+		
+		if(this->userWordLabel->Text==""){
+			this->userWordLabel->Text="Please guess a word!";
+		}else{
 		enableButtons();
-		this->userWordChoice = "";
-		this->userWordLabel->Text = "";
-		this->buttonCounter=0;
-		this->selectedButtons->Clear;
+			this->guessedWords[this->wordCounter] = this->userWordChoice;
+			this->wordCounter++;
+			this->userWordChoice = "";
+			this->userWordLabel->Text = "";
+			this->buttonCounter=0;
+			this->selectedButtons->Clear;
+			addGuessedWord();
+		}
 	}
 
 
-
-
-
+	void MyForm::addGuessedWord(){
+		this->richTextBox1->Text="";
+		this->richTextBox1->Text="GUESSES:\n~~~~~~~~\n";
+		for(int i = this->wordCounter; i>0; i--){
+			this->richTextBox1->Text+=this->guessedWords[i-1]+"\n";
+		}
+	}
 
 
 	MyForm::~MyForm()
