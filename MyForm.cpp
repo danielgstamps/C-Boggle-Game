@@ -62,6 +62,7 @@ namespace Project1{
 		this->die1->Size = System::Drawing::Size(74, 66);
 		this->die1->TabIndex = 1;
 		this->die1->UseVisualStyleBackColor = true;
+		
 		// 
 		// die2
 		// 
@@ -353,6 +354,50 @@ namespace Project1{
 		this->die13->Text = this->dice->getElementAt(13)->getRandomLetter();
 		this->die14->Text = this->dice->getElementAt(14)->getRandomLetter();
 		this->die15->Text = this->dice->getElementAt(15)->getRandomLetter();
+	}
+
+	void MyForm::cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner){
+		itSelf->Enabled = false;
+		sideOne->Enabled = true;
+		sideTwo->Enabled = true;
+		corner->Enabled = true;
+	}
+	void MyForm::insideEdgeDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ cornerOne, Button^ cornerTwo){
+		itSelf->Enabled = false;
+		sideOne->Enabled = true;
+		sideTwo->Enabled = true;
+		sideThree->Enabled = true;
+		cornerOne->Enabled = true;
+		cornerTwo->Enabled = true;
+	}
+	void MyForm::insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour){
+		itSelf->Enabled = false;
+		sideOne->Enabled = true;
+		sideTwo->Enabled = true;
+		sideThree->Enabled = true;
+		sideFour->Enabled = true;
+		cornerOne->Enabled = true;
+		cornerTwo->Enabled = true;
+		cornerThree->Enabled = true;
+		cornerFour->Enabled= true;
+	}
+	void MyForm::disableAllButtons(){
+		this->die0->Enabled=false;
+		this->die1->Enabled=false;
+		this->die2->Enabled=false;
+		this->die3->Enabled=false;
+		this->die4->Enabled=false;
+		this->die5->Enabled=false;
+		this->die6->Enabled=false;
+		this->die7->Enabled=false;
+		this->die8->Enabled=false;
+		this->die9->Enabled=false;
+		this->die10->Enabled=false;
+		this->die11->Enabled=false;
+		this->die12->Enabled=false;
+		this->die13->Enabled=false;
+		this->die14->Enabled=false;
+		this->die15->Enabled=false;
 	}
 
 	MyForm::~MyForm()
