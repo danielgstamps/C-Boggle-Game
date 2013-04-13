@@ -8,6 +8,8 @@ namespace Project1{
 		this->dice = gcnew Dice();
 		this->InitializeComponent();
 		this->initializeDice();
+		this->selectedButtons = gcnew array<Button^>(16);
+		this->buttonCounter=0;
 	}
 
 	void MyForm::InitializeComponent()
@@ -464,6 +466,8 @@ namespace Project1{
 		sideOne->BackColor = Color::White;
 		sideTwo->BackColor = Color::White;
 		corner->BackColor = Color::White;
+
+		disableButtonsClicked();
 		
 	}
 	void MyForm::insideEdgeDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ cornerOne, Button^ cornerTwo){
@@ -480,6 +484,7 @@ namespace Project1{
 		sideThree->BackColor = Color::White;
 		cornerOne->BackColor = Color::White;
 		cornerTwo->BackColor = Color::White;
+		disableButtonsClicked();
 
 	}
 	void MyForm::insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour){
@@ -502,6 +507,8 @@ namespace Project1{
 		cornerTwo->BackColor = Color::White;
 		cornerThree->BackColor = Color::White;
 		cornerFour->BackColor = Color::White;
+		disableButtonsClicked();
+
 	}
 	void MyForm::disableAllButtons(){
 		this->die0->Enabled=false;
@@ -537,11 +544,16 @@ namespace Project1{
 		this->die13->BackColor=Color::DarkGray;
 		this->die14->BackColor=Color::DarkGray;
 		this->die15->BackColor=Color::DarkGray;
+		
 	}
 
 	void MyForm::disableButtonsClicked(){
-		///after every button is clicked it will be added to an array. 
-		///This method should disable every button in the array with a for each loop.
+		if(this->buttonCounter!=0){
+			for(int i = 0; i <this->buttonCounter; i++){
+				this->selectedButtons[i]->Enabled = false;
+				this->selectedButtons[i]->BackColor = Color::LightSalmon;
+			}
+		}
 	}
 
 
@@ -553,6 +565,9 @@ namespace Project1{
 		this->userWordChoice += this->die0->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die0, this->die1, this->die4, this->die5);
+		this->selectedButtons[this->buttonCounter]=this->die0;
+		this->buttonCounter++;
+		
 	}
 
 	// Die 1
@@ -560,6 +575,9 @@ namespace Project1{
 		this->userWordChoice += this->die1->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die1, this->die2, this->die5, this->die0, this->die6, this->die4);
+		this->selectedButtons[this->buttonCounter]=this->die1;
+		this->buttonCounter++;
+		
 	}
 
 	// Die 2
@@ -567,6 +585,8 @@ namespace Project1{
 		this->userWordChoice += this->die2->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die2, this->die3, this->die6, this->die1, this->die7, this->die5);
+		this->selectedButtons[this->buttonCounter]=this->die2;
+		this->buttonCounter++;
 	}
 
 	// Die 3
@@ -574,6 +594,8 @@ namespace Project1{
 		this->userWordChoice += this->die3->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die3, this->die2, this->die7, this->die6);
+		this->selectedButtons[this->buttonCounter]=this->die3;
+		this->buttonCounter++;
 	}
 
 	// Die 4
@@ -581,6 +603,9 @@ namespace Project1{
 		this->userWordChoice += this->die4->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die4, this->die0, this->die5, this->die8, this->die1, this->die9);
+		this->selectedButtons[this->buttonCounter]=this->die4;
+		this->buttonCounter++;
+		
 	}
 
 	// Die 5
@@ -588,6 +613,9 @@ namespace Project1{
 		this->userWordChoice += this->die5->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die5, this->die1, this->die6, this->die9, this->die4, this->die2, this->die10, this->die8, this->die0);
+		this->selectedButtons[this->buttonCounter]=this->die5;
+		this->buttonCounter++;
+		
 	}
 
 	// Die 6
@@ -595,6 +623,8 @@ namespace Project1{
 		this->userWordChoice += this->die6->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die6, this->die2, this->die7, this->die10, this->die5, this->die3, this->die11, this->die9, this->die1);
+		this->selectedButtons[this->buttonCounter]=this->die6;
+		this->buttonCounter++;
 	}
 
 	// Die 7
@@ -602,6 +632,8 @@ namespace Project1{
 		this->userWordChoice += this->die7->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die7, this->die3, this->die11, this->die6, this->die10, this->die2);
+		this->selectedButtons[this->buttonCounter]=this->die7;
+		this->buttonCounter++;
 	}
 
 	// Die 8
@@ -609,6 +641,8 @@ namespace Project1{
 		this->userWordChoice += this->die8->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die8, this->die4, this->die9, this->die12, this->die5, this->die13);
+		this->selectedButtons[this->buttonCounter]=this->die8;
+		this->buttonCounter++;
 	}
 
 	// Die 9
@@ -616,6 +650,8 @@ namespace Project1{
 		this->userWordChoice += this->die9->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die9, this->die5, this->die10, this->die13, this->die8, this->die6, this->die14, this->die12, this->die4);
+		this->selectedButtons[this->buttonCounter]=this->die9;
+		this->buttonCounter++;
 	}
 
 	// Die 10
@@ -623,6 +659,8 @@ namespace Project1{
 		this->userWordChoice += this->die10->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die10, this->die6, this->die11, this->die14, this->die9, this->die7, this->die15, this->die13, this->die5);
+		this->selectedButtons[this->buttonCounter]=this->die10;
+		this->buttonCounter++;
 	}
 
 	// Die 11
@@ -630,6 +668,8 @@ namespace Project1{
 		this->userWordChoice += this->die11->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die11, this->die7, this->die15, this->die10, this->die14, this->die6);
+		this->selectedButtons[this->buttonCounter]=this->die11;
+		this->buttonCounter++;
 	}
 
 	// Die 12
@@ -637,6 +677,8 @@ namespace Project1{
 		this->userWordChoice += this->die12->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die12, this->die8, this->die13, this->die9);
+		this->selectedButtons[this->buttonCounter]=this->die12;
+		this->buttonCounter++;
 	}
 
 	// Die 13
@@ -644,6 +686,8 @@ namespace Project1{
 		this->userWordChoice += this->die13->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die13, this->die9, this->die14, this->die12, this->die8, this->die10);
+		this->selectedButtons[this->buttonCounter]=this->die13;
+		this->buttonCounter++;
 	}
 
 	// Die 14
@@ -651,6 +695,8 @@ namespace Project1{
 		this->userWordChoice += this->die14->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die14, this->die10, this->die15, this->die13, this->die9, this->die11);
+		this->selectedButtons[this->buttonCounter]=this->die14;
+		this->buttonCounter++;
 	}
 
 	// Die 15
@@ -658,6 +704,8 @@ namespace Project1{
 		this->userWordChoice += this->die15->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die15, this->die11, this->die14, this->die10);
+		this->selectedButtons[this->buttonCounter]=this->die15;
+		this->buttonCounter++;
 	}
 
 	// Submit Button
@@ -665,6 +713,8 @@ namespace Project1{
 		enableButtons();
 		this->userWordChoice = "";
 		this->userWordLabel->Text = "";
+		this->buttonCounter=0;
+		this->selectedButtons->Clear;
 	}
 
 
