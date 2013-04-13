@@ -36,6 +36,8 @@ namespace Project1{
 		this->lblTime = (gcnew System::Windows::Forms::Label());
 		this->button17 = (gcnew System::Windows::Forms::Button());
 		this->panel3 = (gcnew System::Windows::Forms::Panel());
+		this->yourWordLabel = (gcnew System::Windows::Forms::Label());
+		this->userWordLabel = (gcnew System::Windows::Forms::Label());
 		this->label2 = (gcnew System::Windows::Forms::Label());
 		this->panel1->SuspendLayout();
 		this->panel2->SuspendLayout();
@@ -62,7 +64,7 @@ namespace Project1{
 		this->die1->Size = System::Drawing::Size(74, 66);
 		this->die1->TabIndex = 1;
 		this->die1->UseVisualStyleBackColor = true;
-		
+		this->die1->Click += gcnew System::EventHandler(this, &MyForm::die1_Click);
 		// 
 		// die2
 		// 
@@ -73,6 +75,7 @@ namespace Project1{
 		this->die2->Size = System::Drawing::Size(74, 66);
 		this->die2->TabIndex = 2;
 		this->die2->UseVisualStyleBackColor = true;
+		this->die2->Click += gcnew System::EventHandler(this, &MyForm::die2_Click);
 		// 
 		// die4
 		// 
@@ -83,6 +86,7 @@ namespace Project1{
 		this->die4->Size = System::Drawing::Size(74, 66);
 		this->die4->TabIndex = 4;
 		this->die4->UseVisualStyleBackColor = true;
+		this->die4->Click += gcnew System::EventHandler(this, &MyForm::die4_Click);
 		// 
 		// die5
 		// 
@@ -93,6 +97,7 @@ namespace Project1{
 		this->die5->Size = System::Drawing::Size(74, 66);
 		this->die5->TabIndex = 5;
 		this->die5->UseVisualStyleBackColor = true;
+		this->die5->Click += gcnew System::EventHandler(this, &MyForm::die5_Click);
 		// 
 		// die6
 		// 
@@ -103,6 +108,7 @@ namespace Project1{
 		this->die6->Size = System::Drawing::Size(74, 66);
 		this->die6->TabIndex = 6;
 		this->die6->UseVisualStyleBackColor = true;
+		this->die6->Click += gcnew System::EventHandler(this, &MyForm::die6_Click);
 		// 
 		// die8
 		// 
@@ -113,6 +119,7 @@ namespace Project1{
 		this->die8->Size = System::Drawing::Size(74, 66);
 		this->die8->TabIndex = 8;
 		this->die8->UseVisualStyleBackColor = true;
+		this->die8->Click += gcnew System::EventHandler(this, &MyForm::die8_Click);
 		// 
 		// die9
 		// 
@@ -123,6 +130,7 @@ namespace Project1{
 		this->die9->Size = System::Drawing::Size(74, 66);
 		this->die9->TabIndex = 9;
 		this->die9->UseVisualStyleBackColor = true;
+		this->die9->Click += gcnew System::EventHandler(this, &MyForm::die9_Click);
 		// 
 		// die10
 		// 
@@ -133,6 +141,7 @@ namespace Project1{
 		this->die10->Size = System::Drawing::Size(74, 66);
 		this->die10->TabIndex = 10;
 		this->die10->UseVisualStyleBackColor = true;
+		this->die10->Click += gcnew System::EventHandler(this, &MyForm::die10_Click);
 		// 
 		// label1
 		// 
@@ -163,6 +172,7 @@ namespace Project1{
 		this->die12->Size = System::Drawing::Size(74, 66);
 		this->die12->TabIndex = 12;
 		this->die12->UseVisualStyleBackColor = true;
+		this->die12->Click += gcnew System::EventHandler(this, &MyForm::die12_Click);
 		// 
 		// die13
 		// 
@@ -173,6 +183,7 @@ namespace Project1{
 		this->die13->Size = System::Drawing::Size(74, 66);
 		this->die13->TabIndex = 13;
 		this->die13->UseVisualStyleBackColor = true;
+		this->die13->Click += gcnew System::EventHandler(this, &MyForm::die13_Click);
 		// 
 		// die14
 		// 
@@ -183,6 +194,7 @@ namespace Project1{
 		this->die14->Size = System::Drawing::Size(74, 66);
 		this->die14->TabIndex = 14;
 		this->die14->UseVisualStyleBackColor = true;
+		this->die14->Click += gcnew System::EventHandler(this, &MyForm::die14_Click);
 		// 
 		// die15
 		// 
@@ -193,6 +205,7 @@ namespace Project1{
 		this->die15->Size = System::Drawing::Size(74, 66);
 		this->die15->TabIndex = 15;
 		this->die15->UseVisualStyleBackColor = true;
+		this->die15->Click += gcnew System::EventHandler(this, &MyForm::die15_Click);
 		// 
 		// die11
 		// 
@@ -203,6 +216,7 @@ namespace Project1{
 		this->die11->Size = System::Drawing::Size(74, 66);
 		this->die11->TabIndex = 11;
 		this->die11->UseVisualStyleBackColor = true;
+		this->die11->Click += gcnew System::EventHandler(this, &MyForm::die11_Click);
 		// 
 		// die7
 		// 
@@ -213,6 +227,7 @@ namespace Project1{
 		this->die7->Size = System::Drawing::Size(74, 66);
 		this->die7->TabIndex = 7;
 		this->die7->UseVisualStyleBackColor = true;
+		this->die7->Click += gcnew System::EventHandler(this, &MyForm::die7_Click);
 		// 
 		// die3
 		// 
@@ -223,6 +238,7 @@ namespace Project1{
 		this->die3->Size = System::Drawing::Size(74, 66);
 		this->die3->TabIndex = 3;
 		this->die3->UseVisualStyleBackColor = true;
+		this->die3->Click += gcnew System::EventHandler(this, &MyForm::die3_Click);
 		// 
 		// panel1
 		// 
@@ -286,7 +302,7 @@ namespace Project1{
 		// 
 		this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->button17->Location = System::Drawing::Point(264, 13);
+		this->button17->Location = System::Drawing::Point(277, 17);
 		this->button17->Name = L"button17";
 		this->button17->Size = System::Drawing::Size(74, 66);
 		this->button17->TabIndex = 18;
@@ -296,12 +312,38 @@ namespace Project1{
 		// panel3
 		// 
 		this->panel3->BackColor = System::Drawing::SystemColors::AppWorkspace;
+		this->panel3->Controls->Add(this->yourWordLabel);
+		this->panel3->Controls->Add(this->userWordLabel);
 		this->panel3->Controls->Add(this->label2);
 		this->panel3->Controls->Add(this->button17);
+		this->panel3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->panel3->Location = System::Drawing::Point(24, 377);
 		this->panel3->Name = L"panel3";
 		this->panel3->Size = System::Drawing::Size(363, 95);
 		this->panel3->TabIndex = 21;
+		// 
+		// yourWordLabel
+		// 
+		this->yourWordLabel->AutoSize = true;
+		this->yourWordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->yourWordLabel->Location = System::Drawing::Point(19, 6);
+		this->yourWordLabel->Name = L"yourWordLabel";
+		this->yourWordLabel->Size = System::Drawing::Size(106, 25);
+		this->yourWordLabel->TabIndex = 21;
+		this->yourWordLabel->Text = L"Your word:";
+		// 
+		// userWordLabel
+		// 
+		this->userWordLabel->AutoSize = true;
+		this->userWordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17));
+		this->userWordLabel->Location = System::Drawing::Point(19, 33);
+		this->userWordLabel->MaximumSize = System::Drawing::Size(250, 50);
+		this->userWordLabel->Name = L"userWordLabel";
+		this->userWordLabel->Size = System::Drawing::Size(0, 29);
+		this->userWordLabel->TabIndex = 20;
+		this->userWordLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 		// 
 		// label2
 		// 
@@ -309,10 +351,11 @@ namespace Project1{
 		this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
-		this->label2->Location = System::Drawing::Point(27, 30);
+		this->label2->Location = System::Drawing::Point(64, 12);
 		this->label2->Name = L"label2";
 		this->label2->Size = System::Drawing::Size(0, 31);
 		this->label2->TabIndex = 20;
+		this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 		// 
 		// MyForm
 		// 
@@ -335,7 +378,7 @@ namespace Project1{
 		this->ResumeLayout(false);
 		this->PerformLayout();
 
-	}
+	} // End of initializeComponent
 
 	void MyForm::initializeDice(){
 		this->die0->Text = this->dice->getElementAt(0)->getRandomLetter();
@@ -404,6 +447,112 @@ namespace Project1{
 		///after every button is clicked it will be added to an array. 
 		///This method should disable every button in the array with a for each loop.
 	}
+
+
+
+	// ~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
+
+	// Die 0
+	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die0->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 1
+	System::Void MyForm::die1_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die1->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 2
+	System::Void MyForm::die2_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die2->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 3
+	System::Void MyForm::die3_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die3->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 4
+	System::Void MyForm::die4_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die4->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 5
+	System::Void MyForm::die5_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die5->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 6
+	System::Void MyForm::die6_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die6->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 7
+	System::Void MyForm::die7_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die7->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 8
+	System::Void MyForm::die8_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die8->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 9
+	System::Void MyForm::die9_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die9->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 10
+	System::Void MyForm::die10_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die10->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 11
+	System::Void MyForm::die11_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die11->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 12
+	System::Void MyForm::die12_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die12->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 13
+	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die13->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 14
+	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die14->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+	// Die 15
+	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->userWordChoice += this->die15->Text;
+		this->userWordLabel->Text = this->userWordChoice;
+	}
+
+
+
+
+
+
 
 	MyForm::~MyForm()
 	{
