@@ -32,6 +32,9 @@ namespace Project1 {
 			 Dice^ dice;
 	array<Button^>^ selectedButtons;
 	int buttonCounter; 
+	int wordCounter; 
+	array<String^>^ guessedWords;
+	void addGuessedWord();
 	void InitializeComponent();
 	void initializeDice();
 	void cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner);
