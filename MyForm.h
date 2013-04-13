@@ -38,6 +38,7 @@ namespace Project1 {
 	void insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour);
 	void disableAllButtons();
 	void disableButtonsClicked();
+	void enableButtons();
 
 	// ----- FORMS ------ //
 	System::Windows::Forms::Button^  die0;
@@ -93,7 +94,8 @@ namespace Project1 {
 	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e);
-
+	System::Void button17_Click(System::Object^  sender, System::EventArgs^  e);
+			 
 	};
 
 
