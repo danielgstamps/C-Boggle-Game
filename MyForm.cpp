@@ -51,7 +51,7 @@ namespace Project1{
 		// die0
 		// 
 		this->die0->BackColor = System::Drawing::Color::DarkGray;
-		this->die0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die0->Location = System::Drawing::Point(24, 17);
 		this->die0->Name = L"die0";
@@ -63,7 +63,7 @@ namespace Project1{
 		// die1
 		// 
 		this->die1->BackColor = System::Drawing::Color::DarkGray;
-		this->die1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die1->Location = System::Drawing::Point(104, 17);
 		this->die1->Name = L"die1";
@@ -75,7 +75,7 @@ namespace Project1{
 		// die2
 		// 
 		this->die2->BackColor = System::Drawing::Color::DarkGray;
-		this->die2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die2->Location = System::Drawing::Point(184, 17);
 		this->die2->Name = L"die2";
@@ -87,7 +87,7 @@ namespace Project1{
 		// die4
 		// 
 		this->die4->BackColor = System::Drawing::Color::DarkGray;
-		this->die4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die4->Location = System::Drawing::Point(24, 89);
 		this->die4->Name = L"die4";
@@ -99,7 +99,7 @@ namespace Project1{
 		// die5
 		// 
 		this->die5->BackColor = System::Drawing::Color::DarkGray;
-		this->die5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die5->Location = System::Drawing::Point(104, 89);
 		this->die5->Name = L"die5";
@@ -111,7 +111,7 @@ namespace Project1{
 		// die6
 		// 
 		this->die6->BackColor = System::Drawing::Color::DarkGray;
-		this->die6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die6->Location = System::Drawing::Point(184, 89);
 		this->die6->Name = L"die6";
@@ -123,7 +123,7 @@ namespace Project1{
 		// die8
 		// 
 		this->die8->BackColor = System::Drawing::Color::DarkGray;
-		this->die8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die8->Location = System::Drawing::Point(24, 161);
 		this->die8->Name = L"die8";
@@ -135,7 +135,7 @@ namespace Project1{
 		// die9
 		// 
 		this->die9->BackColor = System::Drawing::Color::DarkGray;
-		this->die9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die9->Location = System::Drawing::Point(104, 161);
 		this->die9->Name = L"die9";
@@ -147,7 +147,7 @@ namespace Project1{
 		// die10
 		// 
 		this->die10->BackColor = System::Drawing::Color::DarkGray;
-		this->die10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die10->Location = System::Drawing::Point(184, 161);
 		this->die10->Name = L"die10";
@@ -170,6 +170,7 @@ namespace Project1{
 		// 
 		// richTextBox1
 		// 
+		this->richTextBox1->Enabled = false;
 		this->richTextBox1->Location = System::Drawing::Point(393, 70);
 		this->richTextBox1->Name = L"richTextBox1";
 		this->richTextBox1->Size = System::Drawing::Size(147, 301);
@@ -179,7 +180,7 @@ namespace Project1{
 		// die12
 		// 
 		this->die12->BackColor = System::Drawing::Color::DarkGray;
-		this->die12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die12->Location = System::Drawing::Point(24, 233);
 		this->die12->Name = L"die12";
@@ -191,7 +192,7 @@ namespace Project1{
 		// die13
 		// 
 		this->die13->BackColor = System::Drawing::Color::DarkGray;
-		this->die13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die13->Location = System::Drawing::Point(104, 233);
 		this->die13->Name = L"die13";
@@ -203,7 +204,7 @@ namespace Project1{
 		// die14
 		// 
 		this->die14->BackColor = System::Drawing::Color::DarkGray;
-		this->die14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die14->Location = System::Drawing::Point(184, 233);
 		this->die14->Name = L"die14";
@@ -215,7 +216,7 @@ namespace Project1{
 		// die15
 		// 
 		this->die15->BackColor = System::Drawing::Color::DarkGray;
-		this->die15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die15->Location = System::Drawing::Point(264, 233);
 		this->die15->Name = L"die15";
@@ -227,7 +228,7 @@ namespace Project1{
 		// die11
 		// 
 		this->die11->BackColor = System::Drawing::Color::DarkGray;
-		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die11->Location = System::Drawing::Point(264, 161);
 		this->die11->Name = L"die11";
@@ -239,7 +240,7 @@ namespace Project1{
 		// die7
 		// 
 		this->die7->BackColor = System::Drawing::Color::DarkGray;
-		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die7->Location = System::Drawing::Point(264, 89);
 		this->die7->Name = L"die7";
@@ -251,7 +252,7 @@ namespace Project1{
 		// die3
 		// 
 		this->die3->BackColor = System::Drawing::Color::DarkGray;
-		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->die3->Location = System::Drawing::Point(264, 17);
 		this->die3->Name = L"die3";
@@ -713,17 +714,18 @@ namespace Project1{
 	// Submit Button
 	System::Void MyForm::button17_Click(System::Object^  sender, System::EventArgs^  e) {
 		
-		if(this->userWordLabel->Text==""){
+		if(this->userWordLabel->Text==""||this->userWordLabel->Text=="Please guess a word!"){
 			this->userWordLabel->Text="Please guess a word!";
 		}else{
-		enableButtons();
-			this->guessedWords[this->wordCounter] = this->userWordChoice;
+			enableButtons();
+			this->guessedWords[this->wordCounter]=this->userWordChoice;
 			this->wordCounter++;
 			this->userWordChoice = "";
 			this->userWordLabel->Text = "";
 			this->buttonCounter=0;
 			this->selectedButtons->Clear;
 			addGuessedWord();
+		
 		}
 	}
 
@@ -736,6 +738,7 @@ namespace Project1{
 		}
 	}
 
+	
 
 	MyForm::~MyForm()
 	{

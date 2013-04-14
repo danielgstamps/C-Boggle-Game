@@ -2,6 +2,7 @@
 #include "Dictionary.h"
 
 
+
 Dictionary::Dictionary(){
 	this->set = unordered_set<string>();
 }
@@ -21,7 +22,25 @@ void Dictionary::loadDictionary(){
   }
 }
 
-bool Dictionary::wordExist(string word){
+bool Dictionary::wordExist(String^ word){
+//	string stdString = msclr::interop::marshal_as< std::string >(word);
+//	return this->set.find(stdString)!= this->set.end();
+	return false;
+}
 
-	return this->set.find(word)!= this->set.end();
+int Dictionary::points(String^ word){
+	int point = 0;
+	if(word->Length==3||word->Length==4){
+		point =1;
+	}else if(word->Length==5){
+		point = 2;
+	}else if(word->Length==6){
+		point = 3;
+	}else if(word->Length==7){
+		point =5;
+	}else if(word->Length>=8){
+		point =11;
+	}
+
+	return point;
 }

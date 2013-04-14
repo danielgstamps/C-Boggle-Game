@@ -3,6 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+//#include <msclr/marshal_cppstd.h>
+#include <stdlib.h>
+
 using namespace std;
 using namespace System;
 using namespace std;
@@ -14,5 +17,6 @@ private:
 public:
 	Dictionary();
 	void loadDictionary();
-	bool wordExist(string word);
+	bool wordExist(String^ word);
+	int points(String^ word);
 };
