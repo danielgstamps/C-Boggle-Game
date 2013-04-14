@@ -6,13 +6,13 @@ using namespace std;
 using namespace System;
 using namespace std;
 
-class Score
+ref class Score
 {
 private:
-	string name;
+	String^ name;
 	int score;
 public:
-	Score(string name, int score);
-	string getName();
+	Score(String^ name, int score);
+	String^ getName();
 	int getScore();
 };

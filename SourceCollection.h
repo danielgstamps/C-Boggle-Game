@@ -10,7 +10,7 @@
 using namespace std;
 using namespace System;
 
-class ScoreCollection
+ref class ScoreCollection
 {
 private:
 	array<Score^>^ scores;

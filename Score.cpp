@@ -1,11 +1,11 @@
 #include "Score.h"
 
-Score::Score(string name, int score){
+Score::Score(String^ name, int score){
 	this->name = name;
 	this->score = score;
 }
 
-string Score::getName(){
+String^ Score::getName(){
 
 	return this->name;
 }

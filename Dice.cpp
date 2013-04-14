@@ -4,7 +4,6 @@
 Dice::Dice(void)
 {
 	this->dice = gcnew array<Die^>(16);
-	
 	this->populateDiceList();
 }
 
@@ -33,6 +32,7 @@ void Dice::ramdomizeDice(){
 	array<Die^>^ tempDice = gcnew array<Die^>(16);
 	array<int>^ nums = gcnew array<int>(16);
 	int count = 0;
+
 	while(count<15){
 		int num = rand() %16;
 		if(!contains(num,nums)){
@@ -40,9 +40,11 @@ void Dice::ramdomizeDice(){
 			count++;
 		}
 	}
+
 	for(int i=0; i < nums->Length; i++){
 		tempDice[i] = this->dice[nums[i]];
 	}
+
 	this->dice = tempDice;
 }
 
