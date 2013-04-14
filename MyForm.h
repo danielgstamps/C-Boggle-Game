@@ -19,23 +19,18 @@ namespace Project1 {
 	public:
 	MyForm();
 
-
 	protected:
 	~MyForm();
 
 	private: 
 	String^ userWordChoice;
-
-	private: System::Windows::Forms::Label^  yourWordLabel;
-	private: System::Windows::Forms::Label^  userWordLabel;
-	private: System::Windows::Forms::Label^  label2;
 	Dice^ dice;
-	array<Button^>^ selectedButtons;
-	int buttonCounter; 
-	int wordCounter; 
+	array<Button^>^ selectedButtons;	
 	array<String^>^ guessedWords;
+	int buttonCounter;
+	int wordCounter; 
+ 
 	void addGuessedWord();
-	
 	void InitializeComponent();
 	void initializeDice();
 	void cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner);
@@ -49,29 +44,31 @@ namespace Project1 {
 	System::Windows::Forms::Button^  die0;
 	System::Windows::Forms::Button^  die1;
 	System::Windows::Forms::Button^  die2;
+	System::Windows::Forms::Button^  die3;
 	System::Windows::Forms::Button^  die4;
 	System::Windows::Forms::Button^  die5;
 	System::Windows::Forms::Button^  die6;
+	System::Windows::Forms::Button^  die7;
 	System::Windows::Forms::Button^  die8;
 	System::Windows::Forms::Button^  die9;
 	System::Windows::Forms::Button^  die10;
-	System::Windows::Forms::Label^  label1;
-	System::Windows::Forms::RichTextBox^  richTextBox1;
+	System::Windows::Forms::Button^  die11;
 	System::Windows::Forms::Button^  die12;
 	System::Windows::Forms::Button^  die13;
 	System::Windows::Forms::Button^  die14;
 	System::Windows::Forms::Button^  die15;
-	System::Windows::Forms::Button^  die11;
-	System::Windows::Forms::Button^  die7;
-	System::Windows::Forms::Button^  die3;
-	System::Windows::Forms::Panel^  panel1;
-	System::Windows::Forms::Label^  lblTimeName;
-	System::Windows::Forms::Panel^  panel2;
-	System::Windows::Forms::Label^  lblTime;
-	System::Windows::Forms::Button^  button17;
-	System::Windows::Forms::Panel^  panel3;
-
+	System::Windows::Forms::Button^  submitButton;
+	System::Windows::Forms::Label^  titleLabel;
+	System::Windows::Forms::Label^  yourWordLabel;
+	System::Windows::Forms::Label^  userWordLabel;
+	System::Windows::Forms::Label^  label2;
+	System::Windows::Forms::Label^  timeLabel;
+	System::Windows::Forms::Label^  timeLeftLabel;
+	System::Windows::Forms::Panel^  dicePanel;
+	System::Windows::Forms::Panel^  timerPanel;
+	System::Windows::Forms::Panel^  wordGuessPanel;
 	System::Windows::Forms::MenuStrip^  menuStrip1;
+	System::Windows::Forms::RichTextBox^  userGuessesBox;
 	System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  startToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  stopToolStripMenuItem;
@@ -99,19 +96,8 @@ namespace Project1 {
 	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void button17_Click(System::Object^  sender, System::EventArgs^  e);
-			 
+	System::Void button17_Click(System::Object^  sender, System::EventArgs^  e);		 
 	};
-
-
-
-
-
-
-
-
-
-
 
 #pragma region Windows Form Designer generated code
 #pragma endregion

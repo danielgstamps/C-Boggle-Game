@@ -11,7 +11,7 @@ namespace Project1{
 		this->selectedButtons = gcnew array<Button^>(16);
 		this->guessedWords = gcnew array<String^>(256);
 		this->buttonCounter=0;
-		this->richTextBox1->Text="MAKE A GUESS! HURRY!";
+		this->userGuessesBox->Text="MAKE A GUESS! HURRY!";
 	}
 
 	void MyForm::InitializeComponent()
@@ -25,8 +25,8 @@ namespace Project1{
 		this->die8 = (gcnew System::Windows::Forms::Button());
 		this->die9 = (gcnew System::Windows::Forms::Button());
 		this->die10 = (gcnew System::Windows::Forms::Button());
-		this->label1 = (gcnew System::Windows::Forms::Label());
-		this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
+		this->titleLabel = (gcnew System::Windows::Forms::Label());
+		this->userGuessesBox = (gcnew System::Windows::Forms::RichTextBox());
 		this->die12 = (gcnew System::Windows::Forms::Button());
 		this->die13 = (gcnew System::Windows::Forms::Button());
 		this->die14 = (gcnew System::Windows::Forms::Button());
@@ -34,18 +34,18 @@ namespace Project1{
 		this->die11 = (gcnew System::Windows::Forms::Button());
 		this->die7 = (gcnew System::Windows::Forms::Button());
 		this->die3 = (gcnew System::Windows::Forms::Button());
-		this->panel1 = (gcnew System::Windows::Forms::Panel());
-		this->lblTimeName = (gcnew System::Windows::Forms::Label());
-		this->panel2 = (gcnew System::Windows::Forms::Panel());
-		this->lblTime = (gcnew System::Windows::Forms::Label());
-		this->button17 = (gcnew System::Windows::Forms::Button());
-		this->panel3 = (gcnew System::Windows::Forms::Panel());
+		this->dicePanel = (gcnew System::Windows::Forms::Panel());
+		this->timeLabel = (gcnew System::Windows::Forms::Label());
+		this->timerPanel = (gcnew System::Windows::Forms::Panel());
+		this->timeLeftLabel = (gcnew System::Windows::Forms::Label());
+		this->submitButton = (gcnew System::Windows::Forms::Button());
+		this->wordGuessPanel = (gcnew System::Windows::Forms::Panel());
 		this->yourWordLabel = (gcnew System::Windows::Forms::Label());
 		this->userWordLabel = (gcnew System::Windows::Forms::Label());
 		this->label2 = (gcnew System::Windows::Forms::Label());
-		this->panel1->SuspendLayout();
-		this->panel2->SuspendLayout();
-		this->panel3->SuspendLayout();
+		this->dicePanel->SuspendLayout();
+		this->timerPanel->SuspendLayout();
+		this->wordGuessPanel->SuspendLayout();
 		this->SuspendLayout();
 		// 
 		// die0
@@ -156,26 +156,26 @@ namespace Project1{
 		this->die10->UseVisualStyleBackColor = false;
 		this->die10->Click += gcnew System::EventHandler(this, &MyForm::die10_Click);
 		// 
-		// label1
+		// titleLabel
 		// 
-		this->label1->AutoSize = true;
-		this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+		this->titleLabel->AutoSize = true;
+		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->label1->ForeColor = System::Drawing::Color::LightCyan;
-		this->label1->Location = System::Drawing::Point(121, 11);
-		this->label1->Name = L"label1";
-		this->label1->Size = System::Drawing::Size(176, 39);
-		this->label1->TabIndex = 9;
-		this->label1->Text = L"BOGGLE!";
+		this->titleLabel->ForeColor = System::Drawing::Color::LightCyan;
+		this->titleLabel->Location = System::Drawing::Point(121, 11);
+		this->titleLabel->Name = L"titleLabel";
+		this->titleLabel->Size = System::Drawing::Size(176, 39);
+		this->titleLabel->TabIndex = 9;
+		this->titleLabel->Text = L"BOGGLE!";
 		// 
-		// richTextBox1
+		// userGuessesBox
 		// 
-		this->richTextBox1->Enabled = false;
-		this->richTextBox1->Location = System::Drawing::Point(393, 70);
-		this->richTextBox1->Name = L"richTextBox1";
-		this->richTextBox1->Size = System::Drawing::Size(147, 301);
-		this->richTextBox1->TabIndex = 10;
-		this->richTextBox1->Text = L"";
+		this->userGuessesBox->Enabled = false;
+		this->userGuessesBox->Location = System::Drawing::Point(393, 70);
+		this->userGuessesBox->Name = L"userGuessesBox";
+		this->userGuessesBox->Size = System::Drawing::Size(147, 301);
+		this->userGuessesBox->TabIndex = 10;
+		this->userGuessesBox->Text = L"";
 		// 
 		// die12
 		// 
@@ -261,89 +261,89 @@ namespace Project1{
 		this->die3->UseVisualStyleBackColor = false;
 		this->die3->Click += gcnew System::EventHandler(this, &MyForm::die3_Click);
 		// 
-		// panel1
+		// dicePanel
 		// 
-		this->panel1->BackColor = System::Drawing::Color::SteelBlue;
-		this->panel1->Controls->Add(this->die2);
-		this->panel1->Controls->Add(this->die3);
-		this->panel1->Controls->Add(this->die0);
-		this->panel1->Controls->Add(this->die7);
-		this->panel1->Controls->Add(this->die1);
-		this->panel1->Controls->Add(this->die11);
-		this->panel1->Controls->Add(this->die4);
-		this->panel1->Controls->Add(this->die15);
-		this->panel1->Controls->Add(this->die5);
-		this->panel1->Controls->Add(this->die14);
-		this->panel1->Controls->Add(this->die6);
-		this->panel1->Controls->Add(this->die13);
-		this->panel1->Controls->Add(this->die8);
-		this->panel1->Controls->Add(this->die12);
-		this->panel1->Controls->Add(this->die9);
-		this->panel1->Controls->Add(this->die10);
-		this->panel1->Location = System::Drawing::Point(24, 53);
-		this->panel1->Name = L"panel1";
-		this->panel1->Size = System::Drawing::Size(363, 318);
-		this->panel1->TabIndex = 18;
+		this->dicePanel->BackColor = System::Drawing::Color::SteelBlue;
+		this->dicePanel->Controls->Add(this->die2);
+		this->dicePanel->Controls->Add(this->die3);
+		this->dicePanel->Controls->Add(this->die0);
+		this->dicePanel->Controls->Add(this->die7);
+		this->dicePanel->Controls->Add(this->die1);
+		this->dicePanel->Controls->Add(this->die11);
+		this->dicePanel->Controls->Add(this->die4);
+		this->dicePanel->Controls->Add(this->die15);
+		this->dicePanel->Controls->Add(this->die5);
+		this->dicePanel->Controls->Add(this->die14);
+		this->dicePanel->Controls->Add(this->die6);
+		this->dicePanel->Controls->Add(this->die13);
+		this->dicePanel->Controls->Add(this->die8);
+		this->dicePanel->Controls->Add(this->die12);
+		this->dicePanel->Controls->Add(this->die9);
+		this->dicePanel->Controls->Add(this->die10);
+		this->dicePanel->Location = System::Drawing::Point(24, 53);
+		this->dicePanel->Name = L"dicePanel";
+		this->dicePanel->Size = System::Drawing::Size(363, 318);
+		this->dicePanel->TabIndex = 18;
 		// 
-		// lblTimeName
+		// timeLabel
 		// 
-		this->lblTimeName->AutoSize = true;
-		this->lblTimeName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
+		this->timeLabel->AutoSize = true;
+		this->timeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		this->lblTimeName->ForeColor = System::Drawing::SystemColors::Control;
-		this->lblTimeName->Location = System::Drawing::Point(41, 6);
-		this->lblTimeName->Name = L"lblTimeName";
-		this->lblTimeName->Size = System::Drawing::Size(60, 22);
-		this->lblTimeName->TabIndex = 19;
-		this->lblTimeName->Text = L"Time:";
+		this->timeLabel->ForeColor = System::Drawing::SystemColors::Control;
+		this->timeLabel->Location = System::Drawing::Point(41, 6);
+		this->timeLabel->Name = L"timeLabel";
+		this->timeLabel->Size = System::Drawing::Size(60, 22);
+		this->timeLabel->TabIndex = 19;
+		this->timeLabel->Text = L"Time:";
 		// 
-		// panel2
+		// timerPanel
 		// 
-		this->panel2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-		this->panel2->Controls->Add(this->lblTime);
-		this->panel2->Controls->Add(this->lblTimeName);
-		this->panel2->Location = System::Drawing::Point(393, 377);
-		this->panel2->Name = L"panel2";
-		this->panel2->Size = System::Drawing::Size(148, 95);
-		this->panel2->TabIndex = 20;
+		this->timerPanel->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+		this->timerPanel->Controls->Add(this->timeLeftLabel);
+		this->timerPanel->Controls->Add(this->timeLabel);
+		this->timerPanel->Location = System::Drawing::Point(393, 377);
+		this->timerPanel->Name = L"timerPanel";
+		this->timerPanel->Size = System::Drawing::Size(148, 95);
+		this->timerPanel->TabIndex = 20;
 		// 
-		// lblTime
+		// timeLeftLabel
 		// 
-		this->lblTime->AutoSize = true;
-		this->lblTime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->timeLeftLabel->AutoSize = true;
+		this->timeLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->lblTime->ForeColor = System::Drawing::SystemColors::ButtonFace;
-		this->lblTime->Location = System::Drawing::Point(17, 30);
-		this->lblTime->Name = L"lblTime";
-		this->lblTime->Size = System::Drawing::Size(114, 54);
-		this->lblTime->TabIndex = 0;
-		this->lblTime->Text = L"3.00";
+		this->timeLeftLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
+		this->timeLeftLabel->Location = System::Drawing::Point(17, 30);
+		this->timeLeftLabel->Name = L"timeLeftLabel";
+		this->timeLeftLabel->Size = System::Drawing::Size(114, 54);
+		this->timeLeftLabel->TabIndex = 0;
+		this->timeLeftLabel->Text = L"3.00";
 		// 
-		// button17
+		// submitButton
 		// 
-		this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->submitButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->button17->Location = System::Drawing::Point(277, 17);
-		this->button17->Name = L"button17";
-		this->button17->Size = System::Drawing::Size(74, 66);
-		this->button17->TabIndex = 18;
-		this->button17->Text = L"Submit";
-		this->button17->UseVisualStyleBackColor = true;
-		this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+		this->submitButton->Location = System::Drawing::Point(277, 17);
+		this->submitButton->Name = L"submitButton";
+		this->submitButton->Size = System::Drawing::Size(74, 66);
+		this->submitButton->TabIndex = 18;
+		this->submitButton->Text = L"Submit";
+		this->submitButton->UseVisualStyleBackColor = true;
+		this->submitButton->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
 		// 
-		// panel3
+		// wordGuessPanel
 		// 
-		this->panel3->BackColor = System::Drawing::SystemColors::AppWorkspace;
-		this->panel3->Controls->Add(this->yourWordLabel);
-		this->panel3->Controls->Add(this->userWordLabel);
-		this->panel3->Controls->Add(this->label2);
-		this->panel3->Controls->Add(this->button17);
-		this->panel3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->wordGuessPanel->BackColor = System::Drawing::SystemColors::AppWorkspace;
+		this->wordGuessPanel->Controls->Add(this->yourWordLabel);
+		this->wordGuessPanel->Controls->Add(this->userWordLabel);
+		this->wordGuessPanel->Controls->Add(this->label2);
+		this->wordGuessPanel->Controls->Add(this->submitButton);
+		this->wordGuessPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->panel3->Location = System::Drawing::Point(24, 377);
-		this->panel3->Name = L"panel3";
-		this->panel3->Size = System::Drawing::Size(363, 95);
-		this->panel3->TabIndex = 21;
+		this->wordGuessPanel->Location = System::Drawing::Point(24, 377);
+		this->wordGuessPanel->Name = L"wordGuessPanel";
+		this->wordGuessPanel->Size = System::Drawing::Size(363, 95);
+		this->wordGuessPanel->TabIndex = 21;
 		// 
 		// yourWordLabel
 		// 
@@ -385,18 +385,18 @@ namespace Project1{
 		this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 		this->BackColor = System::Drawing::Color::SteelBlue;
 		this->ClientSize = System::Drawing::Size(573, 488);
-		this->Controls->Add(this->panel3);
-		this->Controls->Add(this->panel2);
-		this->Controls->Add(this->panel1);
-		this->Controls->Add(this->richTextBox1);
-		this->Controls->Add(this->label1);
+		this->Controls->Add(this->wordGuessPanel);
+		this->Controls->Add(this->timerPanel);
+		this->Controls->Add(this->dicePanel);
+		this->Controls->Add(this->userGuessesBox);
+		this->Controls->Add(this->titleLabel);
 		this->Name = L"MyForm";
 		this->Text = L"Boggle by Daniel Stamps and Bryan Patterson";
-		this->panel1->ResumeLayout(false);
-		this->panel2->ResumeLayout(false);
-		this->panel2->PerformLayout();
-		this->panel3->ResumeLayout(false);
-		this->panel3->PerformLayout();
+		this->dicePanel->ResumeLayout(false);
+		this->timerPanel->ResumeLayout(false);
+		this->timerPanel->PerformLayout();
+		this->wordGuessPanel->ResumeLayout(false);
+		this->wordGuessPanel->PerformLayout();
 		this->ResumeLayout(false);
 		this->PerformLayout();
 
@@ -420,7 +420,6 @@ namespace Project1{
 		this->die13->Text = this->dice->getElementAt(13)->getRandomLetter();
 		this->die14->Text = this->dice->getElementAt(14)->getRandomLetter();
 		this->die15->Text = this->dice->getElementAt(15)->getRandomLetter();
-
 	}
 
 	void MyForm::enableButtons(){
@@ -487,6 +486,7 @@ namespace Project1{
 		sideThree->BackColor = Color::White;
 		cornerOne->BackColor = Color::White;
 		cornerTwo->BackColor = Color::White;
+
 		disableButtonsClicked();
 
 	}
@@ -546,20 +546,15 @@ namespace Project1{
 		this->die12->BackColor=Color::DarkGray;
 		this->die13->BackColor=Color::DarkGray;
 		this->die14->BackColor=Color::DarkGray;
-		this->die15->BackColor=Color::DarkGray;
-		
+		this->die15->BackColor=Color::DarkGray;	
 	}
 
 	void MyForm::disableButtonsClicked(){
-		
-			for(int i = 0; i <this->buttonCounter; i++){
-				this->selectedButtons[i]->Enabled = false;
-				this->selectedButtons[i]->BackColor = Color::LightSalmon;
-			}
-		
+		for(int i = 0; i <this->buttonCounter; i++){
+			this->selectedButtons[i]->Enabled = false;
+			this->selectedButtons[i]->BackColor = Color::LightSalmon;
+		}
 	}
-
-
 
 	// ~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
 
@@ -729,16 +724,13 @@ namespace Project1{
 		}
 	}
 
-
 	void MyForm::addGuessedWord(){
-		this->richTextBox1->Text="";
-		this->richTextBox1->Text="GUESSES:\n~~~~~~~~\n";
+		this->userGuessesBox->Text="";
+		this->userGuessesBox->Text="GUESSES:\n~~~~~~~~\n";
 		for(int i = this->wordCounter; i>0; i--){
-			this->richTextBox1->Text+=this->guessedWords[i-1]+"\n";
+			this->userGuessesBox->Text+=this->guessedWords[i-1]+"\n";
 		}
 	}
-
-	
 
 	MyForm::~MyForm()
 	{

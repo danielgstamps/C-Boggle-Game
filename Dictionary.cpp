@@ -8,18 +8,19 @@ Dictionary::Dictionary(){
 }
 
 void Dictionary::loadDictionary(){
-	 string line;
-  ifstream myfile ("dictionary.txt");
-  if (myfile.is_open())
-  {
-    while ( myfile.good() )
-    {
-      getline (myfile,line);
-	 cout<<line<<endl;
-	  this->set.insert(line);
-    }
+	string line;
+	ifstream myfile ("dictionary.txt");
+
+	if (myfile.is_open()){
+
+		while ( myfile.good() ){
+			getline (myfile,line);
+			cout<<line<<endl;
+			this->set.insert(line);
+		}
+
     myfile.close();
-  }
+	}
 }
 
 bool Dictionary::wordExist(String^ word){
