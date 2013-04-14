@@ -29,12 +29,13 @@ namespace Project1 {
 	private: System::Windows::Forms::Label^  yourWordLabel;
 	private: System::Windows::Forms::Label^  userWordLabel;
 	private: System::Windows::Forms::Label^  label2;
-			 Dice^ dice;
+	Dice^ dice;
 	array<Button^>^ selectedButtons;
 	int buttonCounter; 
 	int wordCounter; 
 	array<String^>^ guessedWords;
 	void addGuessedWord();
+	
 	void InitializeComponent();
 	void initializeDice();
 	void cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner);
