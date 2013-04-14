@@ -77,6 +77,8 @@
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="Die.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="ScoreCollection.cpp" />
     <ClCompile Include="WinCLI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +95,8 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="SourceCollection.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
