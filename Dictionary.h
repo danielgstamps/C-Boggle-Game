@@ -1,19 +1,20 @@
 #pragma once
 #include <unordered_set> 
+
 #include <iostream>
 #include <fstream>
 #include <string>
-//#include <msclr/marshal_cppstd.h>
 #include <stdlib.h>
 
 using namespace std;
 using namespace System;
+using System::Collections::Hashtable;
 using System::Runtime::InteropServices::Marshal;
 
-class Dictionary
+ref class Dictionary
 {
 private:
-	unordered_set<string> set;
+	Hashtable^ table;
 public:
 	Dictionary();
 	void loadDictionary();
