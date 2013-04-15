@@ -30,7 +30,9 @@ namespace Project1 {
 	int buttonCounter;
 	int wordCounter;
 	int minutesRemaining;
-	int secondsRemaining;
+	private: System::Windows::Forms::Button^  newGameButton;
+	private: System::Windows::Forms::Button^  highScoresButton;
+			 int secondsRemaining;
  
 	void addGuessedWord();
 	void InitializeComponent();
@@ -41,6 +43,8 @@ namespace Project1 {
 	void disableAllButtons();
 	void disableButtonsClicked();
 	void enableButtons();
+	void endGame();
+	void resetTimer();
 
 	// ----- FORMS ------ //
 	System::Windows::Forms::Button^  die0;
@@ -64,7 +68,7 @@ namespace Project1 {
 	System::Windows::Forms::Label^  titleLabel;
 	System::Windows::Forms::Label^  yourWordLabel;
 	System::Windows::Forms::Label^  userWordLabel;
-	System::Windows::Forms::Label^  label2;
+
 	System::Windows::Forms::Label^  timeLabel;
 	System::Windows::Forms::Label^  secondsLeftLabel;
 	System::Windows::Forms::Label^  timerColonLabel;
@@ -103,8 +107,9 @@ namespace Project1 {
 	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::button17_Click(System::Object^  sender, System::EventArgs^  e);	
+	System::Void MyForm::submitButton_Click(System::Object^  sender, System::EventArgs^  e);	
 	System::Void MyForm::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e); 
+	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e);	
 	};
 
 #pragma region Windows Form Designer generated code

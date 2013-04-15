@@ -5,14 +5,14 @@
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.h" caret="110" fromTop="8" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="400" fromTop="20" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="1652" fromTop="55" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="0" fromTop="0" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="360" fromTop="2" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="186" fromTop="11" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.h" caret="174" fromTop="13" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:SourceCollection.h" caret="277" fromTop="16" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="3281" fromTop="24" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="33950" fromTop="21" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="35291" fromTop="22" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="1405" fromTop="31" />
   </RecentFiles>
   <RecentEdits>
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:WinCLI.cpp" caret="38" fromTop="1" />
@@ -25,7 +25,7 @@
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="220" fromTop="14" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="118" fromTop="7" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.h" caret="191" fromTop="14" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="3233" fromTop="24" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="34144" fromTop="26" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="1405" fromTop="31" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="35251" fromTop="22" />
   </RecentEdits>
 </RecentFiles>
