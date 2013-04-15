@@ -416,7 +416,6 @@ namespace Project1{
 		// 
 		// countdownTimer
 		// 
-		this->countdownTimer->Interval = 1000;
 		this->countdownTimer->Tick += gcnew System::EventHandler(this, &MyForm::countdownTimer_Tick);
 		// 
 		// newGameButton
@@ -800,6 +799,7 @@ namespace Project1{
 	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e){
 		resetTimer();
 		enableButtons();
+		initializeDice();
 
 		this->guessedWords->Clear;
 		this->wordCounter = 0;
