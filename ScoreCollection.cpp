@@ -1,0 +1,70 @@
+#include "SourceCollection.h"
+
+
+
+ScoreCollection::ScoreCollection(){
+	this->scores = gcnew array<Score^>(4);
+}
+
+void ScoreCollection::loadScores(){
+	string line;
+	ifstream myfile ("Scores.txt");
+	int possition = 0;
+	int lineNum=1;
+	string name;
+	int score;
+	if (myfile.is_open()){
+		while ( myfile.good() ){
+			getline (myfile,line);
+			if(lineNum%2==1){
+				name = line;
+			}else{
+			istringstream buffer(line);
+			buffer >> score;  
+			String^ string = Marshal::PtrToStringAnsi(static_cast<IntPtr>(const_cast<char *>(name.c_str()))); 
+			Score^ player = gcnew Score(string, score);
+			this->scores[possition]= player;
+			possition++;
+			}
+			lineNum++;
+		}
+
+    myfile.close();
+	}
+}
+
+void ScoreCollection::writeScores(){
+
+}
+
+bool ScoreCollection::isHighScore(int score){
+	bool isHighScore=false;
+	for(int i=0; i<5; i++){
+		if(this->scores[i]->getScore()<score){
+			isHighScore = true;
+		}
+	}
+	return isHighScore;
+}
+
+void ScoreCollection::newScore(String^ name, int score){
+		int possition;
+		array<Score^>^ tempScore= gcnew array<Score^>(4);
+		///May not look the cleanest but i did it this way for o(n) notation rather than going 0(n*n) nesting for loops
+		for(int i=0; i<5; i++){
+			if(this->scores[i]->getScore() < score){
+				possition = i;
+			}
+		}
+		for(int i=0; i<5; i++){
+			if(i<possition){
+				tempScore[i] = this->scores[i];
+			}else if (i == possition){
+				Score^ newScore = gcnew Score(name,score);
+				tempScore[i] = newScore;
+			}else{
+				tempScore[i] = this->scores[i+1];
+			}
+			this->scores = tempScore;
+		}
+}
