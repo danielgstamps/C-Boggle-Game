@@ -33,7 +33,7 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  newGameButton;
 	private: System::Windows::Forms::Button^  highScoresButton;
 			 int secondsRemaining;
- 
+			 
 	void addGuessedWord();
 	void InitializeComponent();
 	void initializeDice();

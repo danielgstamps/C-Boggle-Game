@@ -15,7 +15,7 @@ void Dictionary::loadDictionary(){
 
 		while ( myfile.good() ){
 			getline (myfile,line);
-			this->set.insert(line);
+			this->set->insert(line);
 		}
 
     myfile.close();
