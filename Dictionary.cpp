@@ -15,7 +15,6 @@ void Dictionary::loadDictionary(){
 
 		while ( myfile.good() ){
 			getline (myfile,line);
-			cout<<line<<endl;
 			this->set.insert(line);
 		}
 
@@ -24,9 +23,11 @@ void Dictionary::loadDictionary(){
 }
 
 bool Dictionary::wordExist(String^ word){
-//	string stdString = msclr::interop::marshal_as< std::string >(word);
-//	return this->set.find(stdString)!= this->set.end();
-	return false;
+	System::IntPtr pointer = Marshal::StringToHGlobalAnsi(word);
+	char* charPointer = reinterpret_cast<char*>(pointer.ToPointer());
+    std::string stdString(charPointer, word->Length);
+    Marshal::FreeHGlobal(pointer);
+	return this->set.find(stdString)!= this->set.end();
 }
 
 int Dictionary::points(String^ word){
