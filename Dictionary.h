@@ -8,7 +8,7 @@
 
 using namespace std;
 using namespace System;
-using namespace std;
+using System::Runtime::InteropServices::Marshal;
 
 class Dictionary
 {
