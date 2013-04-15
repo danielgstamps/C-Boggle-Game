@@ -10,6 +10,5 @@ String^ Score::getName(){
 	return this->name;
 }
 int Score::getScore(){
-
 	return this->score;
 }
