@@ -1,12 +1,21 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="27896" fromTop="10" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="759" fromTop="19" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="451" fromTop="23" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="137" fromTop="8" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="138" fromTop="8" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="6307" fromTop="18" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2120" fromTop="85" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="41143" fromTop="0" />
   </RecentFiles>
   <RecentEdits>
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="28228" fromTop="19" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="673" fromTop="18" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="137" fromTop="8" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="479" fromTop="23" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="136" fromTop="7" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="110" fromTop="5" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="6476" fromTop="18" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="41143" fromTop="17" />
   </RecentEdits>
 </RecentFiles>

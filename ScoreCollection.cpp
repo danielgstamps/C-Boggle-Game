@@ -1,15 +1,19 @@
-#include "SourceCollection.h"
+#include "ScoreCollection.h"
 
 
 
 ScoreCollection::ScoreCollection(){
-	this->scores = gcnew array<Score^>(4);
+	this->scores = gcnew array<Score^>(5);
+}
+
+array<Score^>^ ScoreCollection::getScores(){
+	return this->scores;
 }
 
 void ScoreCollection::loadScores(){
 	string line;
 	ifstream myfile ("Scores.txt");
-	int possition = 0;
+	int position = 0;
 	int lineNum=1;
 	string name;
 	int score;
@@ -23,8 +27,8 @@ void ScoreCollection::loadScores(){
 			buffer >> score;  
 			String^ string = Marshal::PtrToStringAnsi(static_cast<IntPtr>(const_cast<char *>(name.c_str()))); 
 			Score^ player = gcnew Score(string, score);
-			this->scores[possition]= player;
-			possition++;
+			this->scores[position]= player;
+			position++;
 			}
 			lineNum++;
 		}

@@ -96,7 +96,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Score.h" />
-    <ClInclude Include="SourceCollection.h" />
+    <ClInclude Include="ScoreCollection.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">

@@ -49,9 +49,19 @@ namespace Project1{
 		this->countdownTimer = (gcnew System::Windows::Forms::Timer(this->components));
 		this->newGameButton = (gcnew System::Windows::Forms::Button());
 		this->highScoresButton = (gcnew System::Windows::Forms::Button());
+		this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
+		this->tsmFile = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsiNewGame = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsiHighScores = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsiExit = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsmHelp = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsiGameInstructions = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsmAbout = (gcnew System::Windows::Forms::ToolStripMenuItem());
+		this->tsiAbout = (gcnew System::Windows::Forms::ToolStripMenuItem());
 		this->dicePanel->SuspendLayout();
 		this->timerPanel->SuspendLayout();
 		this->wordGuessPanel->SuspendLayout();
+		this->menuStrip2->SuspendLayout();
 		this->SuspendLayout();
 		// 
 		// die0
@@ -177,7 +187,7 @@ namespace Project1{
 		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->titleLabel->ForeColor = System::Drawing::Color::WhiteSmoke;
-		this->titleLabel->Location = System::Drawing::Point(121, 11);
+		this->titleLabel->Location = System::Drawing::Point(118, 32);
 		this->titleLabel->Name = L"titleLabel";
 		this->titleLabel->Size = System::Drawing::Size(176, 39);
 		this->titleLabel->TabIndex = 9;
@@ -188,7 +198,7 @@ namespace Project1{
 		this->userGuessesBox->Enabled = false;
 		this->userGuessesBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->userGuessesBox->Location = System::Drawing::Point(393, 70);
+		this->userGuessesBox->Location = System::Drawing::Point(390, 91);
 		this->userGuessesBox->Name = L"userGuessesBox";
 		this->userGuessesBox->Size = System::Drawing::Size(147, 243);
 		this->userGuessesBox->TabIndex = 10;
@@ -304,7 +314,7 @@ namespace Project1{
 		this->dicePanel->Controls->Add(this->die12);
 		this->dicePanel->Controls->Add(this->die9);
 		this->dicePanel->Controls->Add(this->die10);
-		this->dicePanel->Location = System::Drawing::Point(24, 53);
+		this->dicePanel->Location = System::Drawing::Point(21, 74);
 		this->dicePanel->Name = L"dicePanel";
 		this->dicePanel->Size = System::Drawing::Size(363, 318);
 		this->dicePanel->TabIndex = 18;
@@ -328,7 +338,7 @@ namespace Project1{
 		this->timerPanel->Controls->Add(this->minutesLeftLabel);
 		this->timerPanel->Controls->Add(this->secondsLeftLabel);
 		this->timerPanel->Controls->Add(this->timeLabel);
-		this->timerPanel->Location = System::Drawing::Point(393, 377);
+		this->timerPanel->Location = System::Drawing::Point(390, 398);
 		this->timerPanel->Name = L"timerPanel";
 		this->timerPanel->Size = System::Drawing::Size(148, 95);
 		this->timerPanel->TabIndex = 20;
@@ -389,7 +399,7 @@ namespace Project1{
 		this->wordGuessPanel->Controls->Add(this->submitButton);
 		this->wordGuessPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->wordGuessPanel->Location = System::Drawing::Point(24, 377);
+		this->wordGuessPanel->Location = System::Drawing::Point(21, 398);
 		this->wordGuessPanel->Name = L"wordGuessPanel";
 		this->wordGuessPanel->Size = System::Drawing::Size(363, 95);
 		this->wordGuessPanel->TabIndex = 21;
@@ -427,7 +437,7 @@ namespace Project1{
 		// 
 		this->newGameButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->newGameButton->Location = System::Drawing::Point(393, 319);
+		this->newGameButton->Location = System::Drawing::Point(390, 340);
 		this->newGameButton->Name = L"newGameButton";
 		this->newGameButton->Size = System::Drawing::Size(70, 52);
 		this->newGameButton->TabIndex = 23;
@@ -439,19 +449,87 @@ namespace Project1{
 		// 
 		this->highScoresButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->highScoresButton->Location = System::Drawing::Point(474, 319);
+		this->highScoresButton->Location = System::Drawing::Point(471, 340);
 		this->highScoresButton->Name = L"highScoresButton";
 		this->highScoresButton->Size = System::Drawing::Size(70, 52);
 		this->highScoresButton->TabIndex = 24;
 		this->highScoresButton->Text = L"High Scores";
 		this->highScoresButton->UseVisualStyleBackColor = true;
+		this->highScoresButton->Click += gcnew System::EventHandler(this, &MyForm::highScoresButton_Click);
+		// 
+		// menuStrip2
+		// 
+		this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->tsmFile, this->tsmHelp, 
+			this->tsmAbout});
+		this->menuStrip2->Location = System::Drawing::Point(0, 0);
+		this->menuStrip2->Name = L"menuStrip2";
+		this->menuStrip2->Size = System::Drawing::Size(573, 24);
+		this->menuStrip2->TabIndex = 25;
+		this->menuStrip2->Text = L"menuStrip2";
+		// 
+		// tsmFile
+		// 
+		this->tsmFile->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->tsiNewGame, 
+			this->tsiHighScores, this->tsiExit});
+		this->tsmFile->Name = L"tsmFile";
+		this->tsmFile->Size = System::Drawing::Size(37, 20);
+		this->tsmFile->Text = L"File";
+		// 
+		// tsiNewGame
+		// 
+		this->tsiNewGame->Name = L"tsiNewGame";
+		this->tsiNewGame->Size = System::Drawing::Size(152, 22);
+		this->tsiNewGame->Text = L"New Game";
+		this->tsiNewGame->Click += gcnew System::EventHandler(this, &MyForm::newGameToolStripMenuItem_Click);
+		// 
+		// tsiHighScores
+		// 
+		this->tsiHighScores->Name = L"tsiHighScores";
+		this->tsiHighScores->Size = System::Drawing::Size(152, 22);
+		this->tsiHighScores->Text = L"High Scores";
+		this->tsiHighScores->Click += gcnew System::EventHandler(this, &MyForm::toolStripMenuItem3_Click);
+		// 
+		// tsiExit
+		// 
+		this->tsiExit->Name = L"tsiExit";
+		this->tsiExit->Size = System::Drawing::Size(152, 22);
+		this->tsiExit->Text = L"Exit";
+		this->tsiExit->Click += gcnew System::EventHandler(this, &MyForm::closeToolStripMenuItem_Click);
+		// 
+		// tsmHelp
+		// 
+		this->tsmHelp->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->tsiGameInstructions});
+		this->tsmHelp->Name = L"tsmHelp";
+		this->tsmHelp->Size = System::Drawing::Size(44, 20);
+		this->tsmHelp->Text = L"Help";
+		// 
+		// tsiGameInstructions
+		// 
+		this->tsiGameInstructions->Name = L"tsiGameInstructions";
+		this->tsiGameInstructions->Size = System::Drawing::Size(170, 22);
+		this->tsiGameInstructions->Text = L"Game Instructions";
+		this->tsiGameInstructions->Click += gcnew System::EventHandler(this, &MyForm::gameInstructionsToolStripMenuItem_Click);
+		// 
+		// tsmAbout
+		// 
+		this->tsmAbout->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->tsiAbout});
+		this->tsmAbout->Name = L"tsmAbout";
+		this->tsmAbout->Size = System::Drawing::Size(52, 20);
+		this->tsmAbout->Text = L"About";
+		// 
+		// tsiAbout
+		// 
+		this->tsiAbout->Name = L"tsiAbout";
+		this->tsiAbout->Size = System::Drawing::Size(169, 22);
+		this->tsiAbout->Text = L"About this Project";
+		this->tsiAbout->Click += gcnew System::EventHandler(this, &MyForm::aboutThisProjectToolStripMenuItem_Click);
 		// 
 		// MyForm
 		// 
 		this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 		this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 		this->BackColor = System::Drawing::Color::SteelBlue;
-		this->ClientSize = System::Drawing::Size(573, 488);
+		this->ClientSize = System::Drawing::Size(573, 509);
 		this->Controls->Add(this->highScoresButton);
 		this->Controls->Add(this->newGameButton);
 		this->Controls->Add(this->wordGuessPanel);
@@ -459,6 +537,8 @@ namespace Project1{
 		this->Controls->Add(this->dicePanel);
 		this->Controls->Add(this->userGuessesBox);
 		this->Controls->Add(this->titleLabel);
+		this->Controls->Add(this->menuStrip2);
+		this->MainMenuStrip = this->menuStrip2;
 		this->Name = L"MyForm";
 		this->Text = L"Boggle by Daniel Stamps and Bryan Patterson";
 		this->dicePanel->ResumeLayout(false);
@@ -466,6 +546,8 @@ namespace Project1{
 		this->timerPanel->PerformLayout();
 		this->wordGuessPanel->ResumeLayout(false);
 		this->wordGuessPanel->PerformLayout();
+		this->menuStrip2->ResumeLayout(false);
+		this->menuStrip2->PerformLayout();
 		this->ResumeLayout(false);
 		this->PerformLayout();
 
@@ -801,28 +883,12 @@ namespace Project1{
 
 	// New Game Button
 	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e){
-		resetTimer();
-		enableButtons();
-		initializeDice();
+		newGame();
+	}
 
-		this->guessedWords->Clear;
-		this->wordCounter = 0;
-		this->buttonCounter = 0;
-		this->guessedWords->Clear;
-
-		this->userGuessesBox->Text = "GUESSES:\n~~~~~~~~\n";
-		this->yourWordLabel->Text = "Your word:";
-		this->userWordChoice = "";
-		this->userWordLabel->Text = "";
-
-		this->minutesLeftLabel->Text = "3";
-		this->secondsLeftLabel->Text = "00";
-		//this->newGameButton->Enabled = false;
-		//this->newGameButton->BackColor = Color::DarkGray;
-		this->highScoresButton->Enabled = false;
-		this->highScoresButton->BackColor = Color::DarkGray;
-		this->submitButton->Enabled = true;
-		this->submitButton->BackColor = Color::White;
+	// High Scores Button
+	System::Void MyForm::highScoresButton_Click(System::Object^  sender, System::EventArgs^  e){
+		showHighScores();
 	}
 
 	// Timer
@@ -849,6 +915,67 @@ namespace Project1{
 		}
 	}
 
+	// -------- TOOLBAR ----------- //
+	System::Void MyForm::newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+		newGame();
+	}
+
+	System::Void MyForm::closeToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+		this->Close();
+	}
+
+	System::Void MyForm::gameInstructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+		MessageBox::Show("DO LATER", "Instructions");
+	}
+
+	System::Void MyForm::aboutThisProjectToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+		MessageBox::Show("This Boggle game was created by Daniel Stamps and \n Bryan Patterson for Dr. Yoder's Program Construction II class.", "About this Project");
+	}
+
+	System::Void MyForm::toolStripMenuItem3_Click(System::Object^  sender, System::EventArgs^  e){
+		showHighScores();
+	}
+
+	// --------- END OF TOOLBAR ---------- //
+
+	void MyForm::showHighScores(){
+		this->scores = gcnew ScoreCollection();
+		this->scores->loadScores();
+		array<Score^>^ players = this->scores->getScores();
+		String^ highScore = "High Scores: \n\n";
+		
+		for(int i = 0 ; i < 5 ; i++){
+			Score^ currentScore = players[i];
+			highScore += currentScore->getName() + "\n" + currentScore->getScore() + "\n\n";
+		}
+
+		// Needs fixing
+	//	this->scores->newScore("Tom", 22);
+		MessageBox::Show(highScore, "High Scores");
+	}
+
+
+	void MyForm::newGame(){
+		resetTimer();
+		enableButtons();
+		initializeDice();
+
+		this->guessedWords->Clear;
+		this->wordCounter = 0;
+		this->buttonCounter = 0;
+		this->guessedWords->Clear;
+
+		this->userGuessesBox->Text = "GUESSES:\n~~~~~~~~\n";
+		this->yourWordLabel->Text = "Your word:";
+		this->userWordChoice = "";
+		this->userWordLabel->Text = "";
+
+		this->minutesLeftLabel->Text = "3";
+		this->secondsLeftLabel->Text = "00";
+		this->submitButton->Enabled = true;
+		this->submitButton->BackColor = Color::White;
+	}
+
 	void MyForm::endGame(){
 		
 		int score =0;
@@ -861,8 +988,6 @@ namespace Project1{
 		this->userWordLabel->Text = "Game over!";
 		this->newGameButton->Enabled = true;
 		this->newGameButton->BackColor = Color::White;
-		this->highScoresButton->Enabled = true;
-		this->highScoresButton->BackColor = Color::White;
 		for(int i = 0; i<this->wordCounter;i++){
 			
 			if(this->dictionary->wordExist(this->guessedWords[i]->ToLower())){
