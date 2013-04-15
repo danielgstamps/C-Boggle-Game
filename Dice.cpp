@@ -16,7 +16,7 @@ void Dice::populateDiceList(){
 	this->dice[5] = gcnew Die("L", "U", "P", "E", "T", "S");
 	this->dice[6] = gcnew Die("A", "C", "I", "T", "O", "A");
 	this->dice[7] = gcnew Die("Y", "L", "G", "K", "U", "E");
-	this->dice[8] = gcnew Die("Qu", "B", "M", "J", "O", "A");
+	this->dice[8] = gcnew Die("QU", "B", "M", "J", "O", "A");
 	this->dice[9] = gcnew Die("E", "H", "I", "S", "P", "N");
 	this->dice[10] = gcnew Die("V", "E", "T", "I", "G", "N");
 	this->dice[11] = gcnew Die("B", "A", "L", "I", "Y", "T");
