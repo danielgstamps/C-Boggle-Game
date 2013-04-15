@@ -844,6 +844,8 @@ namespace Project1{
 	}
 
 	void MyForm::endGame(){
+		Dictionary dictionary =  Dictionary();
+		int score =0;
 		this->countdownTimer->Enabled = false;
 		this->disableAllButtons();
 		this->submitButton->Enabled = false;
@@ -855,6 +857,14 @@ namespace Project1{
 		this->newGameButton->BackColor = Color::White;
 		this->highScoresButton->Enabled = true;
 		this->highScoresButton->BackColor = Color::White;
+		dictionary.loadDictionary();
+		for(int i = 0; i<this->wordCounter;i++){
+			
+			if(dictionary.wordExist(this->guessedWords[i]->ToLower())){
+				score+=dictionary.points(this->guessedWords[i]);
+			}
+		}
+		this->yourWordLabel->Text= score.ToString();
 	}
 
 	void MyForm::resetTimer(){
