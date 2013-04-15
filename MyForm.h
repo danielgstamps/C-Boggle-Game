@@ -28,7 +28,9 @@ namespace Project1 {
 	array<Button^>^ selectedButtons;	
 	array<String^>^ guessedWords;
 	int buttonCounter;
-	int wordCounter; 
+	int wordCounter;
+	int minutesRemaining;
+	int secondsRemaining;
  
 	void addGuessedWord();
 	void InitializeComponent();
@@ -58,12 +60,16 @@ namespace Project1 {
 	System::Windows::Forms::Button^  die14;
 	System::Windows::Forms::Button^  die15;
 	System::Windows::Forms::Button^  submitButton;
+	System::Windows::Forms::Timer^  countdownTimer;
 	System::Windows::Forms::Label^  titleLabel;
 	System::Windows::Forms::Label^  yourWordLabel;
 	System::Windows::Forms::Label^  userWordLabel;
 	System::Windows::Forms::Label^  label2;
 	System::Windows::Forms::Label^  timeLabel;
-	System::Windows::Forms::Label^  timeLeftLabel;
+	System::Windows::Forms::Label^  secondsLeftLabel;
+	System::Windows::Forms::Label^  timerColonLabel;
+	System::Windows::Forms::Label^  minutesLeftLabel;
+
 	System::Windows::Forms::Panel^  dicePanel;
 	System::Windows::Forms::Panel^  timerPanel;
 	System::Windows::Forms::Panel^  wordGuessPanel;
@@ -77,7 +83,8 @@ namespace Project1 {
 	System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  howToToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem1;		
-	System::ComponentModel::Container ^components;
+	System::ComponentModel::IContainer^  components;
+
 
 	// ----- ACTION LISTENERS ------ //
 	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e);
@@ -96,7 +103,8 @@ namespace Project1 {
 	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void button17_Click(System::Object^  sender, System::EventArgs^  e);		 
+	System::Void MyForm::button17_Click(System::Object^  sender, System::EventArgs^  e);	
+	System::Void MyForm::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e); 
 	};
 
 #pragma region Windows Form Designer generated code

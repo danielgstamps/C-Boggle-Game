@@ -11,11 +11,14 @@ namespace Project1{
 		this->selectedButtons = gcnew array<Button^>(16);
 		this->guessedWords = gcnew array<String^>(256);
 		this->buttonCounter=0;
+		this->minutesRemaining = 3;
+		this->secondsRemaining = 0;
 		this->userGuessesBox->Text="MAKE A GUESS! HURRY!";
 	}
 
 	void MyForm::InitializeComponent()
 	{
+		this->components = (gcnew System::ComponentModel::Container());
 		this->die0 = (gcnew System::Windows::Forms::Button());
 		this->die1 = (gcnew System::Windows::Forms::Button());
 		this->die2 = (gcnew System::Windows::Forms::Button());
@@ -37,12 +40,15 @@ namespace Project1{
 		this->dicePanel = (gcnew System::Windows::Forms::Panel());
 		this->timeLabel = (gcnew System::Windows::Forms::Label());
 		this->timerPanel = (gcnew System::Windows::Forms::Panel());
-		this->timeLeftLabel = (gcnew System::Windows::Forms::Label());
+		this->timerColonLabel = (gcnew System::Windows::Forms::Label());
+		this->minutesLeftLabel = (gcnew System::Windows::Forms::Label());
+		this->secondsLeftLabel = (gcnew System::Windows::Forms::Label());
 		this->submitButton = (gcnew System::Windows::Forms::Button());
 		this->wordGuessPanel = (gcnew System::Windows::Forms::Panel());
 		this->yourWordLabel = (gcnew System::Windows::Forms::Label());
 		this->userWordLabel = (gcnew System::Windows::Forms::Label());
 		this->label2 = (gcnew System::Windows::Forms::Label());
+		this->countdownTimer = (gcnew System::Windows::Forms::Timer(this->components));
 		this->dicePanel->SuspendLayout();
 		this->timerPanel->SuspendLayout();
 		this->wordGuessPanel->SuspendLayout();
@@ -288,36 +294,59 @@ namespace Project1{
 		// timeLabel
 		// 
 		this->timeLabel->AutoSize = true;
-		this->timeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		this->timeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->timeLabel->ForeColor = System::Drawing::SystemColors::Control;
-		this->timeLabel->Location = System::Drawing::Point(41, 6);
+		this->timeLabel->Location = System::Drawing::Point(22, 6);
 		this->timeLabel->Name = L"timeLabel";
-		this->timeLabel->Size = System::Drawing::Size(60, 22);
+		this->timeLabel->Size = System::Drawing::Size(100, 22);
 		this->timeLabel->TabIndex = 19;
-		this->timeLabel->Text = L"Time:";
+		this->timeLabel->Text = L"Time Left:";
 		// 
 		// timerPanel
 		// 
 		this->timerPanel->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-		this->timerPanel->Controls->Add(this->timeLeftLabel);
+		this->timerPanel->Controls->Add(this->timerColonLabel);
+		this->timerPanel->Controls->Add(this->minutesLeftLabel);
+		this->timerPanel->Controls->Add(this->secondsLeftLabel);
 		this->timerPanel->Controls->Add(this->timeLabel);
 		this->timerPanel->Location = System::Drawing::Point(393, 377);
 		this->timerPanel->Name = L"timerPanel";
 		this->timerPanel->Size = System::Drawing::Size(148, 95);
 		this->timerPanel->TabIndex = 20;
 		// 
-		// timeLeftLabel
+		// timerColonLabel
 		// 
-		this->timeLeftLabel->AutoSize = true;
-		this->timeLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->timerColonLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->timeLeftLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-		this->timeLeftLabel->Location = System::Drawing::Point(17, 30);
-		this->timeLeftLabel->Name = L"timeLeftLabel";
-		this->timeLeftLabel->Size = System::Drawing::Size(114, 54);
-		this->timeLeftLabel->TabIndex = 0;
-		this->timeLeftLabel->Text = L"3.00";
+		this->timerColonLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
+		this->timerColonLabel->Location = System::Drawing::Point(40, 28);
+		this->timerColonLabel->Name = L"timerColonLabel";
+		this->timerColonLabel->Size = System::Drawing::Size(25, 44);
+		this->timerColonLabel->TabIndex = 22;
+		this->timerColonLabel->Text = L":";
+		// 
+		// minutesLeftLabel
+		// 
+		this->minutesLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->minutesLeftLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
+		this->minutesLeftLabel->Location = System::Drawing::Point(3, 33);
+		this->minutesLeftLabel->Name = L"minutesLeftLabel";
+		this->minutesLeftLabel->Size = System::Drawing::Size(50, 45);
+		this->minutesLeftLabel->TabIndex = 20;
+		this->minutesLeftLabel->Text = L"m";
+		// 
+		// secondsLeftLabel
+		// 
+		this->secondsLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 35, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->secondsLeftLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
+		this->secondsLeftLabel->Location = System::Drawing::Point(59, 33);
+		this->secondsLeftLabel->Name = L"secondsLeftLabel";
+		this->secondsLeftLabel->Size = System::Drawing::Size(84, 45);
+		this->secondsLeftLabel->TabIndex = 0;
+		this->secondsLeftLabel->Text = L"s";
 		// 
 		// submitButton
 		// 
@@ -378,6 +407,11 @@ namespace Project1{
 		this->label2->Size = System::Drawing::Size(0, 31);
 		this->label2->TabIndex = 20;
 		this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+		// 
+		// countdownTimer
+		// 
+		this->countdownTimer->Enabled = true;
+		this->countdownTimer->Tick += gcnew System::EventHandler(this, &MyForm::countdownTimer_Tick);
 		// 
 		// MyForm
 		// 
@@ -556,6 +590,15 @@ namespace Project1{
 		}
 	}
 
+	void MyForm::addGuessedWord(){
+		this->userGuessesBox->Text="";
+		this->userGuessesBox->Text="GUESSES:\n~~~~~~~~\n";
+
+		for(int i = this->wordCounter; i>0; i--){
+			this->userGuessesBox->Text+=this->guessedWords[i-1]+"\n";
+		}
+	}
+
 	// ~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
 
 	// Die 0
@@ -720,15 +763,33 @@ namespace Project1{
 			this->buttonCounter=0;
 			this->selectedButtons->Clear;
 			addGuessedWord();
-		
 		}
 	}
 
-	void MyForm::addGuessedWord(){
-		this->userGuessesBox->Text="";
-		this->userGuessesBox->Text="GUESSES:\n~~~~~~~~\n";
-		for(int i = this->wordCounter; i>0; i--){
-			this->userGuessesBox->Text+=this->guessedWords[i-1]+"\n";
+	// Timer
+	System::Void MyForm::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e){
+		if(this->secondsRemaining == 0 && this->minutesRemaining > 0){
+			this->minutesRemaining -= 1;
+			this->secondsRemaining = 60;
+		}
+
+		this->secondsRemaining -= 1;
+
+		String^ minutesRemainingStr = minutesRemaining.ToString();
+		String^ secondsRemainingStr = secondsRemaining.ToString();
+
+		if (secondsRemainingStr->Length == 1){
+			secondsRemainingStr = "0" + secondsRemainingStr;
+		}
+
+		this->minutesLeftLabel->Text = minutesRemainingStr;
+		this->secondsLeftLabel->Text = secondsRemainingStr;
+
+		if(this->minutesRemaining == 0 && this->secondsRemaining == 0){
+			this->disableAllButtons();
+			this->submitButton->Enabled = false;
+			this->submitButton->BackColor = Color::DarkGray;
+			this->countdownTimer->Enabled = false;
 		}
 	}
 
