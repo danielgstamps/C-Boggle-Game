@@ -42,8 +42,14 @@ void ScoreCollection::writeScores(){
 		std::string stdString(charPointer, this->scores[i]->getName()->Length);
 		Marshal::FreeHGlobal(pointer);
 		int score = this->scores[i]->getScore();
+
+		std::string s;
+		std::stringstream out;
+		out << score;
+		s = out.str();
+
 		myfile << stdString+"\n";
-		myfile << score.ToString+"\n";
+		myfile << s+"\n";
 	}
   myfile.close();
 }
