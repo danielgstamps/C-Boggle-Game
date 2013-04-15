@@ -629,7 +629,7 @@ namespace Project1{
 		}
 	}
 
-	// ~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
+	// ~~~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
 
 	// Die 0
 	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e) {
