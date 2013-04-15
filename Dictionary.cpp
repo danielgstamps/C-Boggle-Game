@@ -4,7 +4,7 @@
 
 
 Dictionary::Dictionary(){
-	this->set = unordered_set<string>();
+	this->table = gcnew Hashtable;
 }
 
 void Dictionary::loadDictionary(){
@@ -15,7 +15,8 @@ void Dictionary::loadDictionary(){
 
 		while ( myfile.good() ){
 			getline (myfile,line);
-			this->set->insert(line);
+			String^ cliString = Marshal::PtrToStringAnsi(static_cast<IntPtr>(const_cast<char *>(line.c_str()))); 
+			this->table->Add(cliString , cliString);
 		}
 
     myfile.close();
@@ -23,11 +24,7 @@ void Dictionary::loadDictionary(){
 }
 
 bool Dictionary::wordExist(String^ word){
-	System::IntPtr pointer = Marshal::StringToHGlobalAnsi(word);
-	char* charPointer = reinterpret_cast<char*>(pointer.ToPointer());
-    std::string stdString(charPointer, word->Length);
-    Marshal::FreeHGlobal(pointer);
-	return this->set.find(stdString)!= this->set.end();
+	return this->table->Contains(word);
 }
 
 int Dictionary::points(String^ word){

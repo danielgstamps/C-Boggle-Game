@@ -11,6 +11,8 @@ namespace Project1{
 		this->selectedButtons = gcnew array<Button^>(16);
 		this->guessedWords = gcnew array<String^>(256);
 		this->buttonCounter=0;
+		this->dictionary = gcnew Dictionary();
+		this->dictionary->loadDictionary();
 	}
 
 	void MyForm::InitializeComponent()
@@ -416,6 +418,7 @@ namespace Project1{
 		// 
 		// countdownTimer
 		// 
+		this->countdownTimer->Interval = 1000;
 		this->countdownTimer->Tick += gcnew System::EventHandler(this, &MyForm::countdownTimer_Tick);
 		// 
 		// newGameButton
@@ -844,7 +847,7 @@ namespace Project1{
 	}
 
 	void MyForm::endGame(){
-		Dictionary dictionary =  Dictionary();
+		
 		int score =0;
 		this->countdownTimer->Enabled = false;
 		this->disableAllButtons();
@@ -857,14 +860,13 @@ namespace Project1{
 		this->newGameButton->BackColor = Color::White;
 		this->highScoresButton->Enabled = true;
 		this->highScoresButton->BackColor = Color::White;
-		dictionary.loadDictionary();
 		for(int i = 0; i<this->wordCounter;i++){
 			
-			if(dictionary.wordExist(this->guessedWords[i]->ToLower())){
-				score+=dictionary.points(this->guessedWords[i]);
+			if(this->dictionary->wordExist(this->guessedWords[i]->ToLower())){
+				score+=this->dictionary->points(this->guessedWords[i]);
 			}
 		}
-		this->yourWordLabel->Text= score.ToString();
+		this->yourWordLabel->Text="Your score is: " + score.ToString();
 	}
 
 	void MyForm::resetTimer(){
