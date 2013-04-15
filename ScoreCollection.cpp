@@ -34,7 +34,18 @@ void ScoreCollection::loadScores(){
 }
 
 void ScoreCollection::writeScores(){
-
+  ofstream myfile;
+  myfile.open ("Scores.txt");
+	for(int i = 0; i <5; i++){
+		System::IntPtr pointer = Marshal::StringToHGlobalAnsi(this->scores[i]->getName());
+		char* charPointer = reinterpret_cast<char*>(pointer.ToPointer());
+		std::string stdString(charPointer, this->scores[i]->getName()->Length);
+		Marshal::FreeHGlobal(pointer);
+		int score = this->scores[i]->getScore();
+		myfile << stdString+"\n";
+		myfile << score.ToString+"\n";
+	}
+  myfile.close();
 }
 
 bool ScoreCollection::isHighScore(int score){
