@@ -1,6 +1,8 @@
 #pragma once
 #include "Dice.h"
 #include "Dictionary.h"
+#include "Score.h"
+#include "ScoreCollection.h"
 
 namespace Project1 {
 
@@ -27,13 +29,33 @@ namespace Project1 {
 	Dice^ dice;
 	array<Button^>^ selectedButtons;	
 	array<String^>^ guessedWords;
+	Dictionary^ dictionary;
+	ScoreCollection^ scores;
 	int buttonCounter;
 	int wordCounter;
 	int minutesRemaining;
-	private: System::Windows::Forms::Button^  newGameButton;
-	private: System::Windows::Forms::Button^  highScoresButton;
-			 int secondsRemaining;
-			 Dictionary^ dictionary;
+	System::Windows::Forms::Button^  newGameButton;
+	System::Windows::Forms::Button^  highScoresButton;
+	int secondsRemaining;
+	System::Windows::Forms::MenuStrip^  menuStrip2;
+	private: System::Windows::Forms::ToolStripMenuItem^  tsmFile;
+	private: System::Windows::Forms::ToolStripMenuItem^  tsiNewGame;
+	private: System::Windows::Forms::ToolStripMenuItem^  tsiExit;
+
+
+
+
+	private: System::Windows::Forms::ToolStripMenuItem^  tsmHelp;
+	private: System::Windows::Forms::ToolStripMenuItem^  tsiGameInstructions;
+
+
+	private: System::Windows::Forms::ToolStripMenuItem^  tsmAbout;
+	private: System::Windows::Forms::ToolStripMenuItem^  tsiAbout;
+
+
+	private: System::Windows::Forms::ToolStripMenuItem^  tsiHighScores;
+
+	
 	void addGuessedWord();
 	void InitializeComponent();
 	void initializeDice();
@@ -43,8 +65,10 @@ namespace Project1 {
 	void disableAllButtons();
 	void disableButtonsClicked();
 	void enableButtons();
+	void newGame();
 	void endGame();
 	void resetTimer();
+	void showHighScores();
 
 	// ----- FORMS ------ //
 	System::Windows::Forms::Button^  die0;
@@ -110,7 +134,15 @@ namespace Project1 {
 	System::Void MyForm::submitButton_Click(System::Object^  sender, System::EventArgs^  e);	
 	System::Void MyForm::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e); 
 	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e);	
-	};
+
+	// ----- MENU BAR ------ //
+	System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e);	 
+	System::Void closeToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void gameInstructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void aboutThisProjectToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void toolStripMenuItem3_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void highScoresButton_Click(System::Object^  sender, System::EventArgs^  e); 
+};
 
 #pragma region Windows Form Designer generated code
 #pragma endregion

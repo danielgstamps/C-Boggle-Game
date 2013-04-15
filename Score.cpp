@@ -6,7 +6,6 @@ Score::Score(String^ name, int score){
 }
 
 String^ Score::getName(){
-
 	return this->name;
 }
 int Score::getScore(){
