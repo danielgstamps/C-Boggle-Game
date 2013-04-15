@@ -176,7 +176,7 @@ namespace Project1{
 		this->titleLabel->AutoSize = true;
 		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->titleLabel->ForeColor = System::Drawing::Color::LightCyan;
+		this->titleLabel->ForeColor = System::Drawing::Color::WhiteSmoke;
 		this->titleLabel->Location = System::Drawing::Point(121, 11);
 		this->titleLabel->Name = L"titleLabel";
 		this->titleLabel->Size = System::Drawing::Size(176, 39);
@@ -186,6 +186,8 @@ namespace Project1{
 		// userGuessesBox
 		// 
 		this->userGuessesBox->Enabled = false;
+		this->userGuessesBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
 		this->userGuessesBox->Location = System::Drawing::Point(393, 70);
 		this->userGuessesBox->Name = L"userGuessesBox";
 		this->userGuessesBox->Size = System::Drawing::Size(147, 243);
@@ -321,7 +323,7 @@ namespace Project1{
 		// 
 		// timerPanel
 		// 
-		this->timerPanel->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+		this->timerPanel->BackColor = System::Drawing::Color::SteelBlue;
 		this->timerPanel->Controls->Add(this->timerColonLabel);
 		this->timerPanel->Controls->Add(this->minutesLeftLabel);
 		this->timerPanel->Controls->Add(this->secondsLeftLabel);
@@ -793,7 +795,6 @@ namespace Project1{
 			this->userWordChoice = "";
 			this->userWordLabel->Text = "";
 			this->buttonCounter=0;
-		//	this->selectedButtons->Clear;
 			addGuessedWord();
 		}
 	}
@@ -814,8 +815,10 @@ namespace Project1{
 		this->userWordChoice = "";
 		this->userWordLabel->Text = "";
 
-		this->newGameButton->Enabled = false;
-		this->newGameButton->BackColor = Color::DarkGray;
+		this->minutesLeftLabel->Text = "3";
+		this->secondsLeftLabel->Text = "00";
+		//this->newGameButton->Enabled = false;
+		//this->newGameButton->BackColor = Color::DarkGray;
 		this->highScoresButton->Enabled = false;
 		this->highScoresButton->BackColor = Color::DarkGray;
 		this->submitButton->Enabled = true;
