@@ -5,11 +5,11 @@ namespace Project1{
 	MyForm::MyForm()
 	{		
 		this->userWordChoice = "";
+		this->score = 0;
 		this->dice = gcnew Dice();
 		this->InitializeComponent();
 		this->initializeDice();
 		this->selectedButtons = gcnew array<Button^>(16);
-		this->guessedWords = gcnew array<String^>(256);
 		this->buttonCounter=0;
 		this->dictionary = gcnew Dictionary();
 		this->dictionary->loadDictionary();
@@ -44,7 +44,7 @@ namespace Project1{
 		this->secondsLeftLabel = (gcnew System::Windows::Forms::Label());
 		this->submitButton = (gcnew System::Windows::Forms::Button());
 		this->wordGuessPanel = (gcnew System::Windows::Forms::Panel());
-		this->yourWordLabel = (gcnew System::Windows::Forms::Label());
+		this->yourScoreLabel = (gcnew System::Windows::Forms::Label());
 		this->userWordLabel = (gcnew System::Windows::Forms::Label());
 		this->countdownTimer = (gcnew System::Windows::Forms::Timer(this->components));
 		this->newGameButton = (gcnew System::Windows::Forms::Button());
@@ -187,7 +187,7 @@ namespace Project1{
 		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->titleLabel->ForeColor = System::Drawing::Color::WhiteSmoke;
-		this->titleLabel->Location = System::Drawing::Point(118, 32);
+		this->titleLabel->Location = System::Drawing::Point(187, 32);
 		this->titleLabel->Name = L"titleLabel";
 		this->titleLabel->Size = System::Drawing::Size(176, 39);
 		this->titleLabel->TabIndex = 9;
@@ -202,7 +202,7 @@ namespace Project1{
 		this->userGuessesBox->Name = L"userGuessesBox";
 		this->userGuessesBox->Size = System::Drawing::Size(147, 243);
 		this->userGuessesBox->TabIndex = 10;
-		this->userGuessesBox->Text = L"MAKE A GUESS";
+		this->userGuessesBox->Text = L"YOUR WORDS:\n\n";
 		// 
 		// die12
 		// 
@@ -382,7 +382,8 @@ namespace Project1{
 		this->submitButton->Enabled = false;
 		this->submitButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->submitButton->Location = System::Drawing::Point(277, 17);
+		this->submitButton->ForeColor = System::Drawing::SystemColors::ControlText;
+		this->submitButton->Location = System::Drawing::Point(264, 17);
 		this->submitButton->Name = L"submitButton";
 		this->submitButton->Size = System::Drawing::Size(74, 66);
 		this->submitButton->TabIndex = 18;
@@ -393,8 +394,7 @@ namespace Project1{
 		// wordGuessPanel
 		// 
 		this->wordGuessPanel->BackColor = System::Drawing::Color::SteelBlue;
-		this->wordGuessPanel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-		this->wordGuessPanel->Controls->Add(this->yourWordLabel);
+		this->wordGuessPanel->Controls->Add(this->yourScoreLabel);
 		this->wordGuessPanel->Controls->Add(this->userWordLabel);
 		this->wordGuessPanel->Controls->Add(this->submitButton);
 		this->wordGuessPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
@@ -404,17 +404,17 @@ namespace Project1{
 		this->wordGuessPanel->Size = System::Drawing::Size(363, 95);
 		this->wordGuessPanel->TabIndex = 21;
 		// 
-		// yourWordLabel
+		// yourScoreLabel
 		// 
-		this->yourWordLabel->AutoSize = true;
-		this->yourWordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->yourScoreLabel->AutoSize = true;
+		this->yourScoreLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->yourWordLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-		this->yourWordLabel->Location = System::Drawing::Point(19, 6);
-		this->yourWordLabel->Name = L"yourWordLabel";
-		this->yourWordLabel->Size = System::Drawing::Size(106, 25);
-		this->yourWordLabel->TabIndex = 21;
-		this->yourWordLabel->Text = L"Your word:";
+		this->yourScoreLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
+		this->yourScoreLabel->Location = System::Drawing::Point(19, 3);
+		this->yourScoreLabel->Name = L"yourScoreLabel";
+		this->yourScoreLabel->Size = System::Drawing::Size(226, 25);
+		this->yourScoreLabel->TabIndex = 21;
+		this->yourScoreLabel->Text = L"Click New Game to start!";
 		// 
 		// userWordLabel
 		// 
@@ -478,21 +478,21 @@ namespace Project1{
 		// tsiNewGame
 		// 
 		this->tsiNewGame->Name = L"tsiNewGame";
-		this->tsiNewGame->Size = System::Drawing::Size(152, 22);
+		this->tsiNewGame->Size = System::Drawing::Size(137, 22);
 		this->tsiNewGame->Text = L"New Game";
 		this->tsiNewGame->Click += gcnew System::EventHandler(this, &MyForm::newGameToolStripMenuItem_Click);
 		// 
 		// tsiHighScores
 		// 
 		this->tsiHighScores->Name = L"tsiHighScores";
-		this->tsiHighScores->Size = System::Drawing::Size(152, 22);
+		this->tsiHighScores->Size = System::Drawing::Size(137, 22);
 		this->tsiHighScores->Text = L"High Scores";
 		this->tsiHighScores->Click += gcnew System::EventHandler(this, &MyForm::toolStripMenuItem3_Click);
 		// 
 		// tsiExit
 		// 
 		this->tsiExit->Name = L"tsiExit";
-		this->tsiExit->Size = System::Drawing::Size(152, 22);
+		this->tsiExit->Size = System::Drawing::Size(137, 22);
 		this->tsiExit->Text = L"Exit";
 		this->tsiExit->Click += gcnew System::EventHandler(this, &MyForm::closeToolStripMenuItem_Click);
 		// 
@@ -707,12 +707,20 @@ namespace Project1{
 	}
 
 	void MyForm::addGuessedWord(){
-		this->userGuessesBox->Text="";
-		this->userGuessesBox->Text="GUESSES:\n~~~~~~~~\n";
-
-		for(int i = this->wordCounter; i>0; i--){
-			this->userGuessesBox->Text+=this->guessedWords[i-1]+"\n";
+		if(isUserWordChoiceValid()){
+			this->userGuessesBox->Text += userWordChoice + "\n";
 		}
+	}
+
+	bool MyForm::isUserWordChoiceValid(){
+		int wordPointValue = this->dictionary->points(this->userWordChoice);
+
+		if (this->dictionary->wordExist(userWordChoice->ToLower()) && wordPointValue > 0){
+			return true;
+		}else{
+			return false;
+		}
+		
 	}
 
 	// ~~~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
@@ -867,18 +875,20 @@ namespace Project1{
 
 	// Submit Button
 	System::Void MyForm::submitButton_Click(System::Object^  sender, System::EventArgs^  e) {
-		
-		if(this->userWordLabel->Text==""||this->userWordLabel->Text=="Please guess a word!"){
-			this->userWordLabel->Text="Please guess a word!";
+		enableButtons();
+		this->userWordLabel->Text = "";
+		this->buttonCounter=0;
+		int wordPointValue = this->dictionary->points(userWordChoice);
+
+		if(this->dictionary->wordExist(userWordChoice->ToLower()) && wordPointValue > 0){
+			this->addGuessedWord();
+			this->score += wordPointValue;
+			this->yourScoreLabel->Text = "Your score : " + score;
 		}else{
-			enableButtons();
-			this->guessedWords[this->wordCounter]=this->userWordChoice;
-			this->wordCounter++;
-			this->userWordChoice = "";
-			this->userWordLabel->Text = "";
-			this->buttonCounter=0;
-			addGuessedWord();
+			this->userWordLabel->Text = "Invalid word!";
 		}
+
+		this->userWordChoice = "";
 	}
 
 	// New Game Button
@@ -954,19 +964,18 @@ namespace Project1{
 		MessageBox::Show(highScore, "High Scores");
 	}
 
-
 	void MyForm::newGame(){
 		resetTimer();
 		enableButtons();
 		initializeDice();
 
+		this->score = 0;
 		this->guessedWords->Clear;
-		this->wordCounter = 0;
 		this->buttonCounter = 0;
 		this->guessedWords->Clear;
 
-		this->userGuessesBox->Text = "GUESSES:\n~~~~~~~~\n";
-		this->yourWordLabel->Text = "Your word:";
+		this->userGuessesBox->Text = "YOUR WORDS:\n\n";
+		this->yourScoreLabel->Text = "Your score: ";
 		this->userWordChoice = "";
 		this->userWordLabel->Text = "";
 
@@ -977,24 +986,14 @@ namespace Project1{
 	}
 
 	void MyForm::endGame(){
-		
-		int score =0;
 		this->countdownTimer->Enabled = false;
 		this->disableAllButtons();
 		this->submitButton->Enabled = false;
 		this->submitButton->BackColor = Color::DarkGray;
 		this->countdownTimer->Enabled = false;
-		this->yourWordLabel->Text = "";
 		this->userWordLabel->Text = "Game over!";
 		this->newGameButton->Enabled = true;
 		this->newGameButton->BackColor = Color::White;
-		for(int i = 0; i<this->wordCounter;i++){
-			
-			if(this->dictionary->wordExist(this->guessedWords[i]->ToLower())){
-				score+=this->dictionary->points(this->guessedWords[i]);
-			}
-		}
-		this->yourWordLabel->Text="Your score is: " + score.ToString();
 	}
 
 	void MyForm::resetTimer(){

@@ -1,13 +1,7 @@
 #include "ScoreCollection.h"
 
-
-
 ScoreCollection::ScoreCollection(){
 	this->scores = gcnew array<Score^>(5);
-}
-
-array<Score^>^ ScoreCollection::getScores(){
-	return this->scores;
 }
 
 void ScoreCollection::loadScores(){
@@ -88,4 +82,8 @@ void ScoreCollection::newScore(String^ name, int score){
 			}
 			this->scores = tempScore;
 		}
+}
+
+array<Score^>^ ScoreCollection::getScores(){
+	return this->scores;
 }
