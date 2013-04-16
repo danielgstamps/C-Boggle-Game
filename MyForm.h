@@ -31,8 +31,9 @@ namespace Project1 {
 	array<String^>^ guessedWords;
 	Dictionary^ dictionary;
 	ScoreCollection^ scores;
+	int score;
 	int buttonCounter;
-	int wordCounter;
+	//int wordCounter;
 	int minutesRemaining;
 	System::Windows::Forms::Button^  newGameButton;
 	System::Windows::Forms::Button^  highScoresButton;
@@ -55,7 +56,7 @@ namespace Project1 {
 
 	private: System::Windows::Forms::ToolStripMenuItem^  tsiHighScores;
 
-	
+	bool isUserWordChoiceValid();
 	void addGuessedWord();
 	void InitializeComponent();
 	void initializeDice();
@@ -90,7 +91,8 @@ namespace Project1 {
 	System::Windows::Forms::Button^  submitButton;
 	System::Windows::Forms::Timer^  countdownTimer;
 	System::Windows::Forms::Label^  titleLabel;
-	System::Windows::Forms::Label^  yourWordLabel;
+	private: System::Windows::Forms::Label^  yourScoreLabel;
+
 	System::Windows::Forms::Label^  userWordLabel;
 
 	System::Windows::Forms::Label^  timeLabel;
