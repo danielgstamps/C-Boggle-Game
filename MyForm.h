@@ -60,6 +60,7 @@ namespace Project1 {
 
 	bool isUserWordChoiceValid();
 	bool isWordAlreadyGuessed();
+	void addUserToHighScores();
 	void addGuessedWord();
 	void InitializeComponent();
 	void initializeDice();
