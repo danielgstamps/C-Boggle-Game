@@ -10,6 +10,7 @@ Postcondition: none
 Dictionary::Dictionary(){
 	this->table = gcnew Hashtable;
 }
+
 /*
 This method loads the dictionary
 Predcondition: none
@@ -20,7 +21,6 @@ void Dictionary::loadDictionary(){
 	ifstream myfile ("./dictionary.txt");
 
 	if (myfile.is_open()){
-
 		while ( myfile.good() ){
 			getline (myfile,line);
 			String^ cliString = Marshal::PtrToStringAnsi(static_cast<IntPtr>(const_cast<char *>(line.c_str()))); 
@@ -30,6 +30,7 @@ void Dictionary::loadDictionary(){
     myfile.close();
 	}
 }
+
 /*
 This method returns if a word exists
 Predcondition: none
@@ -38,6 +39,7 @@ Predcondition: none
 bool Dictionary::wordExist(String^ word){
 	return this->table->Contains(word);
 }
+
 /*
 This method returns point value of string.
 Predcondition: none

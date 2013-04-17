@@ -2,6 +2,7 @@
 #include "Die.h"
 #include <time.h>
 #include <cliext/vector>
+
 /*
 Constuctor for die
 Predcondition: none
@@ -11,6 +12,7 @@ Die::Die()
 {
 	this->letters = gcnew array<String^>(6);
 }
+
 /*
 Constuctor
 Predcondition: none
@@ -26,6 +28,7 @@ Die::Die(String^ letter1, String^ letter2, String^ letter3, String^ letter4, Str
 	letters[4] = letter5;
 	letters[5] = letter6;
 }
+
 /*
 This method gets random dice
 Predcondition: none

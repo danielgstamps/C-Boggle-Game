@@ -1,4 +1,5 @@
 #include "ScoreCollection.h"
+
 /*
 Constuctor for ScoreCollection
 Predcondition: none
@@ -7,6 +8,7 @@ Postcondition: none
 ScoreCollection::ScoreCollection(){
 	this->scores = gcnew array<Score^>(5);
 }
+
 /*
 This method loads dictionary
 Predcondition: none
@@ -38,6 +40,7 @@ void ScoreCollection::loadScores(){
     myfile.close();
 	}
 }
+
 /*
 This method writes to highscore file
 Predcondition: none
@@ -63,6 +66,7 @@ void ScoreCollection::writeScores(){
 	}
   myfile.close();
 }
+
 /*
 This method tells if a score is a high score
 Predcondition: none
@@ -78,6 +82,7 @@ bool ScoreCollection::isHighScore(int score){
 	}
 	return isHighScore;
 }
+
 /*
 This method adds a new high score
 Predcondition: none
@@ -94,6 +99,7 @@ void ScoreCollection::newScore(String^ name, int score){
 		}
 		tempScore[5] = gcnew Score(name,score);
 
+	// Bubble Sort
 		int i,j;
 		for(i=0;i<6;i++)
 		{
@@ -112,6 +118,7 @@ void ScoreCollection::newScore(String^ name, int score){
 			this->scores[i] = tempScore[i];
 		}	
 }
+
 /*
 This method gets array of scores
 Predcondition: none

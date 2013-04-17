@@ -5,11 +5,10 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
-
-
 using namespace std;
 using namespace System;
 using namespace System::Runtime::InteropServices; 
+
 /*
 This is the SocoreCollection Class
 @Author Dainel Stamps && Bryan Patterson

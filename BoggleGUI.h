@@ -33,43 +33,19 @@ namespace Project1 {
 	~BoggleGUI();
 
 	private: 
-	Hashtable^ guessedWords;
-	String^ userName;
-	String^ userWordChoice;
 	Dice^ dice;
-	array<Button^>^ selectedButtons;	
 	Dictionary^ dictionary;
+	Hashtable^ guessedWords;
 	ScoreCollection^ scores;
+	array<Button^>^ selectedButtons;
+	String^ userName;
+	String^ userWordChoice;	
+
 	int newGameCounter;
 	int score;
 	int buttonCounter;
 	int minutesRemaining;
-	System::Windows::Forms::Button^  newGameButton;
-	System::Windows::Forms::Button^  highScoresButton;
 	int secondsRemaining;
-	private: System::Windows::Forms::MenuStrip^  menuStrip;
-
-	private: System::Windows::Forms::ToolStripMenuItem^  tsmFile;
-	private: System::Windows::Forms::ToolStripMenuItem^  tsiNewGame;
-	private: System::Windows::Forms::ToolStripMenuItem^  tsiExit;
-
-
-
-
-	private: System::Windows::Forms::ToolStripMenuItem^  tsmHelp;
-	private: System::Windows::Forms::ToolStripMenuItem^  tsiGameInstructions;
-
-
-	private: System::Windows::Forms::ToolStripMenuItem^  tsmAbout;
-	private: System::Windows::Forms::ToolStripMenuItem^  tsiAbout;
-	private: System::Windows::Forms::TextBox^  txtUserName;
-	private: System::Windows::Forms::Button^  btnNameSubmit;
-
-
-
-
-	private: System::Windows::Forms::ToolStripMenuItem^  tsiHighScores;
-
 	bool isUserWordChoiceValid();
 	bool isWordAlreadyGuessed();
 	void addUserToHighScores();
@@ -88,6 +64,19 @@ namespace Project1 {
 	void showHighScores();
 
 	// ----- FORMS ------ //
+	System::Windows::Forms::Button^  newGameButton;
+	System::Windows::Forms::Button^  highScoresButton;
+	System::Windows::Forms::MenuStrip^  menuStrip;
+	System::Windows::Forms::ToolStripMenuItem^  tsmFile;
+	System::Windows::Forms::ToolStripMenuItem^  tsiNewGame;
+	System::Windows::Forms::ToolStripMenuItem^  tsiExit;
+	System::Windows::Forms::ToolStripMenuItem^  tsmHelp;
+	System::Windows::Forms::ToolStripMenuItem^  tsiGameInstructions;
+	System::Windows::Forms::ToolStripMenuItem^  tsmAbout;
+	System::Windows::Forms::ToolStripMenuItem^  tsiAbout;
+	System::Windows::Forms::TextBox^  txtUserName;
+	System::Windows::Forms::Button^  btnNameSubmit;
+	System::Windows::Forms::ToolStripMenuItem^  tsiHighScores;
 	System::Windows::Forms::Button^  die0;
 	System::Windows::Forms::Button^  die1;
 	System::Windows::Forms::Button^  die2;
@@ -107,15 +96,12 @@ namespace Project1 {
 	System::Windows::Forms::Button^  submitButton;
 	System::Windows::Forms::Timer^  countdownTimer;
 	System::Windows::Forms::Label^  titleLabel;
-	private: System::Windows::Forms::Label^  yourScoreLabel;
-
+	System::Windows::Forms::Label^  yourScoreLabel;
 	System::Windows::Forms::Label^  userWordLabel;
-
 	System::Windows::Forms::Label^  timeLabel;
 	System::Windows::Forms::Label^  secondsLeftLabel;
 	System::Windows::Forms::Label^  timerColonLabel;
 	System::Windows::Forms::Label^  minutesLeftLabel;
-
 	System::Windows::Forms::Panel^  dicePanel;
 	System::Windows::Forms::Panel^  timerPanel;
 	System::Windows::Forms::Panel^  wordGuessPanel;
@@ -130,7 +116,6 @@ namespace Project1 {
 	System::Windows::Forms::ToolStripMenuItem^  howToToolStripMenuItem;
 	System::Windows::Forms::ToolStripMenuItem^  infoToolStripMenuItem1;		
 	System::ComponentModel::IContainer^  components;
-
 
 	// ----- ACTION LISTENERS ------ //
 	System::Void BoggleGUI::die0_Click(System::Object^  sender, System::EventArgs^  e);

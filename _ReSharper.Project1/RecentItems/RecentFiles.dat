@@ -1,25 +1,30 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.h" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="1712" fromTop="48" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="260" fromTop="11" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="138" fromTop="8" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="603" fromTop="21" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="564" fromTop="24" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="44833" fromTop="16" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="210" fromTop="14" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="262" fromTop="12" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="654" fromTop="21" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="286" fromTop="17" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="212" fromTop="12" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.h" caret="100" fromTop="4" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2684" fromTop="15" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="338" fromTop="15" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:BoggleGUI.cpp" caret="46834" fromTop="13" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:WinCLI.cpp" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="172" fromTop="12" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.h" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:BoggleGUI.h" caret="565" fromTop="22" />
   </RecentFiles>
   <RecentEdits>
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="137" fromTop="8" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="136" fromTop="7" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="452" fromTop="23" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2208" fromTop="22" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="173" fromTop="10" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="6891" fromTop="24" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="43773" fromTop="20" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:BoggleGUI.h" caret="1051" fromTop="16" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:BoggleGUI.cpp" caret="36411" fromTop="38" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="172" fromTop="12" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="210" fromTop="14" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="262" fromTop="12" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="654" fromTop="21" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="101" fromTop="5" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="212" fromTop="12" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.h" caret="31" fromTop="1" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2684" fromTop="15" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="133" fromTop="6" />
   </RecentEdits>
 </RecentFiles>
