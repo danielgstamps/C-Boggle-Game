@@ -3,6 +3,8 @@
 #include "Dictionary.h"
 #include "Score.h"
 #include "ScoreCollection.h"
+using namespace System;
+using System::Collections::Hashtable;
 
 namespace Project1 {
 
@@ -25,15 +27,14 @@ namespace Project1 {
 	~MyForm();
 
 	private: 
+	Hashtable^ guessedWords;
 	String^ userWordChoice;
 	Dice^ dice;
 	array<Button^>^ selectedButtons;	
-	array<String^>^ guessedWords;
 	Dictionary^ dictionary;
 	ScoreCollection^ scores;
 	int score;
 	int buttonCounter;
-	//int wordCounter;
 	int minutesRemaining;
 	System::Windows::Forms::Button^  newGameButton;
 	System::Windows::Forms::Button^  highScoresButton;
@@ -57,6 +58,7 @@ namespace Project1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  tsiHighScores;
 
 	bool isUserWordChoiceValid();
+	bool isWordAlreadyGuessed();
 	void addGuessedWord();
 	void InitializeComponent();
 	void initializeDice();
