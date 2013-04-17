@@ -15,6 +15,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>$safeprojectname$</RootNamespace>
+    <ProjectName>Team9Boggle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -76,7 +77,7 @@
     <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="Die.cpp" />
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="BoggleGUI.cpp" />
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="ScoreCollection.cpp" />
     <ClCompile Include="WinCLI.cpp" />
@@ -92,15 +93,15 @@
     <ClInclude Include="Dice.h" />
     <ClInclude Include="Dictionary.h" />
     <ClInclude Include="Die.h" />
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="BoggleGUI.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Score.h" />
     <ClInclude Include="ScoreCollection.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
+    <EmbeddedResource Include="BoggleGUI.resx">
+      <DependentUpon>BoggleGUI.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

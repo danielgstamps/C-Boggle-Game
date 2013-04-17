@@ -36,17 +36,14 @@
     <ClCompile Include="Score.cpp">
       <Filter>Source Files\Model</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
     <ClCompile Include="WinCLI.cpp">
       <Filter>Source Files\Controller</Filter>
     </ClCompile>
+    <ClCompile Include="BoggleGUI.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
-      <Filter>Source Files\View</Filter>
-    </ClInclude>
     <ClInclude Include="Dice.h">
       <Filter>Source Files\Model</Filter>
     </ClInclude>
@@ -62,9 +59,12 @@
     <ClInclude Include="ScoreCollection.h">
       <Filter>Source Files\Model</Filter>
     </ClInclude>
+    <ClInclude Include="BoggleGUI.h">
+      <Filter>Source Files\View</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm.resx">
+    <EmbeddedResource Include="BoggleGUI.resx">
       <Filter>Source Files\Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
