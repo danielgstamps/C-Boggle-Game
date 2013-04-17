@@ -4,6 +4,7 @@ namespace Project1{
 		
 	MyForm::MyForm()
 	{		
+		this->guessedWords = gcnew Hashtable;
 		this->userWordChoice = "";
 		this->score = 0;
 		this->dice = gcnew Dice();
@@ -709,18 +710,22 @@ namespace Project1{
 	void MyForm::addGuessedWord(){
 		if(isUserWordChoiceValid()){
 			this->userGuessesBox->Text += userWordChoice + "\n";
+			this->guessedWords->Add(userWordChoice, userWordChoice);
 		}
 	}
 
 	bool MyForm::isUserWordChoiceValid(){
 		int wordPointValue = this->dictionary->points(this->userWordChoice);
 
-		if (this->dictionary->wordExist(userWordChoice->ToLower()) && wordPointValue > 0){
+		if (this->dictionary->wordExist(userWordChoice->ToLower()) && wordPointValue > 0 && !this->guessedWords->Contains(userWordChoice)){
 			return true;
 		}else{
 			return false;
 		}
-		
+	}
+
+	bool MyForm::isWordAlreadyGuessed(){
+		return (this->guessedWords->Contains(userWordChoice));
 	}
 
 	// ~~~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
@@ -878,16 +883,21 @@ namespace Project1{
 		enableButtons();
 		this->userWordLabel->Text = "";
 		this->buttonCounter=0;
-		int wordPointValue = this->dictionary->points(userWordChoice);
 
-		if(this->dictionary->wordExist(userWordChoice->ToLower()) && wordPointValue > 0){
+		if(this->isUserWordChoiceValid()){
+			int wordPointValue = this->dictionary->points(userWordChoice);
 			this->addGuessedWord();
 			this->score += wordPointValue;
 			this->yourScoreLabel->Text = "Your score : " + score;
-		}else{
+		}
+		else if(this->isWordAlreadyGuessed()){
+			this->userWordLabel->Text = "Already entered!";
+		}
+		else
+		{
 			this->userWordLabel->Text = "Invalid word!";
 		}
-
+	
 		this->userWordChoice = "";
 	}
 
@@ -970,9 +980,7 @@ namespace Project1{
 		initializeDice();
 
 		this->score = 0;
-		this->guessedWords->Clear;
 		this->buttonCounter = 0;
-		this->guessedWords->Clear;
 
 		this->userGuessesBox->Text = "YOUR WORDS:\n\n";
 		this->yourScoreLabel->Text = "Your score: ";

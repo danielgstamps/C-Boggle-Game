@@ -2,15 +2,15 @@
   <RecentFiles>
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.h" caret="0" fromTop="0" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="138" fromTop="8" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2208" fromTop="22" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.h" caret="0" fromTop="0" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="399" fromTop="20" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="0" fromTop="0" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="1712" fromTop="18" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="740" fromTop="20" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="483" fromTop="24" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="283" fromTop="11" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2208" fromTop="22" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dice.cpp" caret="1712" fromTop="48" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="260" fromTop="11" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.cpp" caret="0" fromTop="0" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="39240" fromTop="35" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="794" fromTop="18" />
   </RecentFiles>
   <RecentEdits>
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Die.cpp" caret="0" fromTop="0" />
@@ -18,7 +18,8 @@
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Score.cpp" caret="136" fromTop="7" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.h" caret="452" fromTop="23" />
     <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:ScoreCollection.cpp" caret="2208" fromTop="22" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="740" fromTop="23" />
-    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="283" fromTop="11" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:Dictionary.h" caret="173" fromTop="10" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.cpp" caret="39262" fromTop="20" />
+    <File id="D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F/f:MyForm.h" caret="794" fromTop="18" />
   </RecentEdits>
 </RecentFiles>
