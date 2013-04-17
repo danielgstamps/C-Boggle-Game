@@ -1,8 +1,8 @@
-#include "MyForm.h"
+#include "BoggleGUI.h"
 using namespace std;
 namespace Project1{
 		
-	MyForm::MyForm()
+	BoggleGUI::BoggleGUI()
 	{		
 		this->guessedWords = gcnew Hashtable;
 		this->userWordChoice = "";
@@ -20,7 +20,7 @@ namespace Project1{
 		this->scores->loadScores();
 	}
 
-	void MyForm::InitializeComponent()
+	void BoggleGUI::InitializeComponent()
 	{
 		this->components = (gcnew System::ComponentModel::Container());
 		this->die0 = (gcnew System::Windows::Forms::Button());
@@ -82,7 +82,7 @@ namespace Project1{
 		this->die0->Size = System::Drawing::Size(74, 66);
 		this->die0->TabIndex = 0;
 		this->die0->UseVisualStyleBackColor = false;
-		this->die0->Click += gcnew System::EventHandler(this, &MyForm::die0_Click);
+		this->die0->Click += gcnew System::EventHandler(this, &BoggleGUI::die0_Click);
 		// 
 		// die1
 		// 
@@ -95,7 +95,7 @@ namespace Project1{
 		this->die1->Size = System::Drawing::Size(74, 66);
 		this->die1->TabIndex = 1;
 		this->die1->UseVisualStyleBackColor = false;
-		this->die1->Click += gcnew System::EventHandler(this, &MyForm::die1_Click);
+		this->die1->Click += gcnew System::EventHandler(this, &BoggleGUI::die1_Click);
 		// 
 		// die2
 		// 
@@ -108,7 +108,7 @@ namespace Project1{
 		this->die2->Size = System::Drawing::Size(74, 66);
 		this->die2->TabIndex = 2;
 		this->die2->UseVisualStyleBackColor = false;
-		this->die2->Click += gcnew System::EventHandler(this, &MyForm::die2_Click);
+		this->die2->Click += gcnew System::EventHandler(this, &BoggleGUI::die2_Click);
 		// 
 		// die4
 		// 
@@ -121,7 +121,7 @@ namespace Project1{
 		this->die4->Size = System::Drawing::Size(74, 66);
 		this->die4->TabIndex = 4;
 		this->die4->UseVisualStyleBackColor = false;
-		this->die4->Click += gcnew System::EventHandler(this, &MyForm::die4_Click);
+		this->die4->Click += gcnew System::EventHandler(this, &BoggleGUI::die4_Click);
 		// 
 		// die5
 		// 
@@ -134,7 +134,7 @@ namespace Project1{
 		this->die5->Size = System::Drawing::Size(74, 66);
 		this->die5->TabIndex = 5;
 		this->die5->UseVisualStyleBackColor = false;
-		this->die5->Click += gcnew System::EventHandler(this, &MyForm::die5_Click);
+		this->die5->Click += gcnew System::EventHandler(this, &BoggleGUI::die5_Click);
 		// 
 		// die6
 		// 
@@ -147,7 +147,7 @@ namespace Project1{
 		this->die6->Size = System::Drawing::Size(74, 66);
 		this->die6->TabIndex = 6;
 		this->die6->UseVisualStyleBackColor = false;
-		this->die6->Click += gcnew System::EventHandler(this, &MyForm::die6_Click);
+		this->die6->Click += gcnew System::EventHandler(this, &BoggleGUI::die6_Click);
 		// 
 		// die8
 		// 
@@ -160,7 +160,7 @@ namespace Project1{
 		this->die8->Size = System::Drawing::Size(74, 66);
 		this->die8->TabIndex = 8;
 		this->die8->UseVisualStyleBackColor = false;
-		this->die8->Click += gcnew System::EventHandler(this, &MyForm::die8_Click);
+		this->die8->Click += gcnew System::EventHandler(this, &BoggleGUI::die8_Click);
 		// 
 		// die9
 		// 
@@ -173,7 +173,7 @@ namespace Project1{
 		this->die9->Size = System::Drawing::Size(74, 66);
 		this->die9->TabIndex = 9;
 		this->die9->UseVisualStyleBackColor = false;
-		this->die9->Click += gcnew System::EventHandler(this, &MyForm::die9_Click);
+		this->die9->Click += gcnew System::EventHandler(this, &BoggleGUI::die9_Click);
 		// 
 		// die10
 		// 
@@ -186,7 +186,7 @@ namespace Project1{
 		this->die10->Size = System::Drawing::Size(74, 66);
 		this->die10->TabIndex = 10;
 		this->die10->UseVisualStyleBackColor = false;
-		this->die10->Click += gcnew System::EventHandler(this, &MyForm::die10_Click);
+		this->die10->Click += gcnew System::EventHandler(this, &BoggleGUI::die10_Click);
 		// 
 		// titleLabel
 		// 
@@ -222,7 +222,7 @@ namespace Project1{
 		this->die12->Size = System::Drawing::Size(74, 66);
 		this->die12->TabIndex = 12;
 		this->die12->UseVisualStyleBackColor = false;
-		this->die12->Click += gcnew System::EventHandler(this, &MyForm::die12_Click);
+		this->die12->Click += gcnew System::EventHandler(this, &BoggleGUI::die12_Click);
 		// 
 		// die13
 		// 
@@ -235,7 +235,7 @@ namespace Project1{
 		this->die13->Size = System::Drawing::Size(74, 66);
 		this->die13->TabIndex = 13;
 		this->die13->UseVisualStyleBackColor = false;
-		this->die13->Click += gcnew System::EventHandler(this, &MyForm::die13_Click);
+		this->die13->Click += gcnew System::EventHandler(this, &BoggleGUI::die13_Click);
 		// 
 		// die14
 		// 
@@ -248,7 +248,7 @@ namespace Project1{
 		this->die14->Size = System::Drawing::Size(74, 66);
 		this->die14->TabIndex = 14;
 		this->die14->UseVisualStyleBackColor = false;
-		this->die14->Click += gcnew System::EventHandler(this, &MyForm::die14_Click);
+		this->die14->Click += gcnew System::EventHandler(this, &BoggleGUI::die14_Click);
 		// 
 		// die15
 		// 
@@ -261,7 +261,7 @@ namespace Project1{
 		this->die15->Size = System::Drawing::Size(74, 66);
 		this->die15->TabIndex = 15;
 		this->die15->UseVisualStyleBackColor = false;
-		this->die15->Click += gcnew System::EventHandler(this, &MyForm::die15_Click);
+		this->die15->Click += gcnew System::EventHandler(this, &BoggleGUI::die15_Click);
 		// 
 		// die11
 		// 
@@ -274,7 +274,7 @@ namespace Project1{
 		this->die11->Size = System::Drawing::Size(74, 66);
 		this->die11->TabIndex = 11;
 		this->die11->UseVisualStyleBackColor = false;
-		this->die11->Click += gcnew System::EventHandler(this, &MyForm::die11_Click);
+		this->die11->Click += gcnew System::EventHandler(this, &BoggleGUI::die11_Click);
 		// 
 		// die7
 		// 
@@ -287,7 +287,7 @@ namespace Project1{
 		this->die7->Size = System::Drawing::Size(74, 66);
 		this->die7->TabIndex = 7;
 		this->die7->UseVisualStyleBackColor = false;
-		this->die7->Click += gcnew System::EventHandler(this, &MyForm::die7_Click);
+		this->die7->Click += gcnew System::EventHandler(this, &BoggleGUI::die7_Click);
 		// 
 		// die3
 		// 
@@ -300,7 +300,7 @@ namespace Project1{
 		this->die3->Size = System::Drawing::Size(74, 66);
 		this->die3->TabIndex = 3;
 		this->die3->UseVisualStyleBackColor = false;
-		this->die3->Click += gcnew System::EventHandler(this, &MyForm::die3_Click);
+		this->die3->Click += gcnew System::EventHandler(this, &BoggleGUI::die3_Click);
 		// 
 		// dicePanel
 		// 
@@ -396,7 +396,7 @@ namespace Project1{
 		this->submitButton->TabIndex = 16;
 		this->submitButton->Text = L"Submit";
 		this->submitButton->UseVisualStyleBackColor = false;
-		this->submitButton->Click += gcnew System::EventHandler(this, &MyForm::submitButton_Click);
+		this->submitButton->Click += gcnew System::EventHandler(this, &BoggleGUI::submitButton_Click);
 		// 
 		// wordGuessPanel
 		// 
@@ -424,7 +424,7 @@ namespace Project1{
 		this->btnNameSubmit->Text = L"Submit";
 		this->btnNameSubmit->UseVisualStyleBackColor = true;
 		this->btnNameSubmit->Visible = false;
-		this->btnNameSubmit->Click += gcnew System::EventHandler(this, &MyForm::btnNameSubmit_Click);
+		this->btnNameSubmit->Click += gcnew System::EventHandler(this, &BoggleGUI::btnNameSubmit_Click);
 		// 
 		// txtUserName
 		// 
@@ -463,7 +463,7 @@ namespace Project1{
 		// countdownTimer
 		// 
 		this->countdownTimer->Interval = 1000;
-		this->countdownTimer->Tick += gcnew System::EventHandler(this, &MyForm::countdownTimer_Tick);
+		this->countdownTimer->Tick += gcnew System::EventHandler(this, &BoggleGUI::countdownTimer_Tick);
 		// 
 		// newGameButton
 		// 
@@ -475,7 +475,7 @@ namespace Project1{
 		this->newGameButton->TabIndex = 17;
 		this->newGameButton->Text = L"New Game";
 		this->newGameButton->UseVisualStyleBackColor = true;
-		this->newGameButton->Click += gcnew System::EventHandler(this, &MyForm::newGameButton_Click);
+		this->newGameButton->Click += gcnew System::EventHandler(this, &BoggleGUI::newGameButton_Click);
 		// 
 		// highScoresButton
 		// 
@@ -487,7 +487,7 @@ namespace Project1{
 		this->highScoresButton->TabIndex = 18;
 		this->highScoresButton->Text = L"High Scores";
 		this->highScoresButton->UseVisualStyleBackColor = true;
-		this->highScoresButton->Click += gcnew System::EventHandler(this, &MyForm::highScoresButton_Click);
+		this->highScoresButton->Click += gcnew System::EventHandler(this, &BoggleGUI::highScoresButton_Click);
 		// 
 		// menuStrip
 		// 
@@ -513,21 +513,21 @@ namespace Project1{
 		this->tsiNewGame->Name = L"tsiNewGame";
 		this->tsiNewGame->Size = System::Drawing::Size(137, 22);
 		this->tsiNewGame->Text = L"New Game";
-		this->tsiNewGame->Click += gcnew System::EventHandler(this, &MyForm::newGameToolStripMenuItem_Click);
+		this->tsiNewGame->Click += gcnew System::EventHandler(this, &BoggleGUI::newGameToolStripMenuItem_Click);
 		// 
 		// tsiHighScores
 		// 
 		this->tsiHighScores->Name = L"tsiHighScores";
 		this->tsiHighScores->Size = System::Drawing::Size(137, 22);
 		this->tsiHighScores->Text = L"High Scores";
-		this->tsiHighScores->Click += gcnew System::EventHandler(this, &MyForm::toolStripMenuItem3_Click);
+		this->tsiHighScores->Click += gcnew System::EventHandler(this, &BoggleGUI::toolStripMenuItem3_Click);
 		// 
 		// tsiExit
 		// 
 		this->tsiExit->Name = L"tsiExit";
 		this->tsiExit->Size = System::Drawing::Size(137, 22);
 		this->tsiExit->Text = L"Exit";
-		this->tsiExit->Click += gcnew System::EventHandler(this, &MyForm::closeToolStripMenuItem_Click);
+		this->tsiExit->Click += gcnew System::EventHandler(this, &BoggleGUI::closeToolStripMenuItem_Click);
 		// 
 		// tsmHelp
 		// 
@@ -541,7 +541,7 @@ namespace Project1{
 		this->tsiGameInstructions->Name = L"tsiGameInstructions";
 		this->tsiGameInstructions->Size = System::Drawing::Size(170, 22);
 		this->tsiGameInstructions->Text = L"Game Instructions";
-		this->tsiGameInstructions->Click += gcnew System::EventHandler(this, &MyForm::gameInstructionsToolStripMenuItem_Click);
+		this->tsiGameInstructions->Click += gcnew System::EventHandler(this, &BoggleGUI::gameInstructionsToolStripMenuItem_Click);
 		// 
 		// tsmAbout
 		// 
@@ -555,9 +555,9 @@ namespace Project1{
 		this->tsiAbout->Name = L"tsiAbout";
 		this->tsiAbout->Size = System::Drawing::Size(169, 22);
 		this->tsiAbout->Text = L"About this Project";
-		this->tsiAbout->Click += gcnew System::EventHandler(this, &MyForm::aboutThisProjectToolStripMenuItem_Click);
+		this->tsiAbout->Click += gcnew System::EventHandler(this, &BoggleGUI::aboutThisProjectToolStripMenuItem_Click);
 		// 
-		// MyForm
+		// BoggleGUI
 		// 
 		this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 		this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -572,7 +572,7 @@ namespace Project1{
 		this->Controls->Add(this->titleLabel);
 		this->Controls->Add(this->menuStrip);
 		this->MainMenuStrip = this->menuStrip;
-		this->Name = L"MyForm";
+		this->Name = L"BoggleGUI";
 		this->Text = L"Boggle by Daniel Stamps and Bryan Patterson";
 		this->dicePanel->ResumeLayout(false);
 		this->timerPanel->ResumeLayout(false);
@@ -586,7 +586,7 @@ namespace Project1{
 
 	} // End of initializeComponent
 
-	void MyForm::initializeDice(){
+	void BoggleGUI::initializeDice(){
 		this->die0->Text = this->dice->getElementAt(0)->getRandomLetter();
 		this->die1->Text = this->dice->getElementAt(1)->getRandomLetter();
 		this->die2->Text = this->dice->getElementAt(2)->getRandomLetter();
@@ -605,7 +605,7 @@ namespace Project1{
 		this->die15->Text = this->dice->getElementAt(15)->getRandomLetter();
 	}
 
-	void MyForm::enableButtons(){
+	void BoggleGUI::enableButtons(){
 		this->die0->Enabled=true;
 		this->die1->Enabled=true;
 		this->die2->Enabled=true;
@@ -641,7 +641,7 @@ namespace Project1{
 		this->die15->BackColor=Color::White;
 	}
 
-	void MyForm::cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner){
+	void BoggleGUI::cornerDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo, Button^ corner){
 		disableAllButtons();
 		sideOne->Enabled = true;
 		sideTwo->Enabled = true;
@@ -655,7 +655,7 @@ namespace Project1{
 		disableButtonsClicked();
 		
 	}
-	void MyForm::insideEdgeDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ cornerOne, Button^ cornerTwo){
+	void BoggleGUI::insideEdgeDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ cornerOne, Button^ cornerTwo){
 		disableAllButtons();
 		sideOne->Enabled = true;
 		sideTwo->Enabled = true;
@@ -673,7 +673,7 @@ namespace Project1{
 		disableButtonsClicked();
 
 	}
-	void MyForm::insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour){
+	void BoggleGUI::insideDie(Button^ itSelf,Button^ sideOne,Button^ sideTwo,Button^ sideThree, Button^ sideFour, Button^ cornerOne, Button^ cornerTwo, Button^ cornerThree, Button^ cornerFour){
 		disableAllButtons();
 		sideOne->Enabled = true;
 		sideTwo->Enabled = true;
@@ -696,7 +696,7 @@ namespace Project1{
 		disableButtonsClicked();
 
 	}
-	void MyForm::disableAllButtons(){
+	void BoggleGUI::disableAllButtons(){
 		this->die0->Enabled=false;
 		this->die1->Enabled=false;
 		this->die2->Enabled=false;
@@ -733,21 +733,21 @@ namespace Project1{
 		this->die15->BackColor=Color::Silver;	
 	}
 
-	void MyForm::disableButtonsClicked(){
+	void BoggleGUI::disableButtonsClicked(){
 		for(int i = 0; i <this->buttonCounter; i++){
 			this->selectedButtons[i]->Enabled = false;
 			this->selectedButtons[i]->BackColor = Color::LightSalmon;
 		}
 	}
 
-	void MyForm::addGuessedWord(){
+	void BoggleGUI::addGuessedWord(){
 		if(isUserWordChoiceValid()){
 			this->userGuessesBox->Text += userWordChoice + "\n";
 			this->guessedWords->Add(userWordChoice, userWordChoice);
 		}
 	}
 
-	bool MyForm::isUserWordChoiceValid(){
+	bool BoggleGUI::isUserWordChoiceValid(){
 		int wordPointValue = this->dictionary->points(this->userWordChoice);
 
 		if (this->dictionary->wordExist(userWordChoice->ToLower()) && wordPointValue > 0 && !this->guessedWords->Contains(userWordChoice)){
@@ -757,14 +757,14 @@ namespace Project1{
 		}
 	}
 
-	bool MyForm::isWordAlreadyGuessed(){
+	bool BoggleGUI::isWordAlreadyGuessed(){
 		return (this->guessedWords->Contains(userWordChoice));
 	}
 
 	// ~~~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
 
 	// Die 0
-	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die0_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die0->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die0, this->die1, this->die4, this->die5);
@@ -774,7 +774,7 @@ namespace Project1{
 	}
 
 	// Die 1
-	System::Void MyForm::die1_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die1_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die1->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die1, this->die2, this->die5, this->die0, this->die6, this->die4);
@@ -784,7 +784,7 @@ namespace Project1{
 	}
 
 	// Die 2
-	System::Void MyForm::die2_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die2_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die2->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die2, this->die3, this->die6, this->die1, this->die7, this->die5);
@@ -793,7 +793,7 @@ namespace Project1{
 	}
 
 	// Die 3
-	System::Void MyForm::die3_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die3_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die3->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die3, this->die2, this->die7, this->die6);
@@ -802,7 +802,7 @@ namespace Project1{
 	}
 
 	// Die 4
-	System::Void MyForm::die4_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die4_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die4->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die4, this->die0, this->die5, this->die8, this->die1, this->die9);
@@ -812,7 +812,7 @@ namespace Project1{
 	}
 
 	// Die 5
-	System::Void MyForm::die5_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die5_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die5->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die5, this->die1, this->die6, this->die9, this->die4, this->die2, this->die10, this->die8, this->die0);
@@ -822,7 +822,7 @@ namespace Project1{
 	}
 
 	// Die 6
-	System::Void MyForm::die6_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die6_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die6->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die6, this->die2, this->die7, this->die10, this->die5, this->die3, this->die11, this->die9, this->die1);
@@ -831,7 +831,7 @@ namespace Project1{
 	}
 
 	// Die 7
-	System::Void MyForm::die7_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die7_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die7->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die7, this->die3, this->die11, this->die6, this->die10, this->die2);
@@ -840,7 +840,7 @@ namespace Project1{
 	}
 
 	// Die 8
-	System::Void MyForm::die8_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die8_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die8->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die8, this->die4, this->die9, this->die12, this->die5, this->die13);
@@ -849,7 +849,7 @@ namespace Project1{
 	}
 
 	// Die 9
-	System::Void MyForm::die9_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die9_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die9->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die9, this->die5, this->die10, this->die13, this->die8, this->die6, this->die14, this->die12, this->die4);
@@ -858,7 +858,7 @@ namespace Project1{
 	}
 
 	// Die 10
-	System::Void MyForm::die10_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die10_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die10->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideDie(this->die10, this->die6, this->die11, this->die14, this->die9, this->die7, this->die15, this->die13, this->die5);
@@ -867,7 +867,7 @@ namespace Project1{
 	}
 
 	// Die 11
-	System::Void MyForm::die11_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die11_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die11->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die11, this->die7, this->die15, this->die10, this->die14, this->die6);
@@ -876,7 +876,7 @@ namespace Project1{
 	}
 
 	// Die 12
-	System::Void MyForm::die12_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die12_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die12->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die12, this->die8, this->die13, this->die9);
@@ -885,7 +885,7 @@ namespace Project1{
 	}
 
 	// Die 13
-	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die13_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die13->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die13, this->die9, this->die14, this->die12, this->die8, this->die10);
@@ -894,7 +894,7 @@ namespace Project1{
 	}
 
 	// Die 14
-	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die14_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die14->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		insideEdgeDie(this->die14, this->die10, this->die15, this->die13, this->die9, this->die11);
@@ -903,7 +903,7 @@ namespace Project1{
 	}
 
 	// Die 15
-	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::die15_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->userWordChoice += this->die15->Text;
 		this->userWordLabel->Text = this->userWordChoice;
 		cornerDie(this->die15, this->die11, this->die14, this->die10);
@@ -912,7 +912,7 @@ namespace Project1{
 	}
 
 	// Submit Button
-	System::Void MyForm::submitButton_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::Void BoggleGUI::submitButton_Click(System::Object^  sender, System::EventArgs^  e) {
 		enableButtons();
 		this->userWordLabel->Text = "";
 		this->buttonCounter=0;
@@ -937,7 +937,7 @@ namespace Project1{
 	}
 
 	// User Name Submit Button
-	System::Void MyForm::btnNameSubmit_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::btnNameSubmit_Click(System::Object^  sender, System::EventArgs^  e){
 		this->userName = this->txtUserName->Text;
 		this->txtUserName->Visible = false;
 		this->btnNameSubmit->Visible = false;
@@ -945,7 +945,7 @@ namespace Project1{
 	}
 
 	// New Game Button
-	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::newGameButton_Click(System::Object^  sender, System::EventArgs^  e){
 
 		if(this->newGameCounter == 0){
 			this->newGame();
@@ -959,12 +959,12 @@ namespace Project1{
 		}
 
 	// High Scores Button
-	System::Void MyForm::highScoresButton_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::highScoresButton_Click(System::Object^  sender, System::EventArgs^  e){
 		showHighScores();
 	}
 
 	// Timer
-	System::Void MyForm::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e){
 		if(this->secondsRemaining == 0 && this->minutesRemaining > 0){
 			this->minutesRemaining -= 1;
 			this->secondsRemaining = 60;
@@ -994,31 +994,31 @@ namespace Project1{
 	}
 
 	// -------- TOOLBAR ----------- //
-	System::Void MyForm::newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
 		newGame();
 	}
 
-	System::Void MyForm::closeToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::closeToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
 		this->Close();
 	}
 
-	System::Void MyForm::gameInstructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::gameInstructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
 		MessageBox::Show("Instructions:\n\nThe goal of Boggle is to create as many words as possible within the time limit by connecting adjacent word dice together. " +
 			"Click any die block to begin, and form as long of a word as you can before clicking the Submit button. The longer your word, the more points you earn. If you want to " + 
 			"reroll your dice board, you can start a new game. If you get a high score, you will be prompted for your name. \n\nGood luck! ", "Instructions");
 	}
 
-	System::Void MyForm::aboutThisProjectToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::aboutThisProjectToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
 		MessageBox::Show("This Boggle game was created by Daniel Stamps and \n Bryan Patterson for Dr. Yoder's Program Construction II class.", "About this Project");
 	}
 
-	System::Void MyForm::toolStripMenuItem3_Click(System::Object^  sender, System::EventArgs^  e){
+	System::Void BoggleGUI::toolStripMenuItem3_Click(System::Object^  sender, System::EventArgs^  e){
 		showHighScores();
 	}
 
 	// --------- END OF TOOLBAR ---------- //
 
-	void MyForm::showHighScores(){
+	void BoggleGUI::showHighScores(){
 		array<Score^>^ players = this->scores->getScores();
 
 		String^ highScore = "High Scores: \n\n";
@@ -1031,12 +1031,12 @@ namespace Project1{
 		MessageBox::Show(highScore, "High Scores");
 	}
 
-	void MyForm::addUserToHighScores(){
+	void BoggleGUI::addUserToHighScores(){
 		this->scores->newScore(this->userName, this->score);
 		this->scores->writeScores();
 	}
 
-	void MyForm::newGame(){
+	void BoggleGUI::newGame(){
 		resetTimer();
 		enableButtons();
 		initializeDice();
@@ -1059,7 +1059,7 @@ namespace Project1{
 		this->submitButton->BackColor = Color::White;
 	}
 
-	void MyForm::endGame(){
+	void BoggleGUI::endGame(){
 		this->countdownTimer->Enabled = false;
 		this->disableAllButtons();
 		this->submitButton->Enabled = false;
@@ -1080,13 +1080,13 @@ namespace Project1{
 		this->newGameCounter -= 1;
 	}
 
-	void MyForm::resetTimer(){
+	void BoggleGUI::resetTimer(){
 		this->countdownTimer->Enabled = true;
 		this->minutesRemaining = 3;
 		this->secondsRemaining = 0;
 	}
 
-	MyForm::~MyForm()
+	BoggleGUI::~BoggleGUI()
 	{
 		if (components)
 		{

@@ -1,4 +1,4 @@
-#include "MyForm.h"
+#include "BoggleGUI.h"
 #include <time.h>
 #include <iostream>
 using namespace std;
@@ -10,6 +10,6 @@ int main(array<System::String ^> ^args)
 	srand((unsigned) time(NULL));
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false); 
-	Application::Run(gcnew MyForm());
+	Application::Run(gcnew BoggleGUI());
 	return 0;
 }

@@ -16,15 +16,15 @@ namespace Project1 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for MyForm
+	/// Summary for BoggleGUI
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class BoggleGUI : public System::Windows::Forms::Form
 	{
 	public:
-	MyForm();
+	BoggleGUI();
 
 	protected:
-	~MyForm();
+	~BoggleGUI();
 
 	private: 
 	Hashtable^ guessedWords;
@@ -127,25 +127,25 @@ namespace Project1 {
 
 
 	// ----- ACTION LISTENERS ------ //
-	System::Void MyForm::die0_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die1_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die2_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die3_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die4_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die5_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die6_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die7_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die8_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die9_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die10_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die11_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die12_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die13_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die14_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::die15_Click(System::Object^  sender, System::EventArgs^  e);
-	System::Void MyForm::submitButton_Click(System::Object^  sender, System::EventArgs^  e);	
-	System::Void MyForm::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e); 
-	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e);	
+	System::Void BoggleGUI::die0_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die1_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die2_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die3_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die4_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die5_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die6_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die7_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die8_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die9_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die10_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die11_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die12_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die13_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die14_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::die15_Click(System::Object^  sender, System::EventArgs^  e);
+	System::Void BoggleGUI::submitButton_Click(System::Object^  sender, System::EventArgs^  e);	
+	System::Void BoggleGUI::countdownTimer_Tick(System::Object^  sender, System::EventArgs^  e); 
+	System::Void BoggleGUI::newGameButton_Click(System::Object^  sender, System::EventArgs^  e);	
 
 	// ----- MENU BAR ------ //
 	System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e);	 
