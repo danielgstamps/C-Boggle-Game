@@ -961,7 +961,25 @@ namespace Project1{
 	void MyForm::showHighScores(){
 		this->scores = gcnew ScoreCollection();
 		this->scores->loadScores();
+		
+
+
+		this->scores->newScore("BRYAN", 50);
+		this->scores->newScore("BRYAN", 10);
+		this->scores->newScore("BRYAN", 80);
+		this->scores->newScore("BRYAN", 18);
+		this->scores->newScore("BRYAN", 21);
+		this->scores->newScore("BRYAN", 45);
+		this->scores->newScore("BRYAN", 35);
+		this->scores->newScore("BRYAN", 15);
+		this->scores->newScore("BRYAN", 70);
+		this->scores->newScore("BRYAN", 66);
+		this->scores->newScore("BRYAN", 44);
+
+	
+
 		array<Score^>^ players = this->scores->getScores();
+
 		String^ highScore = "High Scores: \n\n";
 		
 		for(int i = 0 ; i < 5 ; i++){
@@ -970,7 +988,7 @@ namespace Project1{
 		}
 
 		// Needs fixing
-	//	this->scores->newScore("Tom", 22);
+		
 		MessageBox::Show(highScore, "High Scores");
 	}
 
