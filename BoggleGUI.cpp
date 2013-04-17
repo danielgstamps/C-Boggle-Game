@@ -1,7 +1,11 @@
 #include "BoggleGUI.h"
 using namespace std;
 namespace Project1{
-		
+	/*
+	Constuctor
+	Predcondition: none
+	Postcondition: none
+	*/
 	BoggleGUI::BoggleGUI()
 	{		
 		this->guessedWords = gcnew Hashtable;

@@ -4,6 +4,11 @@
 using namespace std;
 using namespace Project1;
 
+	/*
+	Main method
+	Predcondition: none
+	Postcondition: none
+	*/
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)
 {

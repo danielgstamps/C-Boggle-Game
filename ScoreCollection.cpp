@@ -1,12 +1,20 @@
 #include "ScoreCollection.h"
-
+/*
+Constuctor for ScoreCollection
+Predcondition: none
+Postcondition: none
+*/
 ScoreCollection::ScoreCollection(){
 	this->scores = gcnew array<Score^>(5);
 }
-
+/*
+This method loads dictionary
+Predcondition: none
+Postcondition: dictionary != null
+*/
 void ScoreCollection::loadScores(){
 	string line;
-	ifstream myfile ("Scores.txt");
+	ifstream myfile ("./Scores.txt");
 	int position = 0;
 	int lineNum=1;
 	string name;
@@ -30,7 +38,11 @@ void ScoreCollection::loadScores(){
     myfile.close();
 	}
 }
-
+/*
+This method writes to highscore file
+Predcondition: none
+Postcondition: file will have high scores.
+*/
 void ScoreCollection::writeScores(){
   ofstream myfile;
   myfile.open ("Scores.txt");
@@ -51,7 +63,12 @@ void ScoreCollection::writeScores(){
 	}
   myfile.close();
 }
-
+/*
+This method tells if a score is a high score
+Predcondition: none
+@param is score to check
+@return bool if it is a high score
+*/
 bool ScoreCollection::isHighScore(int score){
 	bool isHighScore=false;
 	for(int i=0; i<5; i++){
@@ -61,7 +78,13 @@ bool ScoreCollection::isHighScore(int score){
 	}
 	return isHighScore;
 }
-
+/*
+This method adds a new high score
+Predcondition: none
+Postcondition: new high score will be in highscore
+@param name of player
+@param score of player
+*/
 void ScoreCollection::newScore(String^ name, int score){
 		int position;
 		array<Score^>^ tempScore= gcnew array<Score^>(6);
@@ -89,7 +112,11 @@ void ScoreCollection::newScore(String^ name, int score){
 			this->scores[i] = tempScore[i];
 		}	
 }
-
+/*
+This method gets array of scores
+Predcondition: none
+@return array of scores.
+*/
 array<Score^>^ ScoreCollection::getScores(){
 	return this->scores;
 }

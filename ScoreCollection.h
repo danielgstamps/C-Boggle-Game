@@ -10,7 +10,11 @@
 using namespace std;
 using namespace System;
 using namespace System::Runtime::InteropServices; 
-
+/*
+This is the SocoreCollection Class
+@Author Dainel Stamps && Bryan Patterson
+@Version 4-17-13
+*/
 ref class ScoreCollection
 {
 private:

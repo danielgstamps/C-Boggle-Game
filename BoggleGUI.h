@@ -6,6 +6,12 @@
 using namespace System;
 using System::Collections::Hashtable;
 
+
+/*
+This is Boggle GUI
+@Author Dainel Stamps && Bryan Patterson
+@Version 4-17-13
+*/
 namespace Project1 {
 
 	using namespace System;
