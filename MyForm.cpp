@@ -6,6 +6,7 @@ namespace Project1{
 	{		
 		this->guessedWords = gcnew Hashtable;
 		this->userWordChoice = "";
+		this->newGameCounter = 0;
 		this->score = 0;
 		this->dice = gcnew Dice();
 		this->InitializeComponent();
@@ -67,7 +68,7 @@ namespace Project1{
 		// 
 		// die0
 		// 
-		this->die0->BackColor = System::Drawing::Color::DarkGray;
+		this->die0->BackColor = System::Drawing::Color::LightGray;
 		this->die0->Enabled = false;
 		this->die0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -80,7 +81,7 @@ namespace Project1{
 		// 
 		// die1
 		// 
-		this->die1->BackColor = System::Drawing::Color::DarkGray;
+		this->die1->BackColor = System::Drawing::Color::LightGray;
 		this->die1->Enabled = false;
 		this->die1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -93,7 +94,7 @@ namespace Project1{
 		// 
 		// die2
 		// 
-		this->die2->BackColor = System::Drawing::Color::DarkGray;
+		this->die2->BackColor = System::Drawing::Color::LightGray;
 		this->die2->Enabled = false;
 		this->die2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -106,7 +107,7 @@ namespace Project1{
 		// 
 		// die4
 		// 
-		this->die4->BackColor = System::Drawing::Color::DarkGray;
+		this->die4->BackColor = System::Drawing::Color::LightGray;
 		this->die4->Enabled = false;
 		this->die4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -119,7 +120,7 @@ namespace Project1{
 		// 
 		// die5
 		// 
-		this->die5->BackColor = System::Drawing::Color::DarkGray;
+		this->die5->BackColor = System::Drawing::Color::LightGray;
 		this->die5->Enabled = false;
 		this->die5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -132,7 +133,7 @@ namespace Project1{
 		// 
 		// die6
 		// 
-		this->die6->BackColor = System::Drawing::Color::DarkGray;
+		this->die6->BackColor = System::Drawing::Color::LightGray;
 		this->die6->Enabled = false;
 		this->die6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -145,7 +146,7 @@ namespace Project1{
 		// 
 		// die8
 		// 
-		this->die8->BackColor = System::Drawing::Color::DarkGray;
+		this->die8->BackColor = System::Drawing::Color::LightGray;
 		this->die8->Enabled = false;
 		this->die8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -158,7 +159,7 @@ namespace Project1{
 		// 
 		// die9
 		// 
-		this->die9->BackColor = System::Drawing::Color::DarkGray;
+		this->die9->BackColor = System::Drawing::Color::LightGray;
 		this->die9->Enabled = false;
 		this->die9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -171,7 +172,7 @@ namespace Project1{
 		// 
 		// die10
 		// 
-		this->die10->BackColor = System::Drawing::Color::DarkGray;
+		this->die10->BackColor = System::Drawing::Color::LightGray;
 		this->die10->Enabled = false;
 		this->die10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -188,7 +189,7 @@ namespace Project1{
 		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->titleLabel->ForeColor = System::Drawing::Color::WhiteSmoke;
-		this->titleLabel->Location = System::Drawing::Point(187, 32);
+		this->titleLabel->Location = System::Drawing::Point(183, 32);
 		this->titleLabel->Name = L"titleLabel";
 		this->titleLabel->Size = System::Drawing::Size(176, 39);
 		this->titleLabel->TabIndex = 9;
@@ -196,18 +197,18 @@ namespace Project1{
 		// 
 		// userGuessesBox
 		// 
-		this->userGuessesBox->Enabled = false;
-		this->userGuessesBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+		this->userGuessesBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
 		this->userGuessesBox->Location = System::Drawing::Point(390, 91);
 		this->userGuessesBox->Name = L"userGuessesBox";
+		this->userGuessesBox->ReadOnly = true;
 		this->userGuessesBox->Size = System::Drawing::Size(147, 243);
 		this->userGuessesBox->TabIndex = 10;
 		this->userGuessesBox->Text = L"YOUR WORDS:\n\n";
 		// 
 		// die12
 		// 
-		this->die12->BackColor = System::Drawing::Color::DarkGray;
+		this->die12->BackColor = System::Drawing::Color::LightGray;
 		this->die12->Enabled = false;
 		this->die12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -220,7 +221,7 @@ namespace Project1{
 		// 
 		// die13
 		// 
-		this->die13->BackColor = System::Drawing::Color::DarkGray;
+		this->die13->BackColor = System::Drawing::Color::LightGray;
 		this->die13->Enabled = false;
 		this->die13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -233,7 +234,7 @@ namespace Project1{
 		// 
 		// die14
 		// 
-		this->die14->BackColor = System::Drawing::Color::DarkGray;
+		this->die14->BackColor = System::Drawing::Color::LightGray;
 		this->die14->Enabled = false;
 		this->die14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -246,7 +247,7 @@ namespace Project1{
 		// 
 		// die15
 		// 
-		this->die15->BackColor = System::Drawing::Color::DarkGray;
+		this->die15->BackColor = System::Drawing::Color::LightGray;
 		this->die15->Enabled = false;
 		this->die15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -259,7 +260,7 @@ namespace Project1{
 		// 
 		// die11
 		// 
-		this->die11->BackColor = System::Drawing::Color::DarkGray;
+		this->die11->BackColor = System::Drawing::Color::LightGray;
 		this->die11->Enabled = false;
 		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -272,7 +273,7 @@ namespace Project1{
 		// 
 		// die7
 		// 
-		this->die7->BackColor = System::Drawing::Color::DarkGray;
+		this->die7->BackColor = System::Drawing::Color::LightGray;
 		this->die7->Enabled = false;
 		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -285,7 +286,7 @@ namespace Project1{
 		// 
 		// die3
 		// 
-		this->die3->BackColor = System::Drawing::Color::DarkGray;
+		this->die3->BackColor = System::Drawing::Color::LightGray;
 		this->die3->Enabled = false;
 		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -379,7 +380,7 @@ namespace Project1{
 		// 
 		// submitButton
 		// 
-		this->submitButton->BackColor = System::Drawing::Color::DarkGray;
+		this->submitButton->BackColor = System::Drawing::Color::LightGray;
 		this->submitButton->Enabled = false;
 		this->submitButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -682,22 +683,23 @@ namespace Project1{
 		this->die14->Enabled=false;
 		this->die15->Enabled=false;
 
-		this->die0->BackColor=Color::DarkGray;
-		this->die1->BackColor=Color::DarkGray;
-		this->die2->BackColor=Color::DarkGray;
-		this->die3->BackColor=Color::DarkGray;
-		this->die4->BackColor=Color::DarkGray;
-		this->die5->BackColor=Color::DarkGray;
-		this->die6->BackColor=Color::DarkGray;
-		this->die7->BackColor=Color::DarkGray;
-		this->die8->BackColor=Color::DarkGray;
-		this->die9->BackColor=Color::DarkGray;
-		this->die10->BackColor=Color::DarkGray;
-		this->die11->BackColor=Color::DarkGray;
-		this->die12->BackColor=Color::DarkGray;
-		this->die13->BackColor=Color::DarkGray;
-		this->die14->BackColor=Color::DarkGray;
-		this->die15->BackColor=Color::DarkGray;	
+		this->userWordLabel->ForeColor = Color::White;
+		this->die0->BackColor=Color::Silver;
+		this->die1->BackColor=Color::Silver;
+		this->die2->BackColor=Color::Silver;
+		this->die3->BackColor=Color::Silver;
+		this->die4->BackColor=Color::Silver;
+		this->die5->BackColor=Color::Silver;
+		this->die6->BackColor=Color::Silver;
+		this->die7->BackColor=Color::Silver;
+		this->die8->BackColor=Color::Silver;
+		this->die9->BackColor=Color::Silver;
+		this->die10->BackColor=Color::Silver;
+		this->die11->BackColor=Color::Silver;
+		this->die12->BackColor=Color::Silver;
+		this->die13->BackColor=Color::Silver;
+		this->die14->BackColor=Color::Silver;
+		this->die15->BackColor=Color::Silver;	
 	}
 
 	void MyForm::disableButtonsClicked(){
@@ -891,11 +893,13 @@ namespace Project1{
 			this->yourScoreLabel->Text = "Your score : " + score;
 		}
 		else if(this->isWordAlreadyGuessed()){
+			this->userWordLabel->ForeColor = Color::DarkOrange;
 			this->userWordLabel->Text = "Already entered!";
 		}
 		else
 		{
 			this->userWordLabel->Text = "Invalid word!";
+			this->userWordLabel->ForeColor = Color::DarkOrange;
 		}
 	
 		this->userWordChoice = "";
@@ -903,8 +907,17 @@ namespace Project1{
 
 	// New Game Button
 	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e){
-		newGame();
-	}
+
+		if(this->newGameCounter == 0){
+			this->newGame();
+			this->newGameCounter = 1;
+		}
+		else if((MessageBox::Show("Are you sure you want to start a new game? Your current game will be lost.", 
+			"New Game", MessageBoxButtons::YesNo, MessageBoxIcon::Question)
+			== System::Windows::Forms::DialogResult::Yes)){
+				this->newGame();
+			}	
+		}
 
 	// High Scores Button
 	System::Void MyForm::highScoresButton_Click(System::Object^  sender, System::EventArgs^  e){
@@ -929,6 +942,12 @@ namespace Project1{
 
 		this->minutesLeftLabel->Text = minutesRemainingStr;
 		this->secondsLeftLabel->Text = secondsRemainingStr;
+
+		if(this->minutesRemaining == 0 && this->secondsRemaining <= 30){
+			this->secondsLeftLabel->ForeColor = Color::DarkOrange;
+			this->minutesLeftLabel->ForeColor = Color::DarkOrange;
+			this->timerColonLabel->ForeColor = Color::DarkOrange;
+		}
 
 		if(this->minutesRemaining == 0 && this->secondsRemaining == 0){
 			endGame();
@@ -962,13 +981,33 @@ namespace Project1{
 		this->scores = gcnew ScoreCollection();
 		this->scores->loadScores();
 		
+
+
+		this->scores->newScore("BRYAN", 50);
+		this->scores->newScore("BRYAN", 10);
+		this->scores->newScore("BRYAN", 80);
+		this->scores->newScore("BRYAN", 18);
+		this->scores->newScore("BRYAN", 21);
+		this->scores->newScore("BRYAN", 45);
+		this->scores->newScore("BRYAN", 35);
+		this->scores->newScore("BRYAN", 15);
+		this->scores->newScore("BRYAN", 70);
+		this->scores->newScore("BRYAN", 66);
+		this->scores->newScore("BRYAN", 44);
+
+	
+
 		array<Score^>^ players = this->scores->getScores();
+
 		String^ highScore = "High Scores: \n\n";
 		
 		for(int i = 0 ; i < 5 ; i++){
 			Score^ currentScore = players[i];
 			highScore += currentScore->getName() + "\n" + currentScore->getScore() + "\n\n";
 		}
+
+		// Needs fixing
+		
 		MessageBox::Show(highScore, "High Scores");
 	}
 
@@ -980,13 +1019,17 @@ namespace Project1{
 		this->score = 0;
 		this->buttonCounter = 0;
 
-		this->userGuessesBox->Text = "YOUR WORDS:\n\n";
-		this->yourScoreLabel->Text = "Your score: ";
+		this->userGuessesBox->Text = "YOUR WORDS:\n";
+		this->yourScoreLabel->Text = "Your score: 0";
 		this->userWordChoice = "";
 		this->userWordLabel->Text = "";
 
 		this->minutesLeftLabel->Text = "3";
 		this->secondsLeftLabel->Text = "00";
+		this->minutesLeftLabel->ForeColor = Color::White;
+		this->secondsLeftLabel->ForeColor = Color::White;
+		this->timerColonLabel->ForeColor = Color::White;
+
 		this->submitButton->Enabled = true;
 		this->submitButton->BackColor = Color::White;
 	}
@@ -995,7 +1038,7 @@ namespace Project1{
 		this->countdownTimer->Enabled = false;
 		this->disableAllButtons();
 		this->submitButton->Enabled = false;
-		this->submitButton->BackColor = Color::DarkGray;
+		this->submitButton->BackColor = Color::Silver;
 		this->countdownTimer->Enabled = false;
 		this->userWordLabel->Text = "Game over!";
 		this->newGameButton->Enabled = true;
