@@ -56,7 +56,7 @@ namespace Project1{
 		this->countdownTimer = (gcnew System::Windows::Forms::Timer(this->components));
 		this->newGameButton = (gcnew System::Windows::Forms::Button());
 		this->highScoresButton = (gcnew System::Windows::Forms::Button());
-		this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
+		this->menuStrip = (gcnew System::Windows::Forms::MenuStrip());
 		this->tsmFile = (gcnew System::Windows::Forms::ToolStripMenuItem());
 		this->tsiNewGame = (gcnew System::Windows::Forms::ToolStripMenuItem());
 		this->tsiHighScores = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -68,7 +68,7 @@ namespace Project1{
 		this->dicePanel->SuspendLayout();
 		this->timerPanel->SuspendLayout();
 		this->wordGuessPanel->SuspendLayout();
-		this->menuStrip2->SuspendLayout();
+		this->menuStrip->SuspendLayout();
 		this->SuspendLayout();
 		// 
 		// die0
@@ -393,7 +393,7 @@ namespace Project1{
 		this->submitButton->Location = System::Drawing::Point(264, 17);
 		this->submitButton->Name = L"submitButton";
 		this->submitButton->Size = System::Drawing::Size(74, 66);
-		this->submitButton->TabIndex = 18;
+		this->submitButton->TabIndex = 16;
 		this->submitButton->Text = L"Submit";
 		this->submitButton->UseVisualStyleBackColor = false;
 		this->submitButton->Click += gcnew System::EventHandler(this, &MyForm::submitButton_Click);
@@ -462,6 +462,7 @@ namespace Project1{
 		// 
 		// countdownTimer
 		// 
+		this->countdownTimer->Interval = 1000;
 		this->countdownTimer->Tick += gcnew System::EventHandler(this, &MyForm::countdownTimer_Tick);
 		// 
 		// newGameButton
@@ -471,7 +472,7 @@ namespace Project1{
 		this->newGameButton->Location = System::Drawing::Point(390, 340);
 		this->newGameButton->Name = L"newGameButton";
 		this->newGameButton->Size = System::Drawing::Size(70, 52);
-		this->newGameButton->TabIndex = 23;
+		this->newGameButton->TabIndex = 17;
 		this->newGameButton->Text = L"New Game";
 		this->newGameButton->UseVisualStyleBackColor = true;
 		this->newGameButton->Click += gcnew System::EventHandler(this, &MyForm::newGameButton_Click);
@@ -483,26 +484,27 @@ namespace Project1{
 		this->highScoresButton->Location = System::Drawing::Point(471, 340);
 		this->highScoresButton->Name = L"highScoresButton";
 		this->highScoresButton->Size = System::Drawing::Size(70, 52);
-		this->highScoresButton->TabIndex = 24;
+		this->highScoresButton->TabIndex = 18;
 		this->highScoresButton->Text = L"High Scores";
 		this->highScoresButton->UseVisualStyleBackColor = true;
 		this->highScoresButton->Click += gcnew System::EventHandler(this, &MyForm::highScoresButton_Click);
 		// 
-		// menuStrip2
+		// menuStrip
 		// 
-		this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->tsmFile, this->tsmHelp, 
+		this->menuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->tsmFile, this->tsmHelp, 
 			this->tsmAbout});
-		this->menuStrip2->Location = System::Drawing::Point(0, 0);
-		this->menuStrip2->Name = L"menuStrip2";
-		this->menuStrip2->Size = System::Drawing::Size(573, 24);
-		this->menuStrip2->TabIndex = 25;
-		this->menuStrip2->Text = L"menuStrip2";
+		this->menuStrip->Location = System::Drawing::Point(0, 0);
+		this->menuStrip->Name = L"menuStrip";
+		this->menuStrip->Size = System::Drawing::Size(573, 24);
+		this->menuStrip->TabIndex = 25;
+		this->menuStrip->Text = L"menuStrip2";
 		// 
 		// tsmFile
 		// 
 		this->tsmFile->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {this->tsiNewGame, 
 			this->tsiHighScores, this->tsiExit});
 		this->tsmFile->Name = L"tsmFile";
+		this->tsmFile->ShortcutKeyDisplayString = L"";
 		this->tsmFile->Size = System::Drawing::Size(37, 20);
 		this->tsmFile->Text = L"File";
 		// 
@@ -568,8 +570,8 @@ namespace Project1{
 		this->Controls->Add(this->dicePanel);
 		this->Controls->Add(this->userGuessesBox);
 		this->Controls->Add(this->titleLabel);
-		this->Controls->Add(this->menuStrip2);
-		this->MainMenuStrip = this->menuStrip2;
+		this->Controls->Add(this->menuStrip);
+		this->MainMenuStrip = this->menuStrip;
 		this->Name = L"MyForm";
 		this->Text = L"Boggle by Daniel Stamps and Bryan Patterson";
 		this->dicePanel->ResumeLayout(false);
@@ -577,8 +579,8 @@ namespace Project1{
 		this->timerPanel->PerformLayout();
 		this->wordGuessPanel->ResumeLayout(false);
 		this->wordGuessPanel->PerformLayout();
-		this->menuStrip2->ResumeLayout(false);
-		this->menuStrip2->PerformLayout();
+		this->menuStrip->ResumeLayout(false);
+		this->menuStrip->PerformLayout();
 		this->ResumeLayout(false);
 		this->PerformLayout();
 
@@ -1001,7 +1003,9 @@ namespace Project1{
 	}
 
 	System::Void MyForm::gameInstructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
-		MessageBox::Show("DO LATER", "Instructions");
+		MessageBox::Show("Instructions:\n\nThe goal of Boggle is to create as many words as possible within the time limit by connecting adjacent word dice together. " +
+			"Click any die block to begin, and form as long of a word as you can before clicking the Submit button. The longer your word, the more points you earn. If you want to " + 
+			"reroll your dice board, you can start a new game. If you get a high score, you will be prompted for your name. \n\nGood luck! ", "Instructions");
 	}
 
 	System::Void MyForm::aboutThisProjectToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
