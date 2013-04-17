@@ -68,4 +68,12 @@
       <Filter>Source Files\Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Scores.txt">
+      <Filter>Source Files\Resource Files</Filter>
+    </Text>
+    <Text Include="Dictionary.txt">
+      <Filter>Source Files\Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

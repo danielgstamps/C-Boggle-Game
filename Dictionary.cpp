@@ -2,14 +2,22 @@
 #include "Dictionary.h"
 
 
-
+/*
+Constuctor for Dictionary 
+Predcondition: none
+Postcondition: none
+*/
 Dictionary::Dictionary(){
 	this->table = gcnew Hashtable;
 }
-
+/*
+This method loads the dictionary
+Predcondition: none
+Postcondition: iff (dictionary.text !=NULL) HashTable !=null
+*/
 void Dictionary::loadDictionary(){
 	string line;
-	ifstream myfile ("dictionary.txt");
+	ifstream myfile ("./dictionary.txt");
 
 	if (myfile.is_open()){
 
@@ -22,11 +30,19 @@ void Dictionary::loadDictionary(){
     myfile.close();
 	}
 }
-
+/*
+This method returns if a word exists
+Predcondition: none
+@return bool if word exists
+*/
 bool Dictionary::wordExist(String^ word){
 	return this->table->Contains(word);
 }
-
+/*
+This method returns point value of string.
+Predcondition: none
+@return value of word as point basied on word length.
+*/
 int Dictionary::points(String^ word){
 	int point = 0;
 	if(word->Length==3||word->Length==4){

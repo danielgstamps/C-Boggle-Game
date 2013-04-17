@@ -1,12 +1,22 @@
 #include "Dice.h"
 #include <cliext/vector>
 
+
+/*
+Constuctor for Dice
+Predcondition: none
+Postcondition: none
+*/
 Dice::Dice(void)
 {
 	this->dice = gcnew array<Die^>(16);
 	this->populateDiceList();
 }
-
+/*
+Constuctor
+Predcondition: none
+Postcondition: none
+*/
 void Dice::populateDiceList(){
 	this->dice[0] = gcnew Die("R", "I", "F", "O", "B", "X");
 	this->dice[1] = gcnew Die("I", "F", "E", "H", "E", "Y");
@@ -57,6 +67,12 @@ bool Dice::contains(int num, array<int>^ nums){
 	return false;
 }
 
+/*
+This method returns a die at an index
+Predcondition: index >= 0 
+Postcondition: none
+@retun Die at index
+*/
 Die^ Dice::getElementAt(int index){
 	return this->dice[index];
 }

@@ -104,6 +104,10 @@
       <DependentUpon>BoggleGUI.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Dictionary.txt" />
+    <Text Include="Scores.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

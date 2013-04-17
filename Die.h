@@ -3,7 +3,11 @@
 #include <cliext/vector>
 using namespace System;
 using namespace std;
-
+/*
+This is the Die Class
+@Author Dainel Stamps && Bryan Patterson
+@Version 4-17-13
+*/
 ref class Die
 {
 private:

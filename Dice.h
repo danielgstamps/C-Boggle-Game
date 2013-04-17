@@ -2,7 +2,11 @@
 #include <cliext/vector>
 #include "Die.h"
 
-
+/*
+This is the DIce Class.
+@Author Dainel Stamps && Bryan Patterson
+@Version 4-17-13
+*/
 ref class Dice
 {
 private:

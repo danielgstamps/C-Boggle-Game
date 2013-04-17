@@ -10,7 +10,11 @@ using namespace std;
 using namespace System;
 using System::Collections::Hashtable;
 using System::Runtime::InteropServices::Marshal;
-
+/*
+This is the dictionary class
+@Author Dainel Stamps && Bryan Patterson
+@Version 4-17-13
+*/
 ref class Dictionary
 {
 private:
