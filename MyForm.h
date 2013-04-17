@@ -33,6 +33,7 @@ namespace Project1 {
 	array<Button^>^ selectedButtons;	
 	Dictionary^ dictionary;
 	ScoreCollection^ scores;
+	int newGameCounter;
 	int score;
 	int buttonCounter;
 	int minutesRemaining;
