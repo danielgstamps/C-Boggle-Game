@@ -28,6 +28,7 @@ namespace Project1 {
 
 	private: 
 	Hashtable^ guessedWords;
+	String^ userName;
 	String^ userWordChoice;
 	Dice^ dice;
 	array<Button^>^ selectedButtons;	
@@ -54,6 +55,10 @@ namespace Project1 {
 
 	private: System::Windows::Forms::ToolStripMenuItem^  tsmAbout;
 	private: System::Windows::Forms::ToolStripMenuItem^  tsiAbout;
+	private: System::Windows::Forms::TextBox^  txtUserName;
+	private: System::Windows::Forms::Button^  btnNameSubmit;
+
+
 
 
 	private: System::Windows::Forms::ToolStripMenuItem^  tsiHighScores;
@@ -148,6 +153,8 @@ namespace Project1 {
 	System::Void aboutThisProjectToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void toolStripMenuItem3_Click(System::Object^  sender, System::EventArgs^  e);
 	System::Void highScoresButton_Click(System::Object^  sender, System::EventArgs^  e); 
+	System::Void btnNameSubmit_Click(System::Object^  sender, System::EventArgs^  e);
+		 
 };
 
 #pragma region Windows Form Designer generated code

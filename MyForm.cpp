@@ -6,8 +6,10 @@ namespace Project1{
 	{		
 		this->guessedWords = gcnew Hashtable;
 		this->userWordChoice = "";
+		this->userName = "";
 		this->newGameCounter = 0;
 		this->score = 0;
+		this->scores = gcnew ScoreCollection();
 		this->dice = gcnew Dice();
 		this->InitializeComponent();
 		this->initializeDice();
@@ -15,6 +17,7 @@ namespace Project1{
 		this->buttonCounter=0;
 		this->dictionary = gcnew Dictionary();
 		this->dictionary->loadDictionary();
+		this->scores->loadScores();
 	}
 
 	void MyForm::InitializeComponent()
@@ -46,6 +49,8 @@ namespace Project1{
 		this->secondsLeftLabel = (gcnew System::Windows::Forms::Label());
 		this->submitButton = (gcnew System::Windows::Forms::Button());
 		this->wordGuessPanel = (gcnew System::Windows::Forms::Panel());
+		this->btnNameSubmit = (gcnew System::Windows::Forms::Button());
+		this->txtUserName = (gcnew System::Windows::Forms::TextBox());
 		this->yourScoreLabel = (gcnew System::Windows::Forms::Label());
 		this->userWordLabel = (gcnew System::Windows::Forms::Label());
 		this->countdownTimer = (gcnew System::Windows::Forms::Timer(this->components));
@@ -396,6 +401,8 @@ namespace Project1{
 		// wordGuessPanel
 		// 
 		this->wordGuessPanel->BackColor = System::Drawing::Color::SteelBlue;
+		this->wordGuessPanel->Controls->Add(this->btnNameSubmit);
+		this->wordGuessPanel->Controls->Add(this->txtUserName);
 		this->wordGuessPanel->Controls->Add(this->yourScoreLabel);
 		this->wordGuessPanel->Controls->Add(this->userWordLabel);
 		this->wordGuessPanel->Controls->Add(this->submitButton);
@@ -405,6 +412,29 @@ namespace Project1{
 		this->wordGuessPanel->Name = L"wordGuessPanel";
 		this->wordGuessPanel->Size = System::Drawing::Size(363, 95);
 		this->wordGuessPanel->TabIndex = 21;
+		// 
+		// btnNameSubmit
+		// 
+		this->btnNameSubmit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->btnNameSubmit->Location = System::Drawing::Point(183, 72);
+		this->btnNameSubmit->Name = L"btnNameSubmit";
+		this->btnNameSubmit->Size = System::Drawing::Size(62, 23);
+		this->btnNameSubmit->TabIndex = 23;
+		this->btnNameSubmit->Text = L"Submit";
+		this->btnNameSubmit->UseVisualStyleBackColor = true;
+		this->btnNameSubmit->Visible = false;
+		this->btnNameSubmit->Click += gcnew System::EventHandler(this, &MyForm::btnNameSubmit_Click);
+		// 
+		// txtUserName
+		// 
+		this->txtUserName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->txtUserName->Location = System::Drawing::Point(24, 72);
+		this->txtUserName->Name = L"txtUserName";
+		this->txtUserName->Size = System::Drawing::Size(154, 23);
+		this->txtUserName->TabIndex = 22;
+		this->txtUserName->Visible = false;
 		// 
 		// yourScoreLabel
 		// 
@@ -432,7 +462,6 @@ namespace Project1{
 		// 
 		// countdownTimer
 		// 
-		this->countdownTimer->Interval = 1000;
 		this->countdownTimer->Tick += gcnew System::EventHandler(this, &MyForm::countdownTimer_Tick);
 		// 
 		// newGameButton
@@ -905,6 +934,14 @@ namespace Project1{
 		this->userWordChoice = "";
 	}
 
+	// User Name Submit Button
+	System::Void MyForm::btnNameSubmit_Click(System::Object^  sender, System::EventArgs^  e){
+		this->userName = this->txtUserName->Text;
+		this->txtUserName->Visible = false;
+		this->btnNameSubmit->Visible = false;
+		this->addUserToHighScores();
+	}
+
 	// New Game Button
 	System::Void MyForm::newGameButton_Click(System::Object^  sender, System::EventArgs^  e){
 
@@ -978,8 +1015,6 @@ namespace Project1{
 	// --------- END OF TOOLBAR ---------- //
 
 	void MyForm::showHighScores(){
-		this->scores = gcnew ScoreCollection();
-		this->scores->loadScores();
 		array<Score^>^ players = this->scores->getScores();
 
 		String^ highScore = "High Scores: \n\n";
@@ -993,15 +1028,8 @@ namespace Project1{
 	}
 
 	void MyForm::addUserToHighScores(){
-		System::Windows::Forms::TextBox^ nameBox = gcnew TextBox();
-
-		System::Windows::Forms::MessageBox::Show("test", "Title?");
-
-		if (this->scores->isHighScore(this->score)){
-			this->scores->newScore("Default", this->score);
-			this->scores->writeScores();
-			this->showHighScores();
-		}
+		this->scores->newScore(this->userName, this->score);
+		this->scores->writeScores();
 	}
 
 	void MyForm::newGame(){
@@ -1032,11 +1060,20 @@ namespace Project1{
 		this->disableAllButtons();
 		this->submitButton->Enabled = false;
 		this->submitButton->BackColor = Color::Silver;
-		this->userWordLabel->Text = "Game over!";
+
+		if (this->scores->isHighScore(this->score)){	
+			this->yourScoreLabel->Text = "High Score!";
+			this->userWordLabel->Text = "Enter your name:";
+			this->txtUserName->Visible = true;
+			this->btnNameSubmit->Visible = true;
+		}
+		else
+		{
+			this->userWordLabel->Text = "Game over!";
+		}
+
 		this->newGameButton->Enabled = true;
-		this->newGameButton->BackColor = Color::White;
 		this->newGameCounter -= 1;
-		this->addUserToHighScores();
 	}
 
 	void MyForm::resetTimer(){
