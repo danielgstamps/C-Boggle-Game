@@ -68,7 +68,7 @@ namespace Project1{
 		// 
 		// die0
 		// 
-		this->die0->BackColor = System::Drawing::Color::LightGray;
+		this->die0->BackColor = System::Drawing::Color::Silver;
 		this->die0->Enabled = false;
 		this->die0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -81,7 +81,7 @@ namespace Project1{
 		// 
 		// die1
 		// 
-		this->die1->BackColor = System::Drawing::Color::LightGray;
+		this->die1->BackColor = System::Drawing::Color::Silver;
 		this->die1->Enabled = false;
 		this->die1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -94,7 +94,7 @@ namespace Project1{
 		// 
 		// die2
 		// 
-		this->die2->BackColor = System::Drawing::Color::LightGray;
+		this->die2->BackColor = System::Drawing::Color::Silver;
 		this->die2->Enabled = false;
 		this->die2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -107,7 +107,7 @@ namespace Project1{
 		// 
 		// die4
 		// 
-		this->die4->BackColor = System::Drawing::Color::LightGray;
+		this->die4->BackColor = System::Drawing::Color::Silver;
 		this->die4->Enabled = false;
 		this->die4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -120,7 +120,7 @@ namespace Project1{
 		// 
 		// die5
 		// 
-		this->die5->BackColor = System::Drawing::Color::LightGray;
+		this->die5->BackColor = System::Drawing::Color::Silver;
 		this->die5->Enabled = false;
 		this->die5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -133,7 +133,7 @@ namespace Project1{
 		// 
 		// die6
 		// 
-		this->die6->BackColor = System::Drawing::Color::LightGray;
+		this->die6->BackColor = System::Drawing::Color::Silver;
 		this->die6->Enabled = false;
 		this->die6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -146,7 +146,7 @@ namespace Project1{
 		// 
 		// die8
 		// 
-		this->die8->BackColor = System::Drawing::Color::LightGray;
+		this->die8->BackColor = System::Drawing::Color::Silver;
 		this->die8->Enabled = false;
 		this->die8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -159,7 +159,7 @@ namespace Project1{
 		// 
 		// die9
 		// 
-		this->die9->BackColor = System::Drawing::Color::LightGray;
+		this->die9->BackColor = System::Drawing::Color::Silver;
 		this->die9->Enabled = false;
 		this->die9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -172,7 +172,7 @@ namespace Project1{
 		// 
 		// die10
 		// 
-		this->die10->BackColor = System::Drawing::Color::LightGray;
+		this->die10->BackColor = System::Drawing::Color::Silver;
 		this->die10->Enabled = false;
 		this->die10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -208,7 +208,7 @@ namespace Project1{
 		// 
 		// die12
 		// 
-		this->die12->BackColor = System::Drawing::Color::LightGray;
+		this->die12->BackColor = System::Drawing::Color::Silver;
 		this->die12->Enabled = false;
 		this->die12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -221,7 +221,7 @@ namespace Project1{
 		// 
 		// die13
 		// 
-		this->die13->BackColor = System::Drawing::Color::LightGray;
+		this->die13->BackColor = System::Drawing::Color::Silver;
 		this->die13->Enabled = false;
 		this->die13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -234,7 +234,7 @@ namespace Project1{
 		// 
 		// die14
 		// 
-		this->die14->BackColor = System::Drawing::Color::LightGray;
+		this->die14->BackColor = System::Drawing::Color::Silver;
 		this->die14->Enabled = false;
 		this->die14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -247,7 +247,7 @@ namespace Project1{
 		// 
 		// die15
 		// 
-		this->die15->BackColor = System::Drawing::Color::LightGray;
+		this->die15->BackColor = System::Drawing::Color::Silver;
 		this->die15->Enabled = false;
 		this->die15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -260,7 +260,7 @@ namespace Project1{
 		// 
 		// die11
 		// 
-		this->die11->BackColor = System::Drawing::Color::LightGray;
+		this->die11->BackColor = System::Drawing::Color::Silver;
 		this->die11->Enabled = false;
 		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -273,7 +273,7 @@ namespace Project1{
 		// 
 		// die7
 		// 
-		this->die7->BackColor = System::Drawing::Color::LightGray;
+		this->die7->BackColor = System::Drawing::Color::Silver;
 		this->die7->Enabled = false;
 		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -286,7 +286,7 @@ namespace Project1{
 		// 
 		// die3
 		// 
-		this->die3->BackColor = System::Drawing::Color::LightGray;
+		this->die3->BackColor = System::Drawing::Color::Silver;
 		this->die3->Enabled = false;
 		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -380,7 +380,7 @@ namespace Project1{
 		// 
 		// submitButton
 		// 
-		this->submitButton->BackColor = System::Drawing::Color::LightGray;
+		this->submitButton->BackColor = System::Drawing::Color::Silver;
 		this->submitButton->Enabled = false;
 		this->submitButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
@@ -980,23 +980,6 @@ namespace Project1{
 	void MyForm::showHighScores(){
 		this->scores = gcnew ScoreCollection();
 		this->scores->loadScores();
-		
-
-
-		this->scores->newScore("BRYAN", 50);
-		this->scores->newScore("BRYAN", 10);
-		this->scores->newScore("BRYAN", 80);
-		this->scores->newScore("BRYAN", 18);
-		this->scores->newScore("BRYAN", 21);
-		this->scores->newScore("BRYAN", 45);
-		this->scores->newScore("BRYAN", 35);
-		this->scores->newScore("BRYAN", 15);
-		this->scores->newScore("BRYAN", 70);
-		this->scores->newScore("BRYAN", 66);
-		this->scores->newScore("BRYAN", 44);
-
-	
-
 		array<Score^>^ players = this->scores->getScores();
 
 		String^ highScore = "High Scores: \n\n";
@@ -1005,10 +988,20 @@ namespace Project1{
 			Score^ currentScore = players[i];
 			highScore += currentScore->getName() + "\n" + currentScore->getScore() + "\n\n";
 		}
-
-		// Needs fixing
 		
 		MessageBox::Show(highScore, "High Scores");
+	}
+
+	void MyForm::addUserToHighScores(){
+		System::Windows::Forms::TextBox^ nameBox = gcnew TextBox();
+
+		System::Windows::Forms::MessageBox::Show("test", "Title?");
+
+		if (this->scores->isHighScore(this->score)){
+			this->scores->newScore("Default", this->score);
+			this->scores->writeScores();
+			this->showHighScores();
+		}
 	}
 
 	void MyForm::newGame(){
@@ -1039,10 +1032,11 @@ namespace Project1{
 		this->disableAllButtons();
 		this->submitButton->Enabled = false;
 		this->submitButton->BackColor = Color::Silver;
-		this->countdownTimer->Enabled = false;
 		this->userWordLabel->Text = "Game over!";
 		this->newGameButton->Enabled = true;
 		this->newGameButton->BackColor = Color::White;
+		this->newGameCounter -= 1;
+		this->addUserToHighScores();
 	}
 
 	void MyForm::resetTimer(){
