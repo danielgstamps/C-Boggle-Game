@@ -64,24 +64,30 @@ bool ScoreCollection::isHighScore(int score){
 
 void ScoreCollection::newScore(String^ name, int score){
 		int position;
-		array<Score^>^ tempScore= gcnew array<Score^>(5);
-		///May not look the cleanest but i did it this way for o(n) notation rather than going 0(n*n) nesting for loops
-		for(int i=0; i<5; i++){
-			if(this->scores[i]->getScore() > score){
-				position = i;
+		array<Score^>^ tempScore= gcnew array<Score^>(6);
+		
+		for(int i = 0; i < 5; i++){
+			tempScore[i] = this->scores[i]; 
+		}
+		tempScore[5] = gcnew Score(name,score);
+
+		int i,j;
+		for(i=0;i<6;i++)
+		{
+			for(j=0;j<i;j++)
+			{
+				if(tempScore[i]->getScore()>tempScore[j]->getScore())
+				{
+					Score^ temp= tempScore[i]; //swap 
+					tempScore[i] = tempScore[j];
+					tempScore[j] = temp;
+				}
 			}
 		}
-		for(int i=0; i<5; i++){
-			if(i<position){
-				tempScore[i] = this->scores[i];
-			}else if (i == position){
-				Score^ newScore = gcnew Score(name,score);
-				tempScore[i] = newScore;
-			}else{
-				tempScore[i] = this->scores[i-1];
-			}
-		}
-		this->scores = tempScore;
+
+		for (int i =0; i<5; i++){
+			this->scores[i] = tempScore[i];
+		}	
 }
 
 array<Score^>^ ScoreCollection::getScores(){
