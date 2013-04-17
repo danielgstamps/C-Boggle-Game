@@ -1,9 +1,30 @@
-﻿Build started 4/17/2013 5:33:39 AM.
-     1>Project "C:\Users\csuser\Desktop\team9boggle\Project1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         Project1.vcxproj -> C:\Users\csuser\Desktop\team9boggle\Debug\Project1.exe
-     1>Done Building Project "C:\Users\csuser\Desktop\team9boggle\Project1.vcxproj" (Build target(s)).
+﻿Build started 4/17/2013 5:58:18 AM.
+     1>Project "C:\Users\bpatter3\Desktop\Boggle\Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Dice.cpp Dictionary.cpp Die.cpp MyForm.cpp Score.cpp ScoreCollection.cpp WinCLI.cpp
+         Dice.cpp
+         Dictionary.cpp
+         Die.cpp
+         MyForm.cpp
+         Score.cpp
+         ScoreCollection.cpp
+     1>ScoreCollection.cpp(66): warning C4101: 'position' : unreferenced local variable
+         WinCLI.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /analyze- /errorReport:prompt "C:\Users\bpatter3\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bpatter3\Desktop\Boggle\Debug\Project1.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:"Debug\$safeprojectname$.MyForm.resources" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\bpatter3\Desktop\Boggle\Debug\Project1.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Dice.obj
+         Debug\Dictionary.obj
+         Debug\Die.obj
+         Debug\MyForm.obj
+         Debug\Score.obj
+         Debug\ScoreCollection.obj
+         Debug\WinCLI.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         Project1.vcxproj -> C:\Users\bpatter3\Desktop\Boggle\Debug\Project1.exe
+     1>Done Building Project "C:\Users\bpatter3\Desktop\Boggle\Project1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.15
+Time Elapsed 00:00:09.39
