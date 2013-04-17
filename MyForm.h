@@ -41,7 +41,8 @@ namespace Project1 {
 	System::Windows::Forms::Button^  newGameButton;
 	System::Windows::Forms::Button^  highScoresButton;
 	int secondsRemaining;
-	System::Windows::Forms::MenuStrip^  menuStrip2;
+	private: System::Windows::Forms::MenuStrip^  menuStrip;
+
 	private: System::Windows::Forms::ToolStripMenuItem^  tsmFile;
 	private: System::Windows::Forms::ToolStripMenuItem^  tsiNewGame;
 	private: System::Windows::Forms::ToolStripMenuItem^  tsiExit;
