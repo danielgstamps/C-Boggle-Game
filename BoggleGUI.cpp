@@ -8,20 +8,20 @@ namespace Project1{
 	*/
 	BoggleGUI::BoggleGUI()
 	{		
+		this->dice = gcnew Dice();
+		this->dictionary = gcnew Dictionary();
+		this->scores = gcnew ScoreCollection();
+		this->selectedButtons = gcnew array<Button^>(16);
 		this->guessedWords = gcnew Hashtable;
+		this->dictionary->loadDictionary();
+		this->scores->loadScores();
 		this->userWordChoice = "";
 		this->userName = "";
 		this->newGameCounter = 0;
 		this->score = 0;
-		this->scores = gcnew ScoreCollection();
-		this->dice = gcnew Dice();
+		this->buttonCounter=0;
 		this->InitializeComponent();
 		this->initializeDice();
-		this->selectedButtons = gcnew array<Button^>(16);
-		this->buttonCounter=0;
-		this->dictionary = gcnew Dictionary();
-		this->dictionary->loadDictionary();
-		this->scores->loadScores();
 	}
 
 	void BoggleGUI::InitializeComponent()
@@ -114,6 +114,19 @@ namespace Project1{
 		this->die2->UseVisualStyleBackColor = false;
 		this->die2->Click += gcnew System::EventHandler(this, &BoggleGUI::die2_Click);
 		// 
+		// die3
+		// 
+		this->die3->BackColor = System::Drawing::Color::Silver;
+		this->die3->Enabled = false;
+		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die3->Location = System::Drawing::Point(264, 17);
+		this->die3->Name = L"die3";
+		this->die3->Size = System::Drawing::Size(74, 66);
+		this->die3->TabIndex = 3;
+		this->die3->UseVisualStyleBackColor = false;
+		this->die3->Click += gcnew System::EventHandler(this, &BoggleGUI::die3_Click);
+		// 
 		// die4
 		// 
 		this->die4->BackColor = System::Drawing::Color::Silver;
@@ -152,6 +165,19 @@ namespace Project1{
 		this->die6->TabIndex = 6;
 		this->die6->UseVisualStyleBackColor = false;
 		this->die6->Click += gcnew System::EventHandler(this, &BoggleGUI::die6_Click);
+		// 
+		// die7
+		// 
+		this->die7->BackColor = System::Drawing::Color::Silver;
+		this->die7->Enabled = false;
+		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->die7->Location = System::Drawing::Point(264, 89);
+		this->die7->Name = L"die7";
+		this->die7->Size = System::Drawing::Size(74, 66);
+		this->die7->TabIndex = 7;
+		this->die7->UseVisualStyleBackColor = false;
+		this->die7->Click += gcnew System::EventHandler(this, &BoggleGUI::die7_Click);
 		// 
 		// die8
 		// 
@@ -192,28 +218,18 @@ namespace Project1{
 		this->die10->UseVisualStyleBackColor = false;
 		this->die10->Click += gcnew System::EventHandler(this, &BoggleGUI::die10_Click);
 		// 
-		// titleLabel
+		// die11
 		// 
-		this->titleLabel->AutoSize = true;
-		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+		this->die11->BackColor = System::Drawing::Color::Silver;
+		this->die11->Enabled = false;
+		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 			static_cast<System::Byte>(0)));
-		this->titleLabel->ForeColor = System::Drawing::Color::WhiteSmoke;
-		this->titleLabel->Location = System::Drawing::Point(183, 32);
-		this->titleLabel->Name = L"titleLabel";
-		this->titleLabel->Size = System::Drawing::Size(176, 39);
-		this->titleLabel->TabIndex = 9;
-		this->titleLabel->Text = L"BOGGLE!";
-		// 
-		// userGuessesBox
-		// 
-		this->userGuessesBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-			static_cast<System::Byte>(0)));
-		this->userGuessesBox->Location = System::Drawing::Point(390, 91);
-		this->userGuessesBox->Name = L"userGuessesBox";
-		this->userGuessesBox->ReadOnly = true;
-		this->userGuessesBox->Size = System::Drawing::Size(147, 243);
-		this->userGuessesBox->TabIndex = 10;
-		this->userGuessesBox->Text = L"YOUR WORDS:\n\n";
+		this->die11->Location = System::Drawing::Point(264, 161);
+		this->die11->Name = L"die11";
+		this->die11->Size = System::Drawing::Size(74, 66);
+		this->die11->TabIndex = 11;
+		this->die11->UseVisualStyleBackColor = false;
+		this->die11->Click += gcnew System::EventHandler(this, &BoggleGUI::die11_Click);
 		// 
 		// die12
 		// 
@@ -267,45 +283,6 @@ namespace Project1{
 		this->die15->UseVisualStyleBackColor = false;
 		this->die15->Click += gcnew System::EventHandler(this, &BoggleGUI::die15_Click);
 		// 
-		// die11
-		// 
-		this->die11->BackColor = System::Drawing::Color::Silver;
-		this->die11->Enabled = false;
-		this->die11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-			static_cast<System::Byte>(0)));
-		this->die11->Location = System::Drawing::Point(264, 161);
-		this->die11->Name = L"die11";
-		this->die11->Size = System::Drawing::Size(74, 66);
-		this->die11->TabIndex = 11;
-		this->die11->UseVisualStyleBackColor = false;
-		this->die11->Click += gcnew System::EventHandler(this, &BoggleGUI::die11_Click);
-		// 
-		// die7
-		// 
-		this->die7->BackColor = System::Drawing::Color::Silver;
-		this->die7->Enabled = false;
-		this->die7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-			static_cast<System::Byte>(0)));
-		this->die7->Location = System::Drawing::Point(264, 89);
-		this->die7->Name = L"die7";
-		this->die7->Size = System::Drawing::Size(74, 66);
-		this->die7->TabIndex = 7;
-		this->die7->UseVisualStyleBackColor = false;
-		this->die7->Click += gcnew System::EventHandler(this, &BoggleGUI::die7_Click);
-		// 
-		// die3
-		// 
-		this->die3->BackColor = System::Drawing::Color::Silver;
-		this->die3->Enabled = false;
-		this->die3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-			static_cast<System::Byte>(0)));
-		this->die3->Location = System::Drawing::Point(264, 17);
-		this->die3->Name = L"die3";
-		this->die3->Size = System::Drawing::Size(74, 66);
-		this->die3->TabIndex = 3;
-		this->die3->UseVisualStyleBackColor = false;
-		this->die3->Click += gcnew System::EventHandler(this, &BoggleGUI::die3_Click);
-		// 
 		// dicePanel
 		// 
 		this->dicePanel->BackColor = System::Drawing::Color::SteelBlue;
@@ -329,6 +306,29 @@ namespace Project1{
 		this->dicePanel->Name = L"dicePanel";
 		this->dicePanel->Size = System::Drawing::Size(363, 318);
 		this->dicePanel->TabIndex = 18;
+		// 
+		// titleLabel
+		// 
+		this->titleLabel->AutoSize = true;
+		this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->titleLabel->ForeColor = System::Drawing::Color::WhiteSmoke;
+		this->titleLabel->Location = System::Drawing::Point(183, 32);
+		this->titleLabel->Name = L"titleLabel";
+		this->titleLabel->Size = System::Drawing::Size(176, 39);
+		this->titleLabel->TabIndex = 9;
+		this->titleLabel->Text = L"BOGGLE!";
+		// 
+		// userGuessesBox
+		// 
+		this->userGuessesBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			static_cast<System::Byte>(0)));
+		this->userGuessesBox->Location = System::Drawing::Point(390, 91);
+		this->userGuessesBox->Name = L"userGuessesBox";
+		this->userGuessesBox->ReadOnly = true;
+		this->userGuessesBox->Size = System::Drawing::Size(147, 243);
+		this->userGuessesBox->TabIndex = 10;
+		this->userGuessesBox->Text = L"YOUR WORDS:\n\n";
 		// 
 		// timeLabel
 		// 
@@ -588,7 +588,10 @@ namespace Project1{
 		this->ResumeLayout(false);
 		this->PerformLayout();
 
-	} // End of initializeComponent
+	} // ~~~~~~~~~~~~~~~ End of initializeComponent ~~~~~~~~~~~~~~
+
+
+	// ~~~~~~~~~~~~ PRIVATE HELPERS  ~~~~~~~~~~~~ //
 
 	void BoggleGUI::initializeDice(){
 		this->die0->Text = this->dice->getElementAt(0)->getRandomLetter();
@@ -763,6 +766,76 @@ namespace Project1{
 
 	bool BoggleGUI::isWordAlreadyGuessed(){
 		return (this->guessedWords->Contains(userWordChoice));
+	}
+
+	void BoggleGUI::showHighScores(){
+		array<Score^>^ players = this->scores->getScores();
+
+		String^ highScore = "High Scores: \n\n";
+		
+		for(int i = 0 ; i < 5 ; i++){
+			Score^ currentScore = players[i];
+			highScore += currentScore->getName() + "\n" + currentScore->getScore() + "\n\n";
+		}
+		
+		MessageBox::Show(highScore, "High Scores");
+	}
+
+	void BoggleGUI::addUserToHighScores(){
+		this->scores->newScore(this->userName, this->score);
+		this->scores->writeScores();
+	}
+
+	void BoggleGUI::newGame(){
+		resetTimer();
+		enableButtons();
+		initializeDice();
+
+		this->score = 0;
+		this->buttonCounter = 0;
+
+		this->userGuessesBox->Text = "YOUR WORDS:\n";
+		this->yourScoreLabel->Text = "Your score: 0";
+		this->userWordChoice = "";
+		this->userWordLabel->Text = "";
+
+		this->minutesLeftLabel->Text = "3";
+		this->secondsLeftLabel->Text = "00";
+		this->minutesLeftLabel->ForeColor = Color::White;
+		this->secondsLeftLabel->ForeColor = Color::White;
+		this->timerColonLabel->ForeColor = Color::White;
+
+		this->submitButton->Enabled = true;
+		this->submitButton->BackColor = Color::White;
+	}
+
+	void BoggleGUI::endGame(){
+		this->countdownTimer->Enabled = false;
+		this->disableAllButtons();
+		this->submitButton->Enabled = false;
+		this->submitButton->BackColor = Color::Silver;
+
+		if (this->scores->isHighScore(this->score)){	
+			this->yourScoreLabel->Text = "High Score!";
+			this->userWordLabel->Text = "Enter your name:";
+			this->txtUserName->Visible = true;
+			this->btnNameSubmit->Visible = true;
+			this->newGameButton->Enabled = false;
+			this->newGameButton->BackColor = Color::Silver;
+			this->tsmFile->Enabled = false;
+		}
+		else
+		{
+			this->userWordLabel->Text = "Game over!";
+		}
+
+		this->newGameCounter -= 1;
+	}
+
+	void BoggleGUI::resetTimer(){
+		this->countdownTimer->Enabled = true;
+		this->minutesRemaining = 3;
+		this->secondsRemaining = 0;
 	}
 
 	// ~~~~~~~~ ACTION LISTENERS ~~~~~~~~~~ //
@@ -945,6 +1018,9 @@ namespace Project1{
 		this->userName = this->txtUserName->Text;
 		this->txtUserName->Visible = false;
 		this->btnNameSubmit->Visible = false;
+		this->newGameButton->Enabled = true;
+		this->newGameButton->BackColor = Color::White;
+		this->tsmFile->Enabled = true;
 		this->addUserToHighScores();
 	}
 
@@ -997,7 +1073,9 @@ namespace Project1{
 		}
 	}
 
-	// -------- TOOLBAR ----------- //
+	// ~~~~~~~~~~~~ END OF ACTION LISTENERS ~~~~~~~~~~~~~~ //
+
+	// ~~~~~~~~~~~~ TOOLBAR ~~~~~~~~~~~~~~~~~ //
 	System::Void BoggleGUI::newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e){
 		newGame();
 	}
@@ -1020,75 +1098,7 @@ namespace Project1{
 		showHighScores();
 	}
 
-	// --------- END OF TOOLBAR ---------- //
-
-	void BoggleGUI::showHighScores(){
-		array<Score^>^ players = this->scores->getScores();
-
-		String^ highScore = "High Scores: \n\n";
-		
-		for(int i = 0 ; i < 5 ; i++){
-			Score^ currentScore = players[i];
-			highScore += currentScore->getName() + "\n" + currentScore->getScore() + "\n\n";
-		}
-		
-		MessageBox::Show(highScore, "High Scores");
-	}
-
-	void BoggleGUI::addUserToHighScores(){
-		this->scores->newScore(this->userName, this->score);
-		this->scores->writeScores();
-	}
-
-	void BoggleGUI::newGame(){
-		resetTimer();
-		enableButtons();
-		initializeDice();
-
-		this->score = 0;
-		this->buttonCounter = 0;
-
-		this->userGuessesBox->Text = "YOUR WORDS:\n";
-		this->yourScoreLabel->Text = "Your score: 0";
-		this->userWordChoice = "";
-		this->userWordLabel->Text = "";
-
-		this->minutesLeftLabel->Text = "3";
-		this->secondsLeftLabel->Text = "00";
-		this->minutesLeftLabel->ForeColor = Color::White;
-		this->secondsLeftLabel->ForeColor = Color::White;
-		this->timerColonLabel->ForeColor = Color::White;
-
-		this->submitButton->Enabled = true;
-		this->submitButton->BackColor = Color::White;
-	}
-
-	void BoggleGUI::endGame(){
-		this->countdownTimer->Enabled = false;
-		this->disableAllButtons();
-		this->submitButton->Enabled = false;
-		this->submitButton->BackColor = Color::Silver;
-
-		if (this->scores->isHighScore(this->score)){	
-			this->yourScoreLabel->Text = "High Score!";
-			this->userWordLabel->Text = "Enter your name:";
-			this->txtUserName->Visible = true;
-			this->btnNameSubmit->Visible = true;
-		}
-		else
-		{
-			this->userWordLabel->Text = "Game over!";
-		}
-
-		this->newGameButton->Enabled = true;
-		this->newGameCounter -= 1;
-	}
-
-	void BoggleGUI::resetTimer(){
-		this->countdownTimer->Enabled = true;
-		this->minutesRemaining = 3;
-		this->secondsRemaining = 0;
-	}
+	// ~~~~~~~~~~~~ END OF TOOLBAR ~~~~~~~~~~~~~ //
 
 	BoggleGUI::~BoggleGUI()
 	{

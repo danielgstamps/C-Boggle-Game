@@ -1,4 +1,5 @@
 #include "Score.h"
+
 /*
 Constuctor for Score
 Predcondition: none
@@ -9,6 +10,7 @@ Score::Score(String^ name, int score){
 	this->name = name;
 	this->score = score;
 }
+
 /*
 This method gets player name
 Predcondition: none
