@@ -1,10 +1,10 @@
 Bryan Patterson
-200
-Daniel Stamps
-199
-Dr. Yoder
-190
-AAA
-50
-BBB
 20
+Daniel Stamps
+19
+Dr. Yoder
+10
+AAA
+5
+Tom
+2
