@@ -1,0 +1,2 @@
+# C-Boggle-Game
+This C++ Boggle game was developed alongside another student during my Sophomore year at UWG. It was my first major project using C++, which I had previously never used. Bryan and I worked together very well and excelled in the class, receiving an A for this project. I'm uploading this project to demonstrate my ability to complete large pieces of software, work with teammates, and develop solid graphical user interfaces. Please note that this was developed several years ago: The slightly disorganized coding style is not representative of my skills today.
